@@ -7,19 +7,23 @@ import Services from "./containers/Services/Services";
 import ServiceDetails from "./containers/ServiceDetails/ServiceDetails";
 import Career from "./containers/Career/Career";
 import Gallery from "./containers/Gallery/Gallery";
-
+import "../src/styles/common.scss";
+import ContactHeader from "./components/ContactHeader/ContactHeader";
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/service-details" element={<ServiceDetails />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/gallery" element={<Gallery />} />
-      </Routes>
-    </Router>
+    <>
+      <ContactHeader />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/service-details" element={<ServiceDetails />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/gallery" element={<Gallery />} />
+        </Routes>
+      </Router>
+    </>
   );
 };
 

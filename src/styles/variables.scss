@@ -1,24 +1,20 @@
-
-@mixin d-flex($jc: flex-start, $al: flex-start, $fd: row, $gap: 0px) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $al;
-    flex-direction: $fd;
-    gap: $gap;
+@mixin d-flex($jc: flex-start, $al: flex-start, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $al;
+  flex-direction: $fd;
 }
 
 @mixin font-style($fs: normal, $fw: normal, $lh: normal) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
 }
 
-
-
 @mixin poppins() {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @mixin mulish() {
-    font-family: "Mulish", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
