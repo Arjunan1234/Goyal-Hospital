@@ -9,10 +9,12 @@ import Career from "./containers/Career/Career";
 import Gallery from "./containers/Gallery/Gallery";
 import "../src/styles/common.scss";
 import ContactHeader from "./components/ContactHeader/ContactHeader";
+import SearchHeader from "./components/SearchHeader/SearchHeader";
 const App = () => {
   return (
     <>
       <ContactHeader />
+      <SearchHeader />
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />

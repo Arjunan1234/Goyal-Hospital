@@ -1,0 +1,17 @@
+@use "/src/styles/variables.scss" as variable;
+.inputComponentContainer {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--Comps-field-border, #eef0f3);
+  background: var(--Comps-field-bkg, #fdfdfd);
+  @include variable.d-flex();
+  gap: 8px;
+  .imageWrapper {
+    width: 20px;
+    height: 20px;
+  }
+  input {
+    border: none;
+    outline: none;
+  }
+}

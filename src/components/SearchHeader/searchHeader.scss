@@ -1,0 +1,48 @@
+@use "/src/styles/variables.scss" as variable;
+.searchHeader{
+    padding: 20px 80px;
+    .searchHeaderContainer{
+        @include variable.d-flex($jc:space-between);
+        flex-wrap: wrap;
+        gap: 20px;
+      .mainContent{
+        @include variable.d-flex();
+        gap: 32px;
+        flex-wrap: wrap;
+        .logo{
+            .imageWrapper{
+                width: 120px;
+                height: 40px;
+            }
+        }
+      }  
+      .buttonContainer{
+        max-width: 179px;
+      }
+    }
+}
+
+@media screen and (max-width: 992px){
+    .searchHeader{
+        padding: 20px 60px;
+        .searchHeaderContainer{
+            justify-content: center;
+            gap: 20px;
+            .mainContent{
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 568px){
+    .searchHeader{
+        padding: 20px 20px;
+        .searchHeaderContainer{
+            .buttonContainer{
+                width: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}
