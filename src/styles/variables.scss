@@ -1,32 +1,20 @@
-@font-face {
-    font-family: "General Sans";
-    src: url("../fonts/GeneralSans-Variable.ttf") format("truetype");
-    font-style: normal;
-}
-
-@mixin d-flex($jc: flex-start, $al: flex-start, $fd: row, $gap: 0px) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $al;
-    flex-direction: $fd;
-    gap: $gap;
+@mixin d-flex($jc: flex-start, $al: flex-start, $fd: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $al;
+  flex-direction: $fd;
 }
 
 @mixin font-style($fs: normal, $fw: normal, $lh: normal) {
-    font-size: $fs;
-    font-weight: $fw;
-    line-height: $lh;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
 }
 
-@mixin roboto() {
-    font-family: "Roboto", sans-serif;
+@mixin poppins() {
+  font-family: "Poppins", sans-serif;
 }
 
-@mixin inter() {
-    font-family: "Inter", sans-serif;
+@mixin mulish() {
+  font-family: "Mulish", sans-serif;
 }
-
-@mixin general-sans() {
-    font-family: "General Sans", sans-serif;
-}
-

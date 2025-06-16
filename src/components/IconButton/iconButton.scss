@@ -1,0 +1,18 @@
+@use "/src/styles/variables.scss" as variable;
+.iconButtonContainer {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: var(--medium, 24px);
+  background: #195aff;
+  @include variable.d-flex($al: center, $jc: center);
+  gap: 6px;
+  width: 100%;
+  span {
+    @include variable.font-style($fs: 14px, $fw: 500, $lh: 20px);
+  }
+  .imageWrapper {
+    width: 16px;
+    height: 16px;
+  }
+}
