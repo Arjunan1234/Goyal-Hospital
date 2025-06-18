@@ -6,10 +6,12 @@ import ContactHeader from "../../components/ContactHeader/ContactHeader";
 import EconomicTimes from "../../components/EconomicTimes/EconomicTimes";
 import ServicesSection from "../../components/ServicesSection/ServicesSection";
 import AboutUsSection from "../../components/AboutUsSection/AboutUsSection";
+import CommonBanner from "../../components/CommonBanner/CommonBanner";
 
 const Home = () => {
   return (
     <div>
+      <CommonBanner />
       <DoctorCarousel />
       <AboutUsSection />
       <ServicesSection />
