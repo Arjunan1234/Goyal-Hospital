@@ -26,22 +26,22 @@ const SearchHeader = () => {
 
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth > 568) {
+  //       setIsDropDownShow(false); // Close dropdown when resizing to larger screen
+  //     }
+  //   };
+
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 568) {
-        setIsDropDownShow(!isDropDownShow);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [isDropDownShow]);
-
-  useEffect(() => {
-    if (!isDropDownShow) {
+    if (!isDropDownShow && isMobile) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -51,11 +51,11 @@ const SearchHeader = () => {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isDropDownShow]);
+  }, [isDropDownShow, isMobile]);
 
   return (
     <>
-      <section className="searchHeader">
+      <section className="container searchHeader">
         <div className="searchHeaderContainer">
           <div className="mainContent">
             <div className="logo">
@@ -73,7 +73,7 @@ const SearchHeader = () => {
             ) : (
               <div
                 className="humburger"
-                onClick={() => setIsDropDownShow(!isDropDownShow)}
+                onClick={() => setIsDropDownShow((prev) => !prev)}
               >
                 <img
                   src={isDropDownShow ? menuNormal : menuClose}

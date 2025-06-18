@@ -161,7 +161,7 @@
 
 @media screen and (max-width: 768px) {
     .servicesSection {
-        padding: 48px 20px;
+        padding: 48px 60px;
 
         .sectionSubtitle {
             color: var(--primary, #195AFF);
@@ -269,5 +269,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 568px){
+    .servicesSection{
+        padding: 48px 20px ;
     }
 }

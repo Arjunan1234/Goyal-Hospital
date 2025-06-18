@@ -7,7 +7,7 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 const EconomicTimes = () => {
   const isMobile = useScreenMobile({ size: 992 });
   return (
-    <section className="testimonialSection">
+    <section className="container testimonialSection">
       <div className="testimonialContent">
         <div className="leftContent">
           <img src={double} alt="" className="double" />

@@ -5,7 +5,7 @@ const CommonBanner = () => {
   return (
     <>
       <section className="commonBanner">
-        <div className="commonBannerContainer">
+        <div className="container commonBannerContainer">
           <div className="backgroundBanner">
             <div className="mainContent">
               <div className="textContainer">

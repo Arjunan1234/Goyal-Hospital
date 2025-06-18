@@ -51,7 +51,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <div className="servicesSection">
+    <div className="container servicesSection">
       <h4 className="sectionSubtitle">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,7 @@
     gap: 80px;
     align-items: flex-start;
 
-    padding: 60px 40px;
+    padding: 60px 80px;
     background: #fff;
     flex-wrap: wrap;
 
@@ -146,7 +146,7 @@
     .aboutUsSection {
         flex-direction: column;
         gap: 40px;
-        padding: 48px 20px;
+        padding: 48px 60px;
 
         .aboutImage {
             width: 100%;
@@ -254,5 +254,11 @@
                 padding: 12px 16px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 568px){
+    .aboutUsSection{
+        padding: 48px 20px;
     }
 }

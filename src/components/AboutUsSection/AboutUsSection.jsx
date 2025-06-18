@@ -12,7 +12,7 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 const AboutUsSection = () => {
   const isMobile = useScreenMobile({ size: 992 });
   return (
-    <div className="aboutUsSection">
+    <div className="container aboutUsSection">
       <div className="aboutImage">
         <img src={isMobile ? aboutUsMobile : aboutUs} alt="About Us" />
       </div>

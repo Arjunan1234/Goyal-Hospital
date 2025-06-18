@@ -11,7 +11,7 @@ import doctors from "../../constants/doctors";
 
 const DoctorCarousel = () => {
   return (
-    <section className="doctor-section">
+    <section className="container doctor-section">
       <p className="section-subtitle">Our Doctors</p>
       <h2 className="section-title">Meet Our Specialist Doctors</h2>
       <p className="section-description">
