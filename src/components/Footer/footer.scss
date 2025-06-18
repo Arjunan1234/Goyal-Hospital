@@ -1,0 +1,263 @@
+@use "/src/styles/variables.scss" as variables;
+
+.footer {
+    background: linear-gradient(264deg, #195AFF 0%, #0034B8 100%);
+    color: #ffffff;
+    position: relative;
+
+    .pattern {
+        position: absolute;
+        max-width: 710px;
+        height: 100%;
+    }
+
+    .footerContainer {
+
+        padding: 60px 80px 42px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+
+    }
+
+    .footerLeft {
+        flex: 1;
+        min-width: 280px;
+
+        .logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--light, #FAFAFA);
+            font-family: Mulish;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            /* 133.333% */
+            letter-spacing: -1.44px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 5px 0 15px 0;
+        }
+
+        .contactInfo {
+            padding-top: 16px;
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+            margin-bottom: 40px;
+
+            p {
+                color: rgba(255, 255, 255, 0.80);
+                text-align: center;
+
+                /* 13 Med */
+                font-family: Inter;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px;
+                /* 123.077% */
+            }
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            button {
+                background: #ffffff;
+                color: #1e40af;
+                border: none;
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #dbeafe;
+                }
+            }
+        }
+    }
+
+    .footerRight {
+        flex: 1;
+        min-width: 280px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+
+        .linksSection {
+            h3 {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                padding-bottom: 12px;
+                color: #FFF;
+                font-family: Mulish;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                /* 140% */
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                padding-top: 12px;
+
+                li {
+                    color: rgba(255, 255, 255, 0.80);
+
+                    /* body/normal */
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    /* 150% */
+                    letter-spacing: 0.16px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerBottom {
+        padding-bottom: 32px;
+        color: rgba(255, 255, 255, 0.50);
+        text-align: center;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 24px;
+        /* 133.333% */
+    }
+
+    // Responsive
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .footer {
+        .footerContainer {
+            padding: 48px 20px 24px;
+        }
+
+        .footerLeft {
+            // Add responsive styles here
+
+            .logo {
+                // Add responsive styles here
+            }
+
+            h2 {
+                color: var(--light, #FAFAFA);
+                font-family: Mulish;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: -0.96px;
+                text-transform: capitalize;
+            }
+
+            p {
+                // Add responsive styles here
+            }
+
+            .contactInfo {
+
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 20px;
+
+                p {
+                    margin: 0;
+
+                    color: rgba(255, 255, 255, 0.80);
+                    text-align: center;
+
+                    /* 13 Med */
+                    font-family: Inter;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 16px;
+                    /* 123.077% */
+                }
+            }
+
+            .buttons {
+                margin-bottom: 30px;
+
+                // Add responsive styles here
+                button {
+                    // Add responsive styles here
+                }
+            }
+        }
+
+        .footerRight {
+            max-width: 180px;
+            flex-direction: column;
+
+            .linksSection {
+                h3 {
+                    max-width: 180px;
+                    color: #FFF;
+                    font-family: Mulish;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                    ;
+                }
+
+                ul {
+                    li {
+                        color: rgba(255, 255, 255, 0.80);
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        /* 142.857% */
+                        letter-spacing: 0.14px;
+                    }
+                }
+            }
+        }
+
+        .footerBottom {
+            color: rgba(255, 255, 255, 0.50);
+            text-align: center;
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            /* 200% */
+        }
+    }
+}
