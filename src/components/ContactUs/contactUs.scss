@@ -18,7 +18,6 @@
         font-style: normal;
         font-weight: 700;
         line-height: 22px;
-        /* 157.143% */
         letter-spacing: 1.4px;
         text-transform: uppercase;
     }
@@ -27,14 +26,11 @@
         margin-bottom: 16px;
         color: var(--dark-primary, #031E2D);
         text-align: center;
-
-        /* heading/4 */
         font-family: Mulish;
         font-size: 40px;
         font-style: normal;
         font-weight: 600;
         line-height: 48px;
-        /* 120% */
         text-transform: capitalize;
     }
 
@@ -43,14 +39,11 @@
         margin: 0 auto;
         color: var(--dark, #131313);
         text-align: center;
-
-        /* body/normal */
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
-        /* 150% */
         letter-spacing: 0.16px;
         margin-bottom: 40px;
     }
@@ -92,15 +85,27 @@
             flex-direction: column;
             gap: 20px;
 
+
+
             .sendButton {
-                background-color: #195aff;
+                border-radius: var(--medium, 24px);
+                max-width: 153px;
+                background: #195AFF;
                 color: white;
                 padding: 12px;
                 border-radius: 20px;
                 border: none;
                 font-weight: 600;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
                 cursor: pointer;
                 transition: background 0.3s;
+
+                img {
+                    max-width: 16px;
+                }
 
                 &:hover {
                     background-color: #0034b8;

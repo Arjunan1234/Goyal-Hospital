@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./contactUs.scss";
 import Input from "../Input/Input";
+import TextArea from "../TextArea/TextArea";
+
+import send from "../../assets/svg/send.svg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +39,6 @@ const ContactUs = () => {
   return (
     <section className="contactSection container">
       <h5 className="sectionSubtitle">
-        {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="19"
@@ -96,7 +98,7 @@ const ContactUs = () => {
             error={errors.email}
             type="email"
           />
-          <Input
+          <TextArea
             label="Message"
             name="message"
             placeholder="Type your message here..."
@@ -107,7 +109,7 @@ const ContactUs = () => {
           />
 
           <button type="submit" className="sendButton">
-            Send Message ✈️
+            Send Message <img src={send} alt="" />
           </button>
         </form>
       </div>

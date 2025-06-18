@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.scss";
+import "./footer.scss";
 import websiteLogoFooter from "../../assets/images/websiteLogoFooter.svg";
 import backgroundPattern from "../../assets/images/pattern.png";
 import useScreenMobile from "../../hooks/useScreenMobile";
