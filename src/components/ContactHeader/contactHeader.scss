@@ -1,11 +1,11 @@
 @use "/src/styles/variables.scss" as variable;
 .contactHeader {
-  background-color: #195aff;
+ 
 
   .contactHeaderContainer {
     @include variable.d-flex($jc: space-between, $al: center);
     padding: 16px 80px;
-
+ background-color: #195aff;
     .contactContainer {
       @include variable.d-flex();
       gap: 24px;

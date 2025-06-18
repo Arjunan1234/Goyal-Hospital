@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./contactUs.scss";
 import Input from "../Input/Input";
+import TextArea from "../TextArea/TextArea";
+
+import send from "../../assets/svg/send.svg";
+import mapbutton from "../../assets/svg/mapbutton.svg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -36,7 +40,6 @@ const ContactUs = () => {
   return (
     <section className="contactSection container">
       <h5 className="sectionSubtitle">
-        {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="19"
@@ -66,7 +69,9 @@ const ContactUs = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <button className="directionButton">Get Direction 🧭</button>
+          <button className="directionButton">
+            Get Direction <img src={mapbutton} alt="" />
+          </button>
         </div>
 
         <form className="contactForm" onSubmit={handleSubmit}>
@@ -96,7 +101,7 @@ const ContactUs = () => {
             error={errors.email}
             type="email"
           />
-          <Input
+          <TextArea
             label="Message"
             name="message"
             placeholder="Type your message here..."
@@ -107,7 +112,7 @@ const ContactUs = () => {
           />
 
           <button type="submit" className="sendButton">
-            Send Message ✈️
+            Send Message <img src={send} alt="" />
           </button>
         </form>
       </div>

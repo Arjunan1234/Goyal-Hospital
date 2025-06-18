@@ -1,0 +1,41 @@
+@use "/src/styles/variables.scss" as variable;
+.navHeader {
+  .navHeaderContainer {
+    padding: 20px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1.5px solid #eef0f3;
+    background: #fff;
+    .navigationContainer {
+      display: flex;
+      gap: 40px;
+      span {
+        color: #242424;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+      }
+    }
+    .navButtonContainer {
+      display: flex;
+      gap: 8px;
+      .navButton {
+        max-width: 146px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .navHeader {
+    .navHeaderContainer {
+      padding: 20px 60px;
+      justify-content: center;
+    }
+  }
+}

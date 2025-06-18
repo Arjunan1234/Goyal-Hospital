@@ -11,21 +11,23 @@ import Gallery from "./containers/Gallery/Gallery";
 import "../src/styles/common.scss";
 import ContactHeader from "./components/ContactHeader/ContactHeader";
 import SearchHeader from "./components/SearchHeader/SearchHeader";
+import useScreenMobile from "./hooks/useScreenMobile";
+import NavHeader from "./components/NavHeader/NavHeader";
 const App = () => {
+  const isMobile = useScreenMobile({ size: 568 });
   return (
     <>
-      <ContactHeader />
+      {!isMobile && <ContactHeader />}
       <SearchHeader />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/service-details" element={<ServiceDetails />} />
-          <Route path="/career" element={<Career />} />
-          <Route path="/gallery" element={<Gallery />} />
-        </Routes>
-      </Router>
+      {!isMobile && <NavHeader />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/service-details" element={<ServiceDetails />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
     </>
   );
 };

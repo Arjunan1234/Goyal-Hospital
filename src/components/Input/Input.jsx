@@ -8,7 +8,6 @@ const Input = ({
   value,
   onChange = () => {},
   error,
-  image,
 }) => {
   return (
     <div className="container inputContainer">
@@ -21,8 +20,8 @@ const Input = ({
         value={value}
         placeholder={placeholder}
         onChange={onChange}
+        className="input"
       />
-      <img className="calenderIcon" src={image} alt="" />
 
       <p className="error"> {error}</p>
     </div>

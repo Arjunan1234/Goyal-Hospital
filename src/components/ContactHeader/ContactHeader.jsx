@@ -15,8 +15,8 @@ const ContactHeader = () => {
   ];
   return (
     <>
-      <section className="contactHeader">
-        <div className="contactHeaderContainer">
+      <section className=" contactHeader">
+        <div className="container contactHeaderContainer">
           <div className="contactContainer">
             {contactDetails.map((item, index) => (
               <div className="contactDetail" key={index}>

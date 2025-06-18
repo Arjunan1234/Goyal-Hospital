@@ -1,0 +1,99 @@
+@use "/src/styles/variables.scss" as variable;
+.marqueeCards {
+  .marqueeCardsContainer {
+    padding: 48px 0px 48px 80px;
+
+    overflow-x: scroll;
+    .marqueeTag {
+      .cardContainer {
+        padding: 32px;
+        border-radius: 24px;
+        background: var(--primary-20, #e7edff);
+        width: fit-content;
+        display: flex;
+        gap: 24px;
+        margin-left: 32px;
+        .imageWrapper {
+          width: 64px;
+          height: 64px;
+        }
+        .textContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          .cardTitle {
+            color: var(--dark-primary, #031e2d);
+
+            /* heading/6 */
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 32px; /* 133.333% */
+          }
+          .cardContent {
+            color: var(--dark, #131313);
+
+            /* body/normal */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            letter-spacing: 0.16px;
+            max-width: 253px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .marqueeCards {
+    .marqueeCardsContainer {
+      padding: 48px 60px;
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .marqueeCards {
+    .marqueeCardsContainer {
+      padding: 20px;
+
+      .marqueeTag {
+        .cardContainer {
+          padding: 12px;
+          gap: 6px;
+          align-items: center;
+          border-radius: 8px;
+          .imageWrapper {
+            width: 24px;
+            height: 24px;
+          }
+          .textContainer {
+            gap: 4px;
+            .cardTitle {
+              color: var(--dark-primary, #031e2d);
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+            .cardContent {
+              color: var(--dark, #131313);
+              font-family: Inter;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px; /* 133.333% */
+              letter-spacing: 0.12px;
+              max-width: 192px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
