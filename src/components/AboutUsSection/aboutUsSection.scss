@@ -1,0 +1,258 @@
+.aboutUsSection {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+
+    padding: 60px 40px;
+    background: #fff;
+    flex-wrap: wrap;
+
+    .aboutImage {
+        flex: 1;
+        min-width: 300px;
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+    }
+
+    .aboutContent {
+        flex: 1;
+        min-width: 300px;
+
+        .sectionLabel {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #2764f3;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .sectionTitle {
+            margin-top: 8px;
+            margin-bottom: 16px;
+            color: var(--dark-primary, #031E2D);
+
+            /* heading/4 */
+            font-family: Mulish;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px;
+            /* 120% */
+            text-transform: capitalize;
+        }
+
+        .sectionDescription {
+            color: var(--dark, #131313);
+
+            /* body/normal */
+            font-family: Inter;
+            font-size: 16px;
+            max-width: 595px;
+            font-style: normal;
+            font-weight: 400;
+            padding-bottom: 32px;
+            line-height: 24px;
+            /* 150% */
+            opacity: 0.8;
+            letter-spacing: 0.16px;
+        }
+
+        .aboutPoints {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+
+            .aboutPoint {
+                flex-direction: column;
+                display: flex;
+                align-items: flex-start;
+                gap: 16px;
+                max-width: 250px;
+
+                .pointIcon {
+                    img {
+                        width: 64px;
+                    }
+                }
+
+                .pointText {
+                    h4 {
+                        color: var(--dark-primary, #031E2D);
+
+                        /* heading/6 */
+                        font-family: Inter;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 32px;
+                        /* 133.333% */
+                    }
+
+                    p {
+                        padding-top: 8px;
+                        color: var(--dark, #131313);
+
+                        /* body/normal */
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        /* 150% */
+                        opacity: 0.8;
+                        letter-spacing: 0.16px;
+                    }
+                }
+            }
+        }
+
+        .aboutButton {
+            color: #fff;
+            padding: 12px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: var(--medium, 24px);
+            background: #195AFF;
+
+            img {
+                max-width: 16px;
+            }
+
+            &:hover {
+                background-color: #1b4fce;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .aboutUsSection {
+        flex-direction: column;
+        gap: 40px;
+        padding: 48px 20px;
+
+        .aboutImage {
+            width: 100%;
+
+            img {
+                border-radius: 12px;
+                width: 100%;
+            }
+        }
+
+        .aboutContent {
+            .sectionLabel {
+                color: var(--primary, #195AFF);
+                text-align: center;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 22px;
+                /* 157.143% */
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+            }
+
+            .sectionTitle {
+                color: var(--dark-primary, #031E2D);
+                font-family: Mulish;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 32px;
+                /* 133.333% */
+                text-transform: capitalize;
+            }
+
+            .sectionDescription {
+                color: var(--dark, #131313);
+
+                /* body/normal */
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                opacity: 0.8;
+                line-height: 24px;
+                /* 150% */
+                letter-spacing: 0.16px;
+            }
+
+            .aboutPoints {
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+
+                .aboutPoint {
+                    max-width: 100%;
+                    align-items: flex-start;
+                    text-align: center;
+
+
+                    .pointIcon img {
+                        width: 56px;
+                    }
+
+                    .pointText {
+                        h4 {
+                            color: var(--dark-primary, #031E2D);
+                            font-family: Mulish;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            text-align: start;
+                            line-height: 24px;
+                            /* 120% */
+                            text-transform: capitalize;
+                        }
+
+                        p {
+                            color: var(--dark, #131313);
+
+                            /* body/normal */
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            text-align: start;
+
+                            opacity: 0.8;
+                            line-height: 24px;
+                            /* 150% */
+                            letter-spacing: 0.16px;
+                        }
+                    }
+                }
+            }
+
+            .aboutButton {
+                color: #FFF;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+                /* 142.857% */
+                padding: 12px 16px;
+            }
+        }
+    }
+}

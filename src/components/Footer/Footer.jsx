@@ -4,6 +4,8 @@ import websiteLogoFooter from "../../assets/images/websiteLogoFooter.svg";
 import backgroundPattern from "../../assets/images/pattern.png";
 import useScreenMobile from "../../hooks/useScreenMobile";
 
+import phone from "../../assets/svg/phoneCall.svg";
+import calender from "../../assets/svg/calender.svg";
 const Footer = () => {
   const isMobile = useScreenMobile({ size: 992 });
 
@@ -20,8 +22,12 @@ const Footer = () => {
             <p>📞 +91 98412 48842</p>
           </div>
           <div className="buttons">
-            <button>Contact Us 📞</button>
-            <button>Book Appointment 📅</button>
+            <button>
+              Contact Us <img src={phone} alt="" />
+            </button>
+            <button>
+              Book Appointment <img src={calender} alt="" />
+            </button>
           </div>
         </div>
 
