@@ -20,6 +20,7 @@ const Input = ({
         value={value}
         placeholder={placeholder}
         onChange={onChange}
+        className="input"
       />
 
       <p className="error"> {error}</p>

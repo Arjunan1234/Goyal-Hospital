@@ -11,12 +11,13 @@ import Gallery from "./containers/Gallery/Gallery";
 import "../src/styles/common.scss";
 import ContactHeader from "./components/ContactHeader/ContactHeader";
 import SearchHeader from "./components/SearchHeader/SearchHeader";
+import useScreenMobile from "./hooks/useScreenMobile";
 const App = () => {
+  const isMobile = useScreenMobile({size: 568});
   return (
     <>
-      <ContactHeader />
+      {!isMobile &&<ContactHeader />}
       <SearchHeader />
-      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -25,7 +26,6 @@ const App = () => {
           <Route path="/career" element={<Career />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
-      </Router>
     </>
   );
 };
