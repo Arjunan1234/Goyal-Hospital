@@ -1,7 +1,7 @@
 @use "/src/styles/variables.scss" as variable;
 .marqueeCards {
   .marqueeCardsContainer {
-    padding: 48px 80px;
+    padding: 48px 0px 48px 80px;
 
     overflow-x: scroll;
     .marqueeTag {

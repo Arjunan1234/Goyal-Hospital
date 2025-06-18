@@ -27,6 +27,20 @@ const SearchHeader = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 568) {
+        setIsDropDownShow(!isDropDownShow);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isDropDownShow]);
+
+  useEffect(() => {
     if (!isDropDownShow) {
       document.body.style.overflow = "hidden";
     } else {
