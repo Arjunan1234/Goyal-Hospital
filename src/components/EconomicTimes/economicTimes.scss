@@ -1,0 +1,180 @@
+@use "/src/styles/variables.scss" as variables;
+
+.testimonialSection {
+    background-color: #ffffff;
+    padding: 80px;
+
+    .testimonialContent {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        .leftContent {
+            flex: 1;
+            min-width: 300px;
+
+            .double {
+                max-width: 75px;
+                padding-bottom: 20px;
+            }
+
+
+            .greetingText {
+                color: #000;
+                padding-bottom: 16px;
+
+                /* heading/4 */
+                font-family: Mulish;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 48px;
+                /* 120% */
+                text-transform: capitalize;
+
+                .dropCap {
+                    font-size: 44px;
+                    font-weight: bold;
+                    color: #195aff;
+                    display: inline-block;
+                    margin-right: 4px;
+                }
+            }
+
+            .messageBox {
+                p {
+                    color: #000;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    /* 150% */
+                    letter-spacing: 0.16px;
+                    padding-bottom: 16px;
+                }
+            }
+
+
+            .authorDetails {
+                p {
+                    color: #000;
+                    font-family: Roboto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                    /* 150% of 16px */
+                    letter-spacing: 0.15px;
+
+                    strong {
+                        color: #000;
+                        font-family: Roboto;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px;
+                        /* 150% of 16px */
+                        letter-spacing: 0.15px;
+                    }
+                }
+
+                .publicationLogo {
+                    max-width: 360px;
+                    margin-top: 12px;
+
+                }
+            }
+        }
+
+        .rightImage {
+            flex: 1;
+            min-width: 250px;
+
+            img {
+                width: 100%;
+                border-radius: 12px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+
+// Mobile styles for max-width 792px
+@media screen and (max-width: 792px) {
+    .testimonialSection {
+        padding: 48px 20px;
+
+        .testimonialContent {
+            flex-direction: column;
+            gap: 24px;
+
+            .leftContent {
+                .double {
+                    max-width: 44px;
+                }
+            }
+
+            .rightImage {
+                flex: unset;
+                min-width: 100%;
+            }
+
+            .leftContent {
+                .greetingText {
+                    padding-bottom: 16px;
+                    color: #000;
+                    font-family: Mulish;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 32px;
+                    /* 133.333% */
+                    text-transform: capitalize;
+
+                    .dropCap {
+                        font-size: 32px;
+                    }
+                }
+
+                .messageBox {
+                    p {
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        /* 150% */
+                        letter-spacing: 0.16px;
+                    }
+                }
+
+                .authorDetails p,
+                .authorDetails p strong {
+                    color: #000;
+                    font-family: var(--Static-Title-Medium-Font, Roboto);
+                    font-size: var(--Static-Title-Medium-Size, 16px);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: var(--Static-Title-Medium-Line-Height, 24px);
+                    /* 150% */
+                    letter-spacing: var(--Static-Title-Medium-Tracking, 0.15px);
+                }
+
+                .publicationLogo {
+                    max-width: 335px !important;
+                    margin-top: 8px;
+                }
+            }
+
+            .rightImage img {
+                max-height: 280px;
+            }
+        }
+    }
+}

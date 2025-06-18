@@ -4,6 +4,7 @@ import Input from "../Input/Input";
 import TextArea from "../TextArea/TextArea";
 
 import send from "../../assets/svg/send.svg";
+import mapbutton from "../../assets/svg/mapbutton.svg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -68,7 +69,9 @@ const ContactUs = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-          <button className="directionButton">Get Direction 🧭</button>
+          <button className="directionButton">
+            Get Direction <img src={mapbutton} alt="" />
+          </button>
         </div>
 
         <form className="contactForm" onSubmit={handleSubmit}>
