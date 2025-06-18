@@ -1,0 +1,122 @@
+@use "/src/styles/variables.scss" as variables;
+
+.contactSection {
+    background: var(--background-primary, #F4F7FF);
+    padding: 80px;
+    text-align: center;
+
+    .sectionSubtitle {
+        display: flex;
+        color: #195AFF;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 8px;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22px;
+        /* 157.143% */
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+
+    .sectionTitle {
+        margin-bottom: 16px;
+        color: var(--dark-primary, #031E2D);
+        text-align: center;
+
+        /* heading/4 */
+        font-family: Mulish;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px;
+        /* 120% */
+        text-transform: capitalize;
+    }
+
+    .sectionDesc {
+        max-width: 680px;
+        margin: 0 auto;
+        color: var(--dark, #131313);
+        text-align: center;
+
+        /* body/normal */
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.16px;
+        margin-bottom: 40px;
+    }
+
+    .contactContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        justify-content: center;
+        align-items: flex-start;
+
+        .mapContainer {
+            flex: 1 1 400px;
+            position: relative;
+
+            iframe {
+                width: 100%;
+                height: 300px;
+                border: none;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .directionButton {
+                margin-top: 12px;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 20px;
+                background-color: #195aff;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+        .contactForm {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .sendButton {
+                background-color: #195aff;
+                color: white;
+                padding: 12px;
+                border-radius: 20px;
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background-color: #0034b8;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactSection .sectionTitle {
+        font-size: 24px;
+    }
+}
