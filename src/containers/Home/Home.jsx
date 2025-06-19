@@ -17,8 +17,8 @@ const Home = () => {
     <div>
       <CommonBanner />
       <MarqueeCards />
-      <MomentsGallery />
-      <JobList />
+      {/* <MomentsGallery /> */}
+
       <AboutUsSection />
       <ServicesSection />
       <DoctorCarousel />

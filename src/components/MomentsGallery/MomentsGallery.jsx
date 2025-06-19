@@ -1,5 +1,5 @@
 import React from "react";
-import "./MomentsGallery.scss";
+import "./momentsGallery.scss";
 
 import frame1 from "../../assets/images/frame1.png";
 import frame2 from "../../assets/images/frame2.png";
