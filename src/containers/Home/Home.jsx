@@ -8,15 +8,18 @@ import ServicesSection from "../../components/ServicesSection/ServicesSection";
 import AboutUsSection from "../../components/AboutUsSection/AboutUsSection";
 import CommonBanner from "../../components/CommonBanner/CommonBanner";
 import MarqueeCards from "../../components/MarqueeCards/MarqueeCards";
+import Testimonial from "../../components/Testimonial/Testimonial";
 
 const Home = () => {
   return (
     <div>
       <CommonBanner />
       <MarqueeCards />
-      <DoctorCarousel />
       <AboutUsSection />
       <ServicesSection />
+      <DoctorCarousel />
+      <Testimonial />
+
       <EconomicTimes />
       <ContactUs />
       <Footer />

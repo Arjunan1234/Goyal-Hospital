@@ -1,82 +1,155 @@
 @use "/src/styles/variables.scss" as variables;
 
 .doctor-section {
+  position: relative;
   text-align: center;
   padding: 60px 80px;
   background-color: #f9f9f9;
 
   .section-subtitle {
-    color: #195aff;
-    font-weight: 600;
-    text-transform: uppercase;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #195AFF;
+    text-align: center;
+    font-family: Inter;
     font-size: 14px;
-    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    /* 157.143% */
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
   }
 
   .section-title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 10px;
+    padding-bottom: 16px;
+    color: var(--dark-primary, #031E2D);
+    text-align: center;
+
+    /* heading/4 */
+    font-family: Mulish;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    /* 120% */
+    text-transform: capitalize;
   }
 
   .section-description {
     max-width: 600px;
     margin: 0 auto 40px;
+    color: var(--dark, #131313);
+    text-align: center;
+    font-family: Inter;
     font-size: 16px;
-    color: #555;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: 0.16px;
   }
 
   .doctor-card {
-    background: white;
     border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     text-align: center;
+
+    .doctor-image-wrapper {
+      width: 100%;
+    }
 
     img {
       width: 100%;
-      max-width: 150px;
-      border-radius: 50%;
+      max-width: 280px;
+      border-radius: 16px;
       margin-bottom: 15px;
     }
 
     h3 {
       font-size: 18px;
+      text-align: start;
       font-weight: 600;
       margin: 0;
+
+      color: var(--dark-primary, #031E2D);
+
+      /* heading/6 */
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+      /* 133.333% */
     }
 
     p {
-      color: #555;
-      font-size: 14px;
+      padding-top: 4px;
+      color: var(--dark, #131313);
+      text-align: start;
+
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      /* 150% */
+      letter-spacing: 0.16px;
     }
   }
 
   .custom-pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    position: relative;
-    height: 2px;
-    background: rgba(0, 0, 0, 0.1);
-    max-width: 120px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 12px;
+    margin-top: 34px;
 
     .swiper-pagination-bullet {
-      flex: 1;
-      height: 2px;
-      background-color: transparent;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #cbd5e1;
+      opacity: 1;
       transition: all 0.3s ease;
-      border-radius: 0;
-      margin: 0 !important;
-      position: relative;
     }
 
     .swiper-pagination-bullet-active {
+      width: 32px;
+      height: 12px;
+      border-radius: 999px;
       background-color: #195aff;
     }
   }
+
+  .custom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    img {
+      width: 32px;
+      height: 32px;
+      pointer-events: none;
+    }
+  }
+
+  .custom-prev {
+    left: 32px;
+    top: 53%;
+  }
+
+  .custom-next {
+    right: 32px;
+    top: 53%;
+  }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -84,8 +157,158 @@
     padding: 60px 60px;
   }
 }
+
 @media screen and (max-width: 568px) {
   .doctor-section {
+    position: relative;
+    text-align: center;
     padding: 48px 20px;
+    background-color: #f9f9f9;
+
+    .section-subtitle {
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: #195AFF;
+      text-align: center;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22px;
+      /* 157.143% */
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      padding-bottom: 16px;
+
+
+      color: var(--dark-primary, #031E2D);
+      text-align: center;
+      font-family: Mulish;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 32px;
+      /* 133.333% */
+      text-transform: capitalize;
+    }
+
+    .section-description {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: var(--dark, #131313);
+      text-align: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      /* 150% */
+      letter-spacing: 0.16px;
+    }
+
+    .doctor-card {
+      border-radius: 12px;
+      text-align: center;
+
+      .doctor-image-wrapper {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        max-width: 280px;
+        border-radius: 16px;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 600;
+        margin: 0;
+
+        color: var(--dark-primary, #031E2D);
+
+        /* heading/6 */
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        /* 133.333% */
+      }
+
+      p {
+        padding-top: 4px;
+        color: var(--dark, #131313);
+        text-align: center;
+
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        /* 150% */
+        letter-spacing: 0.16px;
+      }
+    }
+
+    .custom-pagination {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 34px;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #cbd5e1;
+        opacity: 1;
+        transition: all 0.3s ease;
+      }
+
+      .swiper-pagination-bullet-active {
+        width: 32px;
+        height: 12px;
+        border-radius: 999px;
+        background-color: #195aff;
+      }
+    }
+
+    .custom-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+        height: 32px;
+        pointer-events: none;
+      }
+    }
+
+    .custom-prev {
+      left: 13px;
+      top: 53%;
+    }
+
+    .custom-next {
+      right: 13px;
+      top: 53%;
+    }
+
+
   }
 }
