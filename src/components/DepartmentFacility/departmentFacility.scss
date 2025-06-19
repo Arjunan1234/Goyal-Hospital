@@ -1,0 +1,36 @@
+@use "/src/styles/variables.scss" as variable;
+.departmentFacilityWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h1 {
+    color: #333;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+  }
+  .facilityContentContainer {
+      display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .facilityItem {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      .imageWrapper {
+        min-width: 18px;
+        height: 18px;
+      }
+      span {
+        color: #333;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+      }
+    }
+  }
+}

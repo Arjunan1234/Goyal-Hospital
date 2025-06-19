@@ -1,0 +1,43 @@
+@use "/src/styles/variables.scss" as variable;
+.departmentHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h1 {
+    color: #333;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40.514px; /* 126.608% */
+  }
+  p {
+    color: #374151;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .departmentHeaderWrapper {
+    h1 {
+      color: #333;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px; /* 133.333% */
+    }
+    p {
+      color: #374151;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+    }
+  }
+}

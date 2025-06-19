@@ -1,0 +1,79 @@
+@use "/src/styles/variables.scss" as variable;
+.odpBookingCardContainer {
+  display: flex;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.05);
+  // min-width: 468px;
+  .imageWrapper {
+    img {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
+  .cardMainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    .drName {
+      h4 {
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px; /* 120% */
+      }
+      h5 {
+        color: #4b5563;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+      }
+    }
+    .drDetailsContainer {
+      .detailsItem {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .imageWrapper {
+          width: 18px;
+          height: 27px;
+        }
+        span {
+          color: #333;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+        }
+      }
+    }
+   
+  }
+}
+
+@media screen and (max-width: 568px){
+  .odpBookingCardContainer{
+    flex-direction: column;
+    width: 100%;
+    .imageWrapper{
+      height: 233px;
+      object-fit: cover;
+      overflow: hidden;
+      img{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: unset;
+      }
+    }
+    .cardMainContent{
+      padding: 12px;
+    }
+  }
+}
