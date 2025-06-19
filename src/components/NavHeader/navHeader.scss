@@ -1,5 +1,8 @@
 @use "/src/styles/variables.scss" as variable;
 .navHeader {
+   position: sticky;
+    top: 0;
+    z-index: 10;
   .navHeaderContainer {
     padding: 20px 80px;
     display: flex;
@@ -9,6 +12,7 @@
     gap: 20px;
     border-bottom: 1.5px solid #eef0f3;
     background: #fff;
+   
     .navigationContainer {
       display: flex;
       gap: 40px;
