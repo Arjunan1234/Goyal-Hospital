@@ -1,0 +1,30 @@
+@use "/src/styles/variables.scss" as variable;
+.serviceDetailParenWrapper {
+  .serviceDetailParenWrapperContainer {
+    display: flex;
+    gap: 40px;
+    padding: 64px 80px;
+    .navBoxWrapper {
+        min-width: 280px;
+    }
+    .mainContentWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      .backContainer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .imageWrapper {
+          width: 20px;
+          height: 20px;
+        }
+        span {
+        }
+      }
+      .departmentDetailWrapper{
+       
+      }
+    }
+  }
+}
