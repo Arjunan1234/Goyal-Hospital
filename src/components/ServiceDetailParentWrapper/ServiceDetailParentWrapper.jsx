@@ -6,14 +6,20 @@ import {
 } from "../../constants/serviceDetailsContent";
 import leftArrow from "../../assets/images/leftArrow.svg";
 import Urology from "../urology/Urology";
+import useScreenMobile from "../../hooks/useScreenMobile";
 const ServiceDetailParentWrapper = () => {
+  const isTab = useScreenMobile({ size: 992 });
+  console.log(isTab,"xxxxxxxxxx");
+  
   return (
     <>
       <section className="serviceDetailParenWrapper">
         <div className="container serviceDetailParenWrapperContainer">
-          <div className="navBoxWrapper">
-            <NavBox title={navBoxTitle} content={navBoxContent} />
-          </div>
+          {!isTab && (
+            <div className="navBoxWrapper">
+              <NavBox title={navBoxTitle} content={navBoxContent} />
+            </div>
+          )}
           <div className="mainContentWrapper">
             <div className="backContainer">
               <div className="imageWrapper">

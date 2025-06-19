@@ -1,5 +1,8 @@
 @use "/src/styles/variables.scss" as variable;
 .departmentFacilityWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   h1 {
     color: #333;
     font-family: Inter;
@@ -9,9 +12,15 @@
     line-height: 24px; /* 120% */
   }
   .facilityContentContainer {
+      display: flex;
+    flex-direction: column;
+    gap: 16px;
     .facilityItem {
+      display: flex;
+      gap: 8px;
+      align-items: center;
       .imageWrapper {
-        width: 18px;
+        min-width: 18px;
         height: 18px;
       }
       span {

@@ -7,6 +7,7 @@ const IconButton = ({
   textColor = "#fff",
   onClick,
   disabled = false,
+  isIconNeed = true
 }) => {
   return (
     <button
@@ -16,9 +17,9 @@ const IconButton = ({
       disabled={disabled}
     >
       <span style={{ color: textColor }}>{buttonContent}</span>
-      <div className="imageWrapper">
+     {isIconNeed && <div className="imageWrapper">
         <img src={image} alt="icon" />
-      </div>
+      </div>}
     </button>
   );
 };

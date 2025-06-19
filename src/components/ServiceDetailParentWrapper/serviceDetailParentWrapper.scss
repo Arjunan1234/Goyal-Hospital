@@ -28,3 +28,18 @@
     }
   }
 }
+
+@media screen and (max-width: 992px){
+  .serviceDetailParenWrapper{
+    .serviceDetailParenWrapperContainer{
+      padding: 64px 60px;
+    }
+  }
+}
+@media screen and (max-width: 568px){
+  .serviceDetailParenWrapper{
+    .serviceDetailParenWrapperContainer{
+      padding: 48px 20px;
+    }
+  }
+}

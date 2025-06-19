@@ -1,0 +1,38 @@
+@use "/src/styles/variables.scss" as variable;
+.equipmentCardContainer {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0px 2.315px 4.63px 0px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  .imageWrapper {
+    width: 54px;
+    height: 54px;
+  }
+  h4 {
+    color: #333;
+    font-family: Inter;
+    font-size: 18.006px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.01px; /* 150% */
+  }
+  p {
+    color: #4b5563;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    max-width: 273px;
+  }
+}
+
+@media screen and (max-width: 568px){
+    .equipmentCardContainer{
+        width: 100%;
+    }
+}

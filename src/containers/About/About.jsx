@@ -10,10 +10,10 @@ const About = () => {
     <>
       <div className="aboutPage">
         <CommonBanner />
-         <AboutUsSection />
-          <Testimonial />
-            <ContactUs />
-            <Footer />
+        <AboutUsSection />
+        <Testimonial />
+        <ContactUs />
+        <Footer />
       </div>
     </>
   );
