@@ -8,7 +8,11 @@ import {
   careerPageBannerTitle,
   careerPageBannerContent,
 } from "../../constants/bannerContents";
+import { useEffect } from "react";
 const Career = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="careerPage">
       <CommonBanner

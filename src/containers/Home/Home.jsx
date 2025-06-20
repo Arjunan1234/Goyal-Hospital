@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import DoctorCarousel from "../../components/DoctorCarousel/DoctorCarousel";
@@ -14,6 +14,9 @@ import {
   homePageBannerTitle,
 } from "../../constants/bannerContents";
 const Home = () => {
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <CommonBanner

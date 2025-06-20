@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DoctorCards from "../../components/DoctorCards/DoctorCards";
 import CommonBanner from "../../components/CommonBanner/CommonBanner";
 import EconomicTimes from "../../components/EconomicTimes/EconomicTimes";
@@ -9,6 +9,9 @@ import {
   servicePageBannerContent,
 } from "../../constants/bannerContents";
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="servicesPage">
       <CommonBanner

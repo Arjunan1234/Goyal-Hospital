@@ -12,6 +12,7 @@ import leftArrow from "../../assets/svg/leftArrowWhite.svg";
 import rightArrow from "../../assets/svg/rightArrowWhite.svg";
 import doubleQuotesYellow from "../../assets/svg/doubleQuotesYellow.svg";
 import star from "../../assets/svg/star.svg";
+import FadeUp from "../FadeUp/FadeUp";
 
 const Testimonial = () => {
   const prevRef = useRef(null);
@@ -63,12 +64,16 @@ const Testimonial = () => {
             fill="#FFA250"
           />
         </svg>
-        Patient Testimonials
+        <FadeUp> Patient Testimonials</FadeUp>
       </p>
-      <h2 className="section-title">What Our Patients Say</h2>
+      <h2 className="section-title">
+        <FadeUp>What Our Patients Say</FadeUp>
+      </h2>
       <p className="section-description">
-        Hear firsthand experiences from people whose lives we've touched with
-        care and compassion.
+        <FadeUp>
+          Hear firsthand experiences from people whose lives we've touched with
+          care and compassion.
+        </FadeUp>
       </p>
 
       <button
@@ -118,7 +123,10 @@ const Testimonial = () => {
               <div className="profile">
                 <img src={doubleQuotesYellow} alt={name} className="avatar" />
                 <div>
-                  <h3 className="name">{item?.name}</h3>
+                  <h3 className="name">
+                    {" "}
+                    <FadeUp> {item?.name}</FadeUp>
+                  </h3>
                   <div className="stars">
                     {[...Array(5)].map((_, i) => (
                       <img src={star} alt="" index={i} />
@@ -126,7 +134,9 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-              <p className="message">{item?.message}</p>
+              <p className="message">
+                <FadeUp>{item?.message}</FadeUp>
+              </p>
             </div>
           </SwiperSlide>
         ))}

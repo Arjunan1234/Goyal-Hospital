@@ -8,6 +8,7 @@ import eye from "../../assets/images/eye.svg";
 import rocket from "../../assets/images/rocket.svg";
 import rightArrow from "../../assets/images/rightArrow.svg";
 import useScreenMobile from "../../hooks/useScreenMobile";
+import FadeUp from "../FadeUp/FadeUp";
 
 const AboutUsSection = () => {
   const isMobile = useScreenMobile({ size: 992 });
@@ -30,12 +31,17 @@ const AboutUsSection = () => {
               fill="#195AFF"
             />
           </svg>
-          About Us
+          <FadeUp> About Us</FadeUp>
         </p>
-        <h2 className="sectionTitle">Excellence In Every Step</h2>
+        <h2 className="sectionTitle">
+          {" "}
+          <FadeUp>Excellence In Every Step</FadeUp>
+        </h2>
         <p className="sectionDescription">
-          With expert doctors, modern facilities, and a caring team, we're
-          redefining healthcare experiences.
+          <FadeUp>
+            With expert doctors, modern facilities, and a caring team, we're
+            redefining healthcare experiences.
+          </FadeUp>
         </p>
 
         <div className="aboutPoints">
@@ -44,11 +50,15 @@ const AboutUsSection = () => {
               <img src={eye} alt="" />
             </div>
             <div className="pointText">
-              <h4>Our Vision</h4>
+              <h4>
+                <FadeUp>Our Vision</FadeUp>
+              </h4>
               <p>
-                Goyal hospital & Urology Centre aspires to provide quality
-                Hi-tech healthcare services to all sections of society at
-                affordable cost.
+                <FadeUp>
+                  Goyal hospital & Urology Centre aspires to provide quality
+                  Hi-tech healthcare services to all sections of society at
+                  affordable cost.
+                </FadeUp>
               </p>
             </div>
           </div>
@@ -58,10 +68,14 @@ const AboutUsSection = () => {
               <img src={rocket} alt="" />
             </div>
             <div className="pointText">
-              <h4>Our Mission</h4>
+              <h4>
+                <FadeUp>Our Mission</FadeUp>
+              </h4>
               <p>
-                To provide compassionate patient care by our dedicated medical
-                and support staff for satisfied service delivery.
+                <FadeUp>
+                  To provide compassionate patient care by our dedicated medical
+                  and support staff for satisfied service delivery.
+                </FadeUp>
               </p>
             </div>
           </div>

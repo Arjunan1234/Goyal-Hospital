@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./jobList.scss";
 import arrowRight from "../../assets/svg/rightArrow.svg";
 import useScreenMobile from "../../hooks/useScreenMobile";
+import FadeUp from "../FadeUp/FadeUp";
 
 const tabs = ["Doctors", "Nursing Staff", "Support"];
 
@@ -33,7 +34,7 @@ const JobList = () => {
   const [activeTab, setActiveTab] = useState("Doctors");
 
   return (
-    <div className="container">
+    <div className="container doctorJobContainer">
       {isMobile ? (
         <>
           <div className="tabs">
@@ -49,19 +50,31 @@ const JobList = () => {
           </div>
           <div className="cards">
             {jobsData[activeTab].length === 0 ? (
-              <div className="no-jobs">No jobs available.</div>
+              <div className="no-jobs">
+                <FadeUp>No jobs available.</FadeUp>
+              </div>
             ) : (
               jobsData[activeTab].map((job, idx) => (
                 <div className="card" key={idx}>
-                  <div className="card-title">{job.title}</div>
+                  <div className="card-title">
+                    <FadeUp>{job.title}</FadeUp>
+                  </div>
                   <div className="card-details">
                     <div className="cards">
-                      <span className="label">Experience</span>
-                      <span>{job.experience}</span>
+                      <span className="label">
+                        <FadeUp>Experience</FadeUp>
+                      </span>
+                      <span>
+                        <FadeUp> {job.experience}</FadeUp>
+                      </span>
                     </div>
                     <div className="cards">
-                      <span className="label">Deadline</span>
-                      <span>{job.deadline}</span>
+                      <span className="label">
+                        <FadeUp>Deadline</FadeUp>
+                      </span>
+                      <span>
+                        <FadeUp>{job.deadline}</FadeUp>
+                      </span>
                     </div>
 
                     <button className="card-action">
@@ -82,24 +95,36 @@ const JobList = () => {
                 className={`tab ${activeTab === tab ? "active" : ""}`}
                 onClick={() => setActiveTab(tab)}
               >
-                {tab}
+                <FadeUp>{tab}</FadeUp>
               </div>
             ))}
           </div>
           <div className="content">
             {jobsData[activeTab].length === 0 ? (
-              <div className="no-jobs">No jobs available.</div>
+              <div className="no-jobs">
+                <FadeUp>No jobs available.</FadeUp>
+              </div>
             ) : (
               jobsData[activeTab].map((item, index) => (
                 <div className="jobList" key={index}>
-                  <p>{item?.title}</p>
+                  <p>
+                    <FadeUp>{item?.title}</FadeUp>
+                  </p>
                   <div>
-                    <p>Experience</p>
-                    <span>{item?.experience}</span>
+                    <p>
+                      <FadeUp>Experience</FadeUp>
+                    </p>
+                    <span>
+                      <FadeUp> {item?.experience}</FadeUp>
+                    </span>
                   </div>
                   <div>
-                    <p>Deadline</p>
-                    <span>{item?.deadline}</span>
+                    <p>
+                      <FadeUp>Deadline</FadeUp>
+                    </p>
+                    <span>
+                      <FadeUp> {item?.deadline}</FadeUp>
+                    </span>
                   </div>
                   <img src={arrowRight} alt="arrow" />
                 </div>

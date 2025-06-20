@@ -1,6 +1,7 @@
 import IconButton from "../IconButton/IconButton";
 import "./commonBanner.scss";
 import Calendar from "../../assets/images/Calendar.svg";
+import FadeUp from "../FadeUp/FadeUp";
 const CommonBanner = ({
   title,
   Content,
@@ -18,13 +19,21 @@ const CommonBanner = ({
               <div className="textContainer">
                 {isCareerBannerTrue ? (
                   <>
-                    <h1>We’re Hiring</h1>
-                    <h1>Work at the Heart of Change</h1>
+                    <h1>
+                      <FadeUp>We’re Hiring</FadeUp>
+                    </h1>
+                    <h1>
+                      <FadeUp>Work at the Heart of Change</FadeUp>
+                    </h1>
                   </>
                 ) : (
-                  <h1>{title}</h1>
+                  <h1>
+                    <FadeUp> {title}</FadeUp>
+                  </h1>
                 )}
-                <p>{Content}</p>
+                <p>
+                  <FadeUp>{Content}</FadeUp>
+                </p>
               </div>
               <div className="buttonContainer">
                 <IconButton buttonContent={buttonContent} image={buttonIcon} />

@@ -14,6 +14,7 @@ import downArrow from "../../assets/images/downArrow.svg";
 import upArrow from "../../assets/images/upArrow.svg";
 import { useEffect, useState } from "react";
 import useScreenMobile from "../../hooks/useScreenMobile";
+import FadeUp from "../FadeUp/FadeUp";
 const cardsContent = [
   [
     {
@@ -154,10 +155,14 @@ const DoctorCards = () => {
                       <img src={item.icon} alt={item.iconAltText} />
                     </div>
                     <div className="mainContent">
-                      <p>{item.Title}</p>
+                      <p>
+                        <FadeUp>{item.Title}</FadeUp>
+                      </p>
                       <div className="doctorList">
                         {item.doctorsList.map((doctor, doctorIndex) => (
-                          <span key={doctorIndex}>{doctor}</span>
+                          <span key={doctorIndex}>
+                            <FadeUp>{doctor}</FadeUp>
+                          </span>
                         ))}
                       </div>
                     </div>

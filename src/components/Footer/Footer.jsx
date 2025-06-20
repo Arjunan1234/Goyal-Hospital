@@ -6,6 +6,7 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 
 import phone from "../../assets/svg/phoneCall.svg";
 import calender from "../../assets/svg/calender.svg";
+import FadeUp from "../FadeUp/FadeUp";
 const Footer = () => {
   const isMobile = useScreenMobile({ size: 992 });
 
@@ -15,47 +16,79 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="footerLeft">
           <img src={websiteLogoFooter} alt="Goyal Hospital" className="logo" />
-          <h2>Your Health, Our Priority</h2>
-          <h2>Anytime, Anywhere</h2>
+          <h2>
+            <FadeUp>Your Health, Our Priority</FadeUp>
+          </h2>
+          <h2>
+            <FadeUp>Anytime, Anywhere</FadeUp>
+          </h2>
           <div className="contactInfo">
-            <p>📧 goyalhospital@gmail.com</p>
-            <p>📞 +91 98412 48842</p>
+            <p>
+              <FadeUp>📧 goyalhospital@gmail.com</FadeUp>
+            </p>
+            <p>
+              <FadeUp>📞 +91 98412 48842</FadeUp>
+            </p>
           </div>
           <div className="buttons">
             <button>
-              Contact Us <img src={phone} alt="" />
+              <FadeUp>Contact Us</FadeUp>
+              <img src={phone} alt="" />
             </button>
             <button>
-              Book Appointment <img src={calender} alt="" />
+              <FadeUp> Book Appointment </FadeUp>
+              <img src={calender} alt="" />
             </button>
           </div>
         </div>
 
         <div className="footerRight">
           <div className="linksSection">
-            <h3>Quick links</h3>
+            <h3>
+              <FadeUp> Quick links</FadeUp>
+            </h3>
             <ul>
-              <li>About Us</li>
-              <li>Our Mission & Vision</li>
-              <li>Careers</li>
-              <li>Our Gallery</li>
+              <li>
+                <FadeUp> About Us</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Our Mission & Vision</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Careers</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Our Gallery</FadeUp>
+              </li>
             </ul>
           </div>
 
           <div className="linksSection">
-            <h3>Services</h3>
+            <h3>
+              <FadeUp> Services</FadeUp>
+            </h3>
             <ul>
-              <li>Pharmacy Services</li>
-              <li>Medical Specialties</li>
-              <li>Health Checkups</li>
-              <li>Health Consultation</li>
-              <li>Emergency Services</li>
+              <li>
+                <FadeUp> Pharmacy Services</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Medical Specialties</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Health Checkups</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Health Consultation</FadeUp>
+              </li>
+              <li>
+                <FadeUp> Emergency Services</FadeUp>
+              </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="footerBottom">
-        Copyright © 2023 Goyal Hospital & Urology Centre
+        <FadeUp> Copyright © 2023 Goyal Hospital & Urology Centre</FadeUp>
       </div>
     </footer>
   );
