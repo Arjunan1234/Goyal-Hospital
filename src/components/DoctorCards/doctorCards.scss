@@ -28,12 +28,18 @@
           border-radius: 24px;
           background: #ebf0ff;
           min-width: 405px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+
+          &:hover{
+            transform: scale(1.05) rotateZ(1.5deg);
+            
+          }
           .imageWrapper {
             width: 80px;
             height: 80px;
           }
-        }
-        .mainContent {
+           .mainContent {
           display: flex;
           flex-direction: column;
           gap: 16px;
@@ -62,6 +68,8 @@
             }
           }
         }
+        }
+       
       }
     }
     .loadButtonWrapper {

@@ -44,7 +44,7 @@ const SearchHeader = () => {
       <section className="container searchHeader">
         <div className="searchHeaderContainer">
           <div className="mainContent">
-            <div className="logo">
+            <div className="logo" onClick={()=>navigate("/")}>
               <div className="imageWrapper">
                 <img src={logo} alt="logo" />
               </div>

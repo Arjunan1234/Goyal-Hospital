@@ -25,6 +25,7 @@
     .footerLeft {
         flex: 1;
         min-width: 280px;
+        
 
         .logo {
             width: 180px;
@@ -143,6 +144,7 @@
                     line-height: 24px;
                     /* 150% */
                     letter-spacing: 0.16px;
+                    cursor: pointer;
 
                     &:hover {
                         text-decoration: underline;

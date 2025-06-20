@@ -9,13 +9,16 @@ import calender from "../../assets/svg/calender.svg";
 import FadeUp from "../FadeUp/FadeUp";
 const Footer = () => {
   const isMobile = useScreenMobile({ size: 992 });
-
   return (
     <footer className="footer container">
       {!isMobile && <img src={backgroundPattern} alt="" className="pattern" />}
       <div className="footerContainer">
         <div className="footerLeft">
-          <img src={websiteLogoFooter} alt="Goyal Hospital" className="logo" />
+          <img
+            src={websiteLogoFooter}
+            alt="Goyal Hospital"
+            className="logo"
+          />
           <h2>
             <FadeUp>Your Health, Our Priority</FadeUp>
           </h2>

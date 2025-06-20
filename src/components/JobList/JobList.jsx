@@ -95,7 +95,7 @@ const JobList = () => {
                 className={`tab ${activeTab === tab ? "active" : ""}`}
                 onClick={() => setActiveTab(tab)}
               >
-                <FadeUp>{tab}</FadeUp>
+                {tab}
               </div>
             ))}
           </div>

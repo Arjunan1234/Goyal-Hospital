@@ -123,7 +123,7 @@ const DoctorCarousel = () => {
           swiper.params.navigation.nextEl = nextRef.current;
         }}
         pagination={{
-          el: ".custom-pagination",
+          el: ".customPagination",
           clickable: true,
           renderBullet: (index, className) => {
             return `<span class="${className}"></span>`;
@@ -154,7 +154,7 @@ const DoctorCarousel = () => {
         ))}
       </Swiper>
 
-      <div className="custom-pagination"></div>
+      <div className="customPagination"></div>
     </section>
   );
 };
