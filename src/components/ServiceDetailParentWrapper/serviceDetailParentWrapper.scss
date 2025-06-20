@@ -5,37 +5,55 @@
     gap: 40px;
     padding: 64px 80px;
     .navBoxWrapper {
-        min-width: 280px;
+      min-width: 280px;
     }
     .mainContentWrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       .backContainer {
         display: flex;
         align-items: center;
         gap: 8px;
+        width: fit-content;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
         .imageWrapper {
           width: 20px;
           height: 20px;
         }
-      
+        span {
+        }
+        &:hover {
+          .imageWrapper{
+            svg{
+              g{
+                path{
+                  stroke: #195aff;
+                }
+              }
+            }
+          }
+          span {
+            color: #195aff;
+          }
+        }
       }
-   
     }
   }
 }
 
-@media screen and (max-width: 992px){
-  .serviceDetailParenWrapper{
-    .serviceDetailParenWrapperContainer{
+@media screen and (max-width: 992px) {
+  .serviceDetailParenWrapper {
+    .serviceDetailParenWrapperContainer {
       padding: 64px 60px;
     }
   }
 }
-@media screen and (max-width: 568px){
-  .serviceDetailParenWrapper{
-    .serviceDetailParenWrapperContainer{
+@media screen and (max-width: 568px) {
+  .serviceDetailParenWrapper {
+    .serviceDetailParenWrapperContainer {
       padding: 48px 20px;
     }
   }

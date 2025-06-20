@@ -7,10 +7,13 @@ const ContactHeader = () => {
     {
       icon: Mail,
       content: "goyalhospital@gmail.com",
+      // href: "mailto:goyalhospital@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com"
     },
     {
       icon: phone,
       content: "+91 98412 48842",
+      href: "tel:+919841248842",
     },
   ];
   return (
@@ -19,12 +22,18 @@ const ContactHeader = () => {
         <div className="container contactHeaderContainer">
           <div className="contactContainer">
             {contactDetails.map((item, index) => (
-              <div className="contactDetail" key={index}>
+              <a
+                className="contactDetail"
+                key={index}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="imageWrapper">
                   <img src={item.icon} alt="mail" />
                 </div>
                 <p>{item.content}</p>
-              </div>
+              </a>
             ))}
           </div>
           <div className="hoursContainer">

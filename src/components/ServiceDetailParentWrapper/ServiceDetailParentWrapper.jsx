@@ -7,28 +7,81 @@ import {
 import leftArrow from "../../assets/images/leftArrow.svg";
 import Urology from "../urology/Urology";
 import useScreenMobile from "../../hooks/useScreenMobile";
-const ServiceDetailParentWrapper = () => {
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+const departmentComponents = {
+  Cardiology: () => <div>Cardiology</div>,
+  Neurology: () => <div>Neurology</div>,
+  Orthopedics: () => <div>Orthopedics Component</div>,
+  Gastroenterology: () => <div>Gastroenterology Component</div>,
+  "Urology & Andrology": Urology,
+  Gynecology: () => <div>Gynecology Component</div>,
+  Pediatrics: () => <div>Pediatrics Component</div>,
+  Dermatology: () => <div>Dermatology Component</div>,
+};
+const ServiceDetailParentWrapper = ({ initialDepartment }) => {
+  const [selectedDept, setSelectedDept] = useState("Urology & Andrology");
+
   const isTab = useScreenMobile({ size: 992 });
-  console.log(isTab,"xxxxxxxxxx");
-  
+  const navigate = useNavigate();
+  useEffect(() => {
+    setSelectedDept(initialDepartment);
+  }, [initialDepartment]);
+
+  const handleDeptClick = (deptName) => {
+    setSelectedDept(deptName);
+  };
+  const SelectedComponent =
+    departmentComponents[selectedDept] ||
+    (() => <div>Select a department</div>);
   return (
     <>
       <section className="serviceDetailParenWrapper">
         <div className="container serviceDetailParenWrapperContainer">
           {!isTab && (
             <div className="navBoxWrapper">
-              <NavBox title={navBoxTitle} content={navBoxContent} />
+              <NavBox
+                title={navBoxTitle}
+                content={navBoxContent}
+                onDeptClick={handleDeptClick}
+                selectedDept={selectedDept}
+              />
             </div>
           )}
           <div className="mainContentWrapper">
-            <div className="backContainer">
+            <div
+              className="backContainer"
+              onClick={() => navigate("/services")}
+            >
               <div className="imageWrapper">
-                <img src={leftArrow} alt="back" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_82_2880)">
+                    <path
+                      d="M12.5 5L7.5 10L12.5 15"
+                      stroke="black"
+                      stroke-width="1.66667"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_82_2880">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
               </div>
               <span>Back</span>
             </div>
             <div className="departmentDetailWrapper">
-              <Urology />
+              {/* <Urology /> */}
+              <SelectedComponent />
             </div>
           </div>
         </div>

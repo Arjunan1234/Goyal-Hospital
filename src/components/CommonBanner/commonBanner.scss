@@ -54,6 +54,38 @@
   }
 }
 
+// careen page banner
+
+.careerBanner {
+  .commonBannerContainer {
+    .backgroundBanner {
+      .mainContent {
+        .textContainer {
+          align-items: center;
+          p {
+            max-width: 84%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// services page
+.serviceBanner{
+  .commonBannerContainer{
+    .backgroundBanner{
+      .mainContent{
+        .textContainer{
+          h1{
+            max-width: 92%;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 992px) {
   .commonBanner {
     .commonBannerContainer {
@@ -74,10 +106,10 @@
         padding: 9px;
         background-image: url(../../assets/images/bannerBackgroundMobile.png);
         .mainContent {
-            max-width: unset;
-         
+          max-width: unset;
+
           .textContainer {
-              align-items: center;
+            align-items: center;
             h1 {
               color: #fff;
               text-align: center;

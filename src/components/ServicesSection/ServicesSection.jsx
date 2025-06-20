@@ -8,6 +8,7 @@ import laboratory from "../../assets/svg/pediatrics.svg";
 import medical from "../../assets/svg/medical.svg";
 import group from "../../assets/svg/group.png";
 import phone from "../../assets/images/Phone.svg";
+import FadeUp from "../FadeUp/FadeUp";
 
 const services = [
   {
@@ -65,12 +66,17 @@ const ServicesSection = () => {
             fill="#195AFF"
           />
         </svg>
-        Our Services
+
+        <FadeUp> Our Services</FadeUp>
       </h4>
-      <h2 className="servicesHeading">Comprehensive Healthcare Solutions</h2>
+      <h2 className="servicesHeading">
+        <FadeUp>Comprehensive Healthcare Solutions</FadeUp>
+      </h2>
       <p className="servicesDescription">
-        At CareLink, we offer a wide range of medical services tailored to your
-        needs, from routine check-ups to specialized treatments.
+        <FadeUp>
+          At CareLink, we offer a wide range of medical services tailored to
+          your needs, from routine check-ups to specialized treatments.
+        </FadeUp>
       </p>
 
       <div className="servicesGrid">
@@ -88,11 +94,16 @@ const ServicesSection = () => {
               </div>
             ) : null}
             <div className="serviceContent">
-              <h3 className="serviceTitle">{service.title}</h3>
-              <p className="serviceText">{service.description}</p>
+              <h3 className="serviceTitle">
+                {" "}
+                <FadeUp>{service.title}</FadeUp>
+              </h3>
+              <p className="serviceText">
+                <FadeUp>{service.description}</FadeUp>
+              </p>
               {service.isDark && (
                 <button className="contactButton">
-                  Contact Us <img src={phone} alt="" />{" "}
+                  <FadeUp>Contact Us</FadeUp> <img src={phone} alt="" />{" "}
                 </button>
               )}
             </div>

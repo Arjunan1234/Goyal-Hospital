@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./navHeader.scss";
 import IconButton from "../IconButton/IconButton";
 import report from "../../assets/images/report.svg";
@@ -13,6 +13,7 @@ const NavHeader = () => {
     { label: "Gallery", path: "/gallery" },
   ];
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <>
@@ -22,6 +23,7 @@ const NavHeader = () => {
             {navContents.map((item, index) => (
               <span
                 key={index}
+                className={location.pathname === item.path ? "highLighted" : ""}
                 onClick={() => {
                   navigate(item.path);
                 }}

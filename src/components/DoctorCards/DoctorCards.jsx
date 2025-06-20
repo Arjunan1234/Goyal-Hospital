@@ -14,6 +14,8 @@ import downArrow from "../../assets/images/downArrow.svg";
 import upArrow from "../../assets/images/upArrow.svg";
 import { useEffect, useState } from "react";
 import useScreenMobile from "../../hooks/useScreenMobile";
+import FadeUp from "../FadeUp/FadeUp";
+import { useNavigate } from "react-router-dom";
 const cardsContent = [
   [
     {
@@ -38,6 +40,7 @@ const cardsContent = [
   [
     {
       icon: gyno,
+      redirection: "Gynecology",
       iconAltText: "gyno",
       Title: "Gynocology & Obsetetrics",
       doctorsList: [
@@ -52,6 +55,7 @@ const cardsContent = [
     },
     {
       icon: medicine,
+      redirection: null,
       iconAltText: "medicine",
       Title: "Medicine",
       doctorsList: [
@@ -66,20 +70,7 @@ const cardsContent = [
     {
       icon: ortho,
       iconAltText: "ortho",
-      Title: "Pediatrics",
-      doctorsList: [
-        "Dr. Amit Srivastava",
-        "Dr. Vivek Chhimpa",
-        "Dr. Rahul Sahu",
-        "Dr. Apoorva Sehgal",
-        "Dr. Sanyam Jain",
-      ],
-    },
-  ],
-  [
-    {
-      icon: pediatrics,
-      iconAltText: "pediatrics",
+      redirection: "Orthopedics",
       Title: "Orthopaedics",
       doctorsList: [
         "Dr. Piyush Jain",
@@ -89,9 +80,26 @@ const cardsContent = [
         "Dr. Anil Jain",
       ],
     },
+  ],
+  [
+    {
+      icon: pediatrics,
+      redirection: "Pediatrics",
+      iconAltText: "pediatrics",
+      Title: "Pediatrics",
+      doctorsList: [
+        "Dr. Amit Srivastava",
+        "Dr. Vivek Chhimpa",
+        "Dr. Rahul Sahu",
+        "Dr. Apoorva Sehgal",
+        "Dr. Sanyam Jain",
+      ],
+    },
+
     {
       icon: anesthesia,
       iconAltText: "anesthesia",
+      redirection: null,
       Title: "Anesthesia",
       doctorsList: [
         "Dr. Pradeep Sharma",
@@ -102,6 +110,7 @@ const cardsContent = [
     },
     {
       icon: cardiology,
+      redirection: "Cardiology",
       iconAltText: "cardiology",
       Title: "Cardiology",
       doctorsList: [
@@ -115,8 +124,12 @@ const cardsContent = [
 ];
 
 const DoctorCards = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (title) => {
+    navigate("/service-details", { state: { department: title } });
+  };
   const isMobile = useScreenMobile({ size: 568 });
-  console.log(isMobile, "isMobile");
 
   const defaultVisibleRows = isMobile ? 1 : 3;
   const [visibleRows, setVisibleRows] = useState(defaultVisibleRows);
@@ -149,15 +162,23 @@ const DoctorCards = () => {
             {cardsContent.slice(0, visibleRows).map((row, rowIndex) => (
               <div className={`row row${rowIndex + 1}`} key={rowIndex}>
                 {row.map((item, index) => (
-                  <div className="doctorsCardsItem" key={index}>
+                  <div
+                    className="doctorsCardsItem"
+                    key={index}
+                    onClick={() => handleCardClick(item.redirection)}
+                  >
                     <div className="imageWrapper">
                       <img src={item.icon} alt={item.iconAltText} />
                     </div>
                     <div className="mainContent">
-                      <p>{item.Title}</p>
+                      <p>
+                        <FadeUp>{item.Title}</FadeUp>
+                      </p>
                       <div className="doctorList">
                         {item.doctorsList.map((doctor, doctorIndex) => (
-                          <span key={doctorIndex}>{doctor}</span>
+                          <span key={doctorIndex}>
+                            <FadeUp>{doctor}</FadeUp>
+                          </span>
                         ))}
                       </div>
                     </div>

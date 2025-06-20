@@ -5,6 +5,7 @@ import TextArea from "../TextArea/TextArea";
 
 import send from "../../assets/svg/send.svg";
 import mapbutton from "../../assets/svg/mapbutton.svg";
+import FadeUp from "../FadeUp/FadeUp";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -52,12 +53,16 @@ const ContactUs = () => {
             fill="#195AFF"
           />
         </svg>
-        Contact Us
+        <FadeUp> Contact Us</FadeUp>
       </h5>
-      <h2 className="sectionTitle">Connect With Goyal Hospital</h2>
+      <h2 className="sectionTitle">
+        <FadeUp>Connect With Goyal Hospital</FadeUp>
+      </h2>
       <p className="sectionDesc">
-        Have a question or need assistance? Our team is always ready to provide
-        the support you need.
+        <FadeUp>
+          Have a question or need assistance? Our team is always ready to
+          provide the support you need.
+        </FadeUp>
       </p>
 
       <div className="contactContainer">

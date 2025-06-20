@@ -15,6 +15,7 @@ import image1 from "../../assets/images/doctors/image1.png";
 import image2 from "../../assets/images/doctors/image2.png";
 import image3 from "../../assets/images/doctors/image3.png";
 import image4 from "../../assets/images/doctors/image4.png";
+import FadeUp from "../FadeUp/FadeUp";
 
 const doctors = [
   {
@@ -78,12 +79,19 @@ const DoctorCarousel = () => {
             fill="#195AFF"
           />
         </svg>
-        Our Doctors
+
+        <FadeUp>Our Doctors</FadeUp>
       </p>
-      <h2 className="section-title">Meet Our Specialist Doctors</h2>
+      <h2 className="section-title">
+        {" "}
+        <FadeUp>Meet Our Specialist Doctors</FadeUp>
+      </h2>
       <p className="section-description">
-        Our team of specialist doctors is dedicated to providing expert care
-        across a wide range of medical fields.
+        <FadeUp>
+          {" "}
+          Our team of specialist doctors is dedicated to providing expert care
+          across a wide range of medical fields.
+        </FadeUp>
       </p>
 
       <button
@@ -115,7 +123,7 @@ const DoctorCarousel = () => {
           swiper.params.navigation.nextEl = nextRef.current;
         }}
         pagination={{
-          el: ".custom-pagination",
+          el: ".customPagination",
           clickable: true,
           renderBullet: (index, className) => {
             return `<span class="${className}"></span>`;
@@ -134,15 +142,19 @@ const DoctorCarousel = () => {
                 <img src={doctor.image} alt={doctor.name} />
               </div>
               <div className="doctor-content">
-                <h3>{doctor.name}</h3>
-                <p>{doctor.specialty}</p>
+                <h3>
+                  <FadeUp>{doctor.name}</FadeUp>
+                </h3>
+                <p>
+                  <FadeUp>{doctor.specialty}</FadeUp>
+                </p>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="custom-pagination"></div>
+      <div className="customPagination"></div>
     </section>
   );
 };

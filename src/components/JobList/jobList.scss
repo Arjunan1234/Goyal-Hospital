@@ -1,217 +1,226 @@
 .doctorJob {
+  display: flex;
+  gap: 32px;
+  padding: 80px;
+  background-color: #fff;
+  border-radius: 12px;
+
+  .sidebar {
     display: flex;
-    gap: 32px;
-    padding: 80px;
-    background-color: #fff;
-    border-radius: 12px;
+    height: fit-content;
+    flex-direction: column;
+    border: 1px solid #bfd1ff;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 180px;
+    background-color: white;
 
-    .sidebar {
-        display: flex;
-        height: fit-content;
-        flex-direction: column;
-        border: 1px solid #bfd1ff;
-        border-radius: 8px;
-        overflow: hidden;
-        min-width: 180px;
-        background-color: white;
-
-        .tab {
-            padding: 12px 16px;
-            color: #001833;
-            cursor: pointer;
-            font-family: Inter, sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: normal;
-
-
-        }
-
-        .active {
-            border-radius: 6px;
-            background: #195aff;
-            color: #fff;
-            font-family: Inter, sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: normal;
-        }
+    .tab {
+      padding: 12px 16px;
+      color: #001833;
+      cursor: pointer;
+      font-family: Inter, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
     }
 
-    .content {
-        width: 100%;
+    .active {
+      border-radius: 6px;
+      background: #195aff;
+      color: #fff;
+      font-family: Inter, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .jobList {
+      display: flex;
+      padding: 20px 21px;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      align-self: stretch;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 91px;
+
+      border-radius: 10px;
+      border: 1px solid rgba(237, 237, 237, 0.6);
+      background: #fff;
+
+      p {
+        width: 200px;
+        color: #001833;
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      div {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 8px;
 
-
-        .jobList {
-            display: flex;
-            padding: 20px 21px;
-            justify-content: space-between;
-            align-items: center;
-            align-content: center;
-            align-self: stretch;
-            flex-wrap: wrap;
-            width: 100%;
-            height: 91px;
-
-            border-radius: 10px;
-            border: 1px solid rgba(237, 237, 237, 0.60);
-            background: #FFF;
-
-            p {
-                width: 200px;
-                color: #001833;
-                font-family: Inter;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-            }
-
-            div {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-
-                p {
-                    color: var(--Grays-Gray, var(--Grays-Gray, #8E8E93));
-                    font-family: Inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                }
-
-                span {
-                    color: #001833;
-                    font-family: Inter;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                }
-            }
-
-            img {
-                max-width: 30px;
-            }
-
-
+        p {
+          color: var(--Grays-Gray, var(--Grays-Gray, #8e8e93));
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
         }
 
-    }
+        span {
+          color: #001833;
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
 
+      img {
+        max-width: 30px;
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 992px) {
+  .doctorJob {
+    padding: 80px 60px;
 
+    .content {
+      .jobList {
+        height: unset;
+        gap: 20px;
+      }
+    }
+  }
+  .doctorJobContainer {
+    // max-width: 400px;
+    // padding: 48px 20px;
 
-@media screen and (max-width : 992px) {
-    .container {
-        // max-width: 400px;
-        padding: 48px 20px;
+    font-family: "Inter", Arial, sans-serif;
+  }
 
-        font-family: 'Inter', Arial, sans-serif;
+  .tabs {
+    display: flex;
+    margin-bottom: 24px;
+    background: #f7f8fa;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .tab {
+      flex: 1;
+      padding: 12px 0;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: #1a2b49;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &.active {
+        background: #195aff;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(30, 34, 90, 0.06);
+    padding: 20px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .card-title {
+      color: #001833;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 8px;
     }
 
-    .tabs {
+    .card-details {
+      display: flex;
+      gap: 19px;
+      font-size: 0.98rem;
+
+      .cards {
         display: flex;
-        margin-bottom: 24px;
-        background: #f7f8fa;
-        border-radius: 8px;
-        overflow: hidden;
+        gap: 6px;
+      }
 
-        .tab {
-            flex: 1;
-            padding: 12px 0;
-            background: none;
-            border: none;
-            font-size: 1rem;
-            color: #1a2b49;
-            cursor: pointer;
-            transition: background 0.2s;
-
-            &.active {
-                background: #195AFF;
-                color: #fff;
-                font-weight: 600;
-            }
-        }
-    }
-
-    .cards {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .card {
-        position: relative;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(30, 34, 90, 0.06);
-        padding: 20px 18px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .card-title {
-            color: #001833;
-            font-family: Inter;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            margin-bottom: 8px;
-        }
-
-        .card-details {
-            display: flex;
-            gap: 19px;
-            font-size: 0.98rem;
-
-            .cards {
-                display: flex;
-                gap: 6px;
-            }
-
-            .label {
-                color: #7e8ba3;
-                font-size: 0.85rem;
-                margin-right: 4px;
-            }
-        }
-
-        .card-action {
-            position: absolute;
-            top: 36%;
-            right: 18px;
-            background: #2563eb;
-            border: none;
-            border-radius: 50%;
-            color: #fff;
-            width: 36px;
-            height: 36px;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            margin-left: 16px;
-            transition: background 0.2s;
-
-            &:hover {
-                background: #1e40af;
-            }
-        }
-    }
-
-    .no-jobs {
+      .label {
         color: #7e8ba3;
-        text-align: center;
-        padding: 40px 0;
+        font-size: 0.85rem;
+        margin-right: 4px;
+      }
     }
+
+    .card-action {
+      position: absolute;
+      top: 36%;
+      right: 18px;
+      background: #2563eb;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 16px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #1e40af;
+      }
+    }
+  }
+
+  .no-jobs {
+    color: #7e8ba3;
+    text-align: center;
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .card-action {
+    span {
+      height: 32px;
+    }
+  }
 }
