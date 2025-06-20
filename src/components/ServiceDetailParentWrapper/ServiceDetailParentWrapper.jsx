@@ -9,8 +9,7 @@ import Urology from "../urology/Urology";
 import useScreenMobile from "../../hooks/useScreenMobile";
 const ServiceDetailParentWrapper = () => {
   const isTab = useScreenMobile({ size: 992 });
-  console.log(isTab,"xxxxxxxxxx");
-  
+
   return (
     <>
       <section className="serviceDetailParenWrapper">

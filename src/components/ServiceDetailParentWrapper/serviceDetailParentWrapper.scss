@@ -5,12 +5,13 @@
     gap: 40px;
     padding: 64px 80px;
     .navBoxWrapper {
-        min-width: 280px;
+      min-width: 280px;
+    
     }
     .mainContentWrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       .backContainer {
         display: flex;
         align-items: center;
@@ -19,23 +20,21 @@
           width: 20px;
           height: 20px;
         }
-      
       }
-   
     }
   }
 }
 
-@media screen and (max-width: 992px){
-  .serviceDetailParenWrapper{
-    .serviceDetailParenWrapperContainer{
+@media screen and (max-width: 992px) {
+  .serviceDetailParenWrapper {
+    .serviceDetailParenWrapperContainer {
       padding: 64px 60px;
     }
   }
 }
-@media screen and (max-width: 568px){
-  .serviceDetailParenWrapper{
-    .serviceDetailParenWrapperContainer{
+@media screen and (max-width: 568px) {
+  .serviceDetailParenWrapper {
+    .serviceDetailParenWrapperContainer {
       padding: 48px 20px;
     }
   }

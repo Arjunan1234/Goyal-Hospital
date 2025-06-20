@@ -26,22 +26,8 @@ const SearchHeader = () => {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth > 568) {
-  //       setIsDropDownShow(false); // Close dropdown when resizing to larger screen
-  //     }
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize);
-  //   };
-  // }, []);
-
   useEffect(() => {
-    if (!isDropDownShow && isMobile) {
+    if (isDropDownShow && isMobile) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
@@ -76,14 +62,14 @@ const SearchHeader = () => {
                 onClick={() => setIsDropDownShow((prev) => !prev)}
               >
                 <img
-                  src={isDropDownShow ? menuNormal : menuClose}
+                  src={isDropDownShow ? menuClose : menuNormal}
                   alt="dropdown"
                 />
               </div>
             )}
           </div>
         </div>
-        {isMobile && !isDropDownShow && (
+        {isMobile && isDropDownShow && (
           <div className="dropDownWrapper show">
             <div className="navWrapper">
               {mobileNavContents.map((item, index) => (
