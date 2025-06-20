@@ -6,6 +6,7 @@ import TextArea from "../TextArea/TextArea";
 import send from "../../assets/svg/send.svg";
 import mapbutton from "../../assets/svg/mapbutton.svg";
 import FadeUp from "../FadeUp/FadeUp";
+import MapIframe from "../MapComponent/MapIframe";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -38,6 +39,13 @@ const ContactUs = () => {
     }
   };
 
+    const handleDirectionClick = () => {
+    // You can use either place name or coordinates
+    const destination = '28.6611623,77.2824233'; // Goyal Hospital location
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+    window.open(googleMapsUrl, '_blank');
+  };
+
   return (
     <section className="contactSection container">
       <h5 className="sectionSubtitle">
@@ -66,15 +74,10 @@ const ContactUs = () => {
       </p>
 
       <div className="contactContainer">
+      
         <div className="mapContainer">
-          <iframe
-            title="Goyal Hospital Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224134.5146549633!2d77.06889964831565!3d28.52758200549333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26ab11a5c33%3A0x7ad56e00e2e9f68a!2sGoyal%20Hospital%20%26%20Urology%20Centre!5e0!3m2!1sen!2sin!4v1718681549834!5m2!1sen!2sin"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <button className="directionButton">
+          <MapIframe />
+          <button className="directionButton" onClick={handleDirectionClick}>
             Get Direction <img src={mapbutton} alt="" />
           </button>
         </div>
