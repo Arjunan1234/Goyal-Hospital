@@ -6,7 +6,7 @@
 
     .backgroundBanner {
       border-radius: 16px;
-      background-image: url(../../assets/svg/hospital.jpg);
+      background-image: url(../../assets/images/banner/banner.png);
       height: 620px;
       background-size: cover;
       display: flex;
@@ -113,7 +113,7 @@
 
       .backgroundBanner {
         padding: 9px;
-        background-image: url(../../assets/svg/hospital.jpg);
+        background-image: url(../../assets/images/banner/mobilebanner.png);
 
         .mainContent {
           max-width: unset;
