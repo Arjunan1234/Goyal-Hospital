@@ -28,48 +28,83 @@
           border-radius: 24px;
           background: #ebf0ff;
           min-width: 405px;
+          max-width: 405px;
           cursor: pointer;
-          transition: transform 0.3s ease;
+          border: 1px solid transparent;
+          transition: all 0.3s ease;
 
-          &:hover{
-            transform: scale(1.05) rotateZ(1.5deg);
-            
+        
+
+          &:hover {
+            border: 1px solid #b8c9ff;
+            .mainContent {
+              .title {
+                .imageWrapper {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+            }
           }
+
           .imageWrapper {
             width: 80px;
             height: 80px;
           }
-           .mainContent {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          p {
-            color: var(--dark-primary, #031e2d);
-
-            /* heading/6 */
-            font-family: Inter;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 32px; /* 133.333% */
-          }
-          .doctorList {
+          .mainContent {
             display: flex;
             flex-direction: column;
-            span {
-              color: var(--dark, #131313);
-              font-family: Inter;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 32px; /* 160% */
-              letter-spacing: 0.2px;
-              opacity: 0.7;
+            gap: 16px;
+
+            .title {
+              display: flex;
+              justify-content: space-between;
+              min-height: 40px;
+              p {
+                color: var(--dark-primary, #031e2d);
+
+                /* heading/6 */
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px; /* 133.333% */
+              }
+              .imageWrapper {
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                width: 40px;
+                height: 40px;
+                transition: all 0.3s ease;
+              }
+            }
+
+            .doctorList {
+              display: flex;
+              flex-direction: column;
+              span {
+                color: var(--dark, #131313);
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px; /* 160% */
+                letter-spacing: 0.2px;
+                opacity: 0.7;
+              }
             }
           }
         }
+      }
+      .row2 {
+        .doctorsCardsItem0 {
+          .mainContent {
+            .title {
+              min-height: 64px;
+            }
+          }
         }
-       
       }
     }
     .loadButtonWrapper {

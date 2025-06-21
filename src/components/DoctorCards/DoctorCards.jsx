@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import useScreenMobile from "../../hooks/useScreenMobile";
 import FadeUp from "../FadeUp/FadeUp";
 import { useNavigate } from "react-router-dom";
+import cardRedirection from "../../assets/images/cardRedirection.svg";
 const cardsContent = [
   [
     {
@@ -73,11 +74,11 @@ const cardsContent = [
       redirection: "Orthopedics",
       Title: "Orthopaedics",
       doctorsList: [
-        "Dr. Piyush Jain",
-        "Dr. Sanjay Kappor",
-        "Dr. Rajeev Gupta",
-        "Dr. Ajay Kumar",
-        "Dr. Anil Jain",
+        "Dr. Amit Srivastava ",
+        "Dr. Vivek Chhimpa ",
+        "Dr. Rahul Sahu",
+        "Dr. Apoorva Sehgal ",
+        "Dr. Sanyam Jain",
       ],
     },
   ],
@@ -88,11 +89,11 @@ const cardsContent = [
       iconAltText: "pediatrics",
       Title: "Pediatrics",
       doctorsList: [
-        "Dr. Amit Srivastava",
-        "Dr. Vivek Chhimpa",
-        "Dr. Rahul Sahu",
-        "Dr. Apoorva Sehgal",
-        "Dr. Sanyam Jain",
+        " Dr. Piyush Jain",
+        "Dr. Sanjay Kappor",
+        "Dr. Rajeev Gupta",
+        "Dr. Ajay Kumar	",
+        "Dr. Anil Jain	",
       ],
     },
 
@@ -163,17 +164,23 @@ const DoctorCards = () => {
               <div className={`row row${rowIndex + 1}`} key={rowIndex}>
                 {row.map((item, index) => (
                   <div
-                    className="doctorsCardsItem"
+                    className={`doctorsCardsItem doctorsCardsItem${index}`}
                     key={index}
                     onClick={() => handleCardClick(item.redirection)}
                   >
-                    <div className="imageWrapper">
+                    {/* <div className="imageWrapper">
                       <img src={item.icon} alt={item.iconAltText} />
-                    </div>
+                    </div> */}
                     <div className="mainContent">
-                      <p>
-                        <FadeUp>{item.Title}</FadeUp>
-                      </p>
+                      <div className="title">
+                        <p>
+                          <FadeUp>{item.Title}</FadeUp>
+                        </p>
+                        <div className="imageWrapper">
+                          <img src={cardRedirection} alt="redirection" />
+                        </div>
+                      </div>
+
                       <div className="doctorList">
                         {item.doctorsList.map((doctor, doctorIndex) => (
                           <span key={doctorIndex}>

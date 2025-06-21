@@ -11,7 +11,7 @@
       display: flex;
       gap: 32px;
       .logo {
-        cursor: pointer ;
+        cursor: pointer;
         .imageWrapper {
           width: 120px;
           height: 40px;
@@ -88,12 +88,28 @@
         span {
           padding: 16px 0;
         }
+        .highLighted {
+          color: #195aff;
+        }
       }
       .buttonWrapper {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 16px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px){
+  .searchHeader{
+    .searchHeaderContainer{
+      flex-direction: column;
+      align-items: center;
+
+      .mainContent{
+        flex-wrap: wrap;
       }
     }
   }
