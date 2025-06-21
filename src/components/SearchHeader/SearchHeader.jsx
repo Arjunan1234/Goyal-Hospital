@@ -11,7 +11,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useState, useEffect } from "react";
 import report from "../../assets/images/report.svg";
 import phoneCall from "../../assets/images/phoneCall.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const mobileNavContents = [
   { label: "Home", path: "/" },
@@ -25,6 +25,7 @@ const SearchHeader = () => {
   const [isDropDownShow, setIsDropDownShow] = useState(false);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (isDropDownShow && isMobile) {
@@ -44,7 +45,7 @@ const SearchHeader = () => {
       <section className="container searchHeader">
         <div className="searchHeaderContainer">
           <div className="mainContent">
-            <div className="logo" onClick={()=>navigate("/")}>
+            <div className="logo" onClick={() => navigate("/")}>
               <div className="imageWrapper">
                 <img src={logo} alt="logo" />
               </div>
@@ -75,6 +76,9 @@ const SearchHeader = () => {
               {mobileNavContents.map((item, index) => (
                 <span
                   key={index}
+                  className={
+                    location.pathname === item.path ? "highLighted" : ""
+                  }
                   onClick={() => {
                     navigate(item.path);
                     setIsDropDownShow(!isDropDownShow); // close dropdown after navigation
