@@ -14,11 +14,7 @@ const Footer = () => {
       {!isMobile && <img src={backgroundPattern} alt="" className="pattern" />}
       <div className="footerContainer">
         <div className="footerLeft">
-          <img
-            src={websiteLogoFooter}
-            alt="Goyal Hospital"
-            className="logo"
-          />
+          <img src={websiteLogoFooter} alt="Goyal Hospital" className="logo" />
           <h2>
             <FadeUp>Your Health, Our Priority</FadeUp>
           </h2>
@@ -26,15 +22,30 @@ const Footer = () => {
             <FadeUp>Anytime, Anywhere</FadeUp>
           </h2>
           <div className="contactInfo">
-            <p>
+            <p
+              onClick={() => {
+                window.open(
+                  "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com",
+                  "_blank"
+                );
+              }}
+            >
               <FadeUp>📧 goyalhospital@gmail.com</FadeUp>
             </p>
-            <p>
+            <p
+              onClick={() => {
+                window.location.href = "tel:+919841248842";
+              }}
+            >
               <FadeUp>📞 +91 98412 48842</FadeUp>
             </p>
           </div>
           <div className="buttons">
-            <button>
+            <button
+              onClick={() => {
+                window.location.href = "tel:+919841248842";
+              }}
+            >
               <FadeUp>Contact Us</FadeUp>
               <img src={phone} alt="" />
             </button>

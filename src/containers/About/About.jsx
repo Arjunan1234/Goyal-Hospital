@@ -3,7 +3,7 @@ import CommonBanner from "../../components/CommonBanner/CommonBanner";
 import AboutUsSection from "../../components/AboutUsSection/AboutUsSection";
 import Testimonial from "../../components/Testimonial/Testimonial";
 import ContactUs from "../../components/ContactUs/ContactUs";
-import Footer from "../../components/Footer/Footer";
+
 import {
   aboutPageBannerTitle,
   aboutPageBannerContent,
@@ -22,7 +22,6 @@ const About = () => {
         <AboutUsSection />
         <Testimonial />
         <ContactUs />
-        <Footer />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import CommonBanner from "../../components/CommonBanner/CommonBanner";
 import JobList from "../../components/JobList/JobList";
 import ContactUs from "../../components/ContactUs/ContactUs";
-import Footer from "../../components/Footer/Footer";
+
 
 import phoneCall from "../../assets/images/phoneCall.svg";
 import {
@@ -25,7 +25,7 @@ const Career = () => {
       />
       <JobList />
       <ContactUs />
-      <Footer />
+    
     </div>
   );
 };

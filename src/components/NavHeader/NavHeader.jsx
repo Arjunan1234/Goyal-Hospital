@@ -1,7 +1,6 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import "./navHeader.scss";
 import IconButton from "../IconButton/IconButton";
-import report from "../../assets/images/report.svg";
 import phoneCall from "../../assets/images/phoneCall.svg";
 
 const NavHeader = () => {
@@ -33,16 +32,22 @@ const NavHeader = () => {
             ))}
           </div>
           <div className="navButtonContainer">
-            <div className="navButton">
+            {/* <div className="navButton">
               <IconButton
                 textColor="#242424"
                 buttonBackgroundColor="#F0F0F0"
                 image={report}
                 buttonContent="Online Report"
               />
-            </div>
+            </div> */}
             <div className="navButton">
-              <IconButton buttonContent="Contact Us" image={phoneCall} />
+              <IconButton
+                buttonContent="Contact Us"
+                image={phoneCall}
+                onClick={() => {
+                  window.location.href = "tel:+919841248842";
+                }}
+              />
             </div>
           </div>
         </div>
