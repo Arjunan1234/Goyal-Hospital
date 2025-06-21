@@ -10,6 +10,7 @@ const NavHeader = () => {
     { label: "Speciality", path: "/speciality" },
     { label: "Careers", path: "/career" },
     { label: "Gallery", path: "/gallery" },
+    { label: "TPA", path: "/tpa" },
   ];
   const navigate = useNavigate();
   const location = useLocation();
