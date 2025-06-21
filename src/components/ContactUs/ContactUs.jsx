@@ -8,6 +8,9 @@ import mapbutton from "../../assets/svg/mapbutton.svg";
 import FadeUp from "../FadeUp/FadeUp";
 import MapIframe from "../MapComponent/MapIframe";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
 
@@ -39,7 +42,7 @@ const ContactUs = () => {
       setLoading(true);
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxobolXHUk5Y1-7D4fYjuVSA5N88yen8N8eEoDDdmszoG-OlrCoJPyrU1rgZmtnVwgq/exec";
+        "https://script.google.com/macros/s/AKfycbzpPiM-NiL0di_99KMUOm_FvyEF2yN1MKR_kHzpXNI4oBZ2nYTN5cC2ei88hlSv7KxX/exec";
 
       const payload = {
         fullName: formData.fullName,
@@ -58,10 +61,10 @@ const ContactUs = () => {
         });
 
         if (response.ok) {
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
           setFormData({ fullName: "", phone: "", email: "", message: "" });
         } else {
-          alert("Failed to send message.");
+          toast.error("Failed to send message.");
         }
       } catch (error) {
         console.error("Error sending data:", error);
@@ -90,6 +93,11 @@ const ContactUs = () => {
 
   return (
     <section className="contactSection container">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={true}
+      />
       <h5 className="sectionSubtitle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
