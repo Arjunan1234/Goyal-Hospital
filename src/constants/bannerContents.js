@@ -1,7 +1,7 @@
 export const homePageBannerTitle =
   "Excellence in Healthcare: Building Trust, Healing Lives.";
 export const homePageBannerContent =
-  "Goyal Hospitals: Leading multi-specialty care in Bengaluru, dedicated to your well-being with state-of-the-art facilities.";
+  "Goyal Hospitals: Leading multi-specialty care in Delhi, dedicated to your well-being with state-of-the-art facilities.";
 
 export const aboutPageBannerTitle =
   "Medical Services available & Doctors On Board";

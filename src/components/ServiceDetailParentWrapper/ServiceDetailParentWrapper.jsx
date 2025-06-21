@@ -51,7 +51,7 @@ const ServiceDetailParentWrapper = ({ initialDepartment }) => {
           <div className="mainContentWrapper">
             <div
               className="backContainer"
-              onClick={() => navigate("/services")}
+              onClick={() => navigate("/speciality")}
             >
               <div className="imageWrapper">
                 <svg
