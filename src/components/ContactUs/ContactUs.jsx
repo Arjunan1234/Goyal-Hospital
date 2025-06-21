@@ -39,11 +39,10 @@ const ContactUs = () => {
     }
   };
 
-    const handleDirectionClick = () => {
-    // You can use either place name or coordinates
-    const destination = '28.6611623,77.2824233'; // Goyal Hospital location
+  const handleDirectionClick = () => {
+    const destination = "28.6611623,77.2824233"; // Goyal Hospital location
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-    window.open(googleMapsUrl, '_blank');
+    window.open(googleMapsUrl, "_blank");
   };
 
   return (
@@ -74,7 +73,6 @@ const ContactUs = () => {
       </p>
 
       <div className="contactContainer">
-      
         <div className="mapContainer">
           <MapIframe />
           <button className="directionButton" onClick={handleDirectionClick}>
