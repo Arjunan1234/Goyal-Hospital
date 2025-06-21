@@ -25,7 +25,7 @@
     .footerLeft {
         flex: 1;
         min-width: 280px;
-        
+
 
         .logo {
             width: 180px;
@@ -59,6 +59,7 @@
             margin-bottom: 40px;
 
             p {
+                cursor: pointer;
                 color: rgba(255, 255, 255, 0.80);
                 text-align: center;
 
@@ -76,8 +77,10 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
+            cursor: pointer;
 
             button {
+                cursor: pointer;
                 background: #ffffff;
                 color: #1e40af;
                 border: none;

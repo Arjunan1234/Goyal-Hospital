@@ -13,6 +13,7 @@ import ContactHeader from "./components/ContactHeader/ContactHeader";
 import SearchHeader from "./components/SearchHeader/SearchHeader";
 import useScreenMobile from "./hooks/useScreenMobile";
 import NavHeader from "./components/NavHeader/NavHeader";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/career" element={<Career />} />
         <Route path="/gallery" element={<Gallery />} />
       </Routes>
+      <Footer />
     </>
   );
 };

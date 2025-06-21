@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ContactUs from "../../components/ContactUs/ContactUs";
-import Footer from "../../components/Footer/Footer";
+
 
 const Gallery = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <div className="galleryPage">
       <ContactUs />
-      <Footer />
+    
     </div>
   );
 };
