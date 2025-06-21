@@ -1,0 +1,174 @@
+@use "/src/styles/variables.scss" as variable;
+
+.aim {
+  .aimContainer {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 78%;
+      h1 {
+        color: var(--dark-primary, #031e2d);
+        text-align: center;
+
+        /* heading/4 */
+        font-family: Mulish;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px; /* 120% */
+        text-transform: capitalize;
+      }
+      p {
+        color: var(--dark, #131313);
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 175% */
+        letter-spacing: 0.16px;
+        opacity: 0.8;
+      }
+    }
+    .mainAimContainer {
+      display: flex;
+      gap: 64px;
+      .imageWrapper {
+        img {
+          height: 100%;
+        }
+      }
+      .aimOfHospital {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        h3 {
+          color: var(--dark-primary, #031e2d);
+          font-family: Mulish;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 40px; /* 125% */
+          text-transform: capitalize;
+        }
+        .listContainer {
+          ul {
+            list-style-type: disc;
+            max-width: 86%;
+            li {
+              color: var(--dark, #131313);
+              font-family: Inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 32px; /* 200% */
+              letter-spacing: 0.16px;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .aim {
+    .aimContainer {
+      .mainAimContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+        .aimOfHospital {
+          .listContainer {
+            ul {
+              max-width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .aim {
+    .aimContainer {
+      padding: 80px 60px;
+      .titleContainer {
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .aim {
+    .aimContainer {
+      padding: 48px 20px;
+      gap: 40px;
+      .titleContainer {
+        h1 {
+          color: var(--dark-primary, #031e2d);
+          font-family: Mulish;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px; /* 133.333% */
+          text-transform: capitalize;
+          text-align: left;
+        }
+        .contentContainer {
+          p {
+            color: var(--dark, #131313);
+
+            /* body/normal */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 150% */
+            letter-spacing: 0.16px;
+            opacity: 0.8;
+            text-align: left;
+          }
+        }
+      }
+      .mainAimContainer {
+        gap: 20px;
+
+        .aimOfHospital {
+          gap: 12px;
+          h3 {
+            color: var(--dark-primary, #031e2d);
+            font-family: Mulish;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px; /* 166.667% */
+            text-transform: capitalize;
+          }
+          .listContainer {
+            ul {
+                margin-left: 20px;
+              li {
+                color: var(--dark, #131313);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px; /* 175% */
+                letter-spacing: 0.16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

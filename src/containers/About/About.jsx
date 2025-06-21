@@ -8,6 +8,7 @@ import {
   aboutPageBannerTitle,
   aboutPageBannerContent,
 } from "../../constants/bannerContents";
+import Aim from "../../components/Aim/Aim";
 const About = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -20,6 +21,7 @@ const About = () => {
           Content={aboutPageBannerContent}
         />
         <AboutUsSection />
+        <Aim />
         <Testimonial />
         <ContactUs />
       </div>
