@@ -8,7 +8,12 @@ import mapbutton from "../../assets/svg/mapbutton.svg";
 import FadeUp from "../FadeUp/FadeUp";
 import MapIframe from "../MapComponent/MapIframe";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ContactUs = () => {
+  const [loading, setLoading] = useState(false);
+
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -22,7 +27,7 @@ const ContactUs = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newErrors = {};
@@ -34,20 +39,65 @@ const ContactUs = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form Submitted: ", formData);
-      // Add API or EmailJS integration here
+      setLoading(true);
+
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzpPiM-NiL0di_99KMUOm_FvyEF2yN1MKR_kHzpXNI4oBZ2nYTN5cC2ei88hlSv7KxX/exec";
+
+      const payload = {
+        fullName: formData.fullName,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.message,
+      };
+
+      const formBody = new URLSearchParams(payload).toString();
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: formBody,
+        });
+
+        if (response.ok) {
+          toast.success("Message sent successfully!");
+          setFormData({ fullName: "", phone: "", email: "", message: "" });
+        } else {
+          toast.error("Failed to send message.");
+        }
+      } catch (error) {
+        console.error("Error sending data:", error);
+        alert("Something went wrong!");
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
-    const handleDirectionClick = () => {
+  const isFormValid = () => {
+    return (
+      formData.fullName.trim() &&
+      formData.phone.trim() &&
+      formData.email.trim() &&
+      formData.message.trim()
+    );
+  };
+
+  const handleDirectionClick = () => {
     // You can use either place name or coordinates
-    const destination = '28.6611623,77.2824233'; // Goyal Hospital location
+    const destination = "28.6611623,77.2824233"; // Goyal Hospital location
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-    window.open(googleMapsUrl, '_blank');
+    window.open(googleMapsUrl, "_blank");
   };
 
   return (
     <section className="contactSection container">
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={true}
+      />
       <h5 className="sectionSubtitle">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +124,6 @@ const ContactUs = () => {
       </p>
 
       <div className="contactContainer">
-      
         <div className="mapContainer">
           <MapIframe />
           <button className="directionButton" onClick={handleDirectionClick}>
@@ -119,8 +168,16 @@ const ContactUs = () => {
             type="text"
           />
 
-          <button type="submit" className="sendButton">
-            Send Message <img src={send} alt="" />
+          <button
+            type="submit"
+            className="sendButton"
+            disabled={!isFormValid() || loading}
+            style={{
+              opacity: !isFormValid() || loading ? 0.6 : 1,
+              cursor: !isFormValid() || loading ? "not-allowed" : "pointer",
+            }}
+          >
+            {loading ? "Sending..." : "Send Message"} <img src={send} alt="" />
           </button>
         </form>
       </div>

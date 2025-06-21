@@ -1,14 +1,14 @@
 import "./contactHeader.scss";
 import phone from "../../assets/images/Phone.svg";
 import Mail from "../../assets/images/Mail.svg";
-import Clock from "../../assets/images/Clock.svg";
+import clocksvg from "../../assets/images/clocksvg.svg";
 const ContactHeader = () => {
   const contactDetails = [
     {
       icon: Mail,
       content: "goyalhospital@gmail.com",
       // href: "mailto:goyalhospital@gmail.com",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com"
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com",
     },
     {
       icon: phone,
@@ -40,8 +40,9 @@ const ContactHeader = () => {
             <p>Working hours</p>
             <div className="timeContianer">
               <div className="imageWrapper">
-                <img src={Clock} alt="Clock" />
+                <img src={clocksvg} alt="Clock" />
               </div>
+
               <p>24/7</p>
             </div>
           </div>

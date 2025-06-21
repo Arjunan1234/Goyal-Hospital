@@ -1,11 +1,13 @@
 @use "/src/styles/variables.scss" as variable;
+
 .contactHeader {
- 
+
 
   .contactHeaderContainer {
     @include variable.d-flex($jc: space-between, $al: center);
     padding: 16px 80px;
- background-color: #195aff;
+    background-color: #195aff;
+
     .contactContainer {
       @include variable.d-flex();
       gap: 24px;
@@ -25,6 +27,7 @@
         }
       }
     }
+
     .hoursContainer {
       @include variable.d-flex();
       gap: 6px;
@@ -52,40 +55,43 @@
   }
 }
 
-@media screen and (max-width: 992px){
-    .contactHeader{
-        .contactHeaderContainer{
-             padding: 16px 60px;
-        }
+@media screen and (max-width: 992px) {
+  .contactHeader {
+    .contactHeaderContainer {
+      padding: 16px 60px;
     }
+  }
 }
 
-@media screen and (max-width: 568px){
-    .contactHeader{
-        .contactHeaderContainer{
-             padding: 16px 20px;
-             flex-direction: column;
-             gap: 12px;
-             .contactContainer{
-                gap: 7px;
-             }
-        }
+@media screen and (max-width: 568px) {
+  .contactHeader {
+    .contactHeaderContainer {
+      padding: 16px 20px;
+      flex-direction: column;
+      gap: 12px;
+
+      .contactContainer {
+        gap: 7px;
+      }
     }
+  }
 }
-@media screen and (max-width: 350px){
-    .contactHeader{
-        .contactHeaderContainer{
-            
-             .contactContainer{
-                width: 100%;
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-             }
-             .hoursContainer{
-                width: 100%;
-                justify-content: center;
-             }
-        }
+
+@media screen and (max-width: 350px) {
+  .contactHeader {
+    .contactHeaderContainer {
+
+      .contactContainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hoursContainer {
+        width: 100%;
+        justify-content: center;
+      }
     }
+  }
 }
