@@ -1,5 +1,8 @@
-import aimArrow from "../../assets/images/aimArrow.png";
 import useScreenMobile from "../../hooks/useScreenMobile";
+
+import FadeUp from "../FadeUp/FadeUp";
+
+import aimArrow from "../../assets/images/aimArrow.png";
 
 import "./aim.scss";
 
@@ -19,33 +22,43 @@ const Aim = () => {
       <section className="aim">
         <div className="container aimContainer">
           <div className="titleContainer">
-            <h1>From the desk of managing director & Sr. Consultant Urology</h1>
+            <h1>
+              <FadeUp>
+                From the desk of managing director & Sr. Consultant Urology
+              </FadeUp>
+            </h1>
             {isMobile ? (
               <>
                 <div className="contentContainer">
                   <p>
-                    Goyal Hospital & Urology Centre is a 100 bedded NABH & NABL
-                    Accredited Multispeciality hospital situated in East Delhi,
-                    founded by Dr Anil Goyal (MBBS, MS, Mch, DNB) who is a
-                    senior and leading Urologist of North India . The hospital
-                    was started in 1997.
+                    <FadeUp>
+                      Goyal Hospital & Urology Centre is a 100 bedded NABH &
+                      NABL Accredited Multispeciality hospital situated in East
+                      Delhi, founded by Dr Anil Goyal (MBBS, MS, Mch, DNB) who
+                      is a senior and leading Urologist of North India . The
+                      hospital was started in 1997.
+                    </FadeUp>
                   </p>
                   <p>
-                    It is a centre involved in the never ending pursuit of
-                    excellence. It came into existence with the wisdom and
-                    foresightedness of its founder Directors and their team.
+                    <FadeUp>
+                      It is a centre involved in the never ending pursuit of
+                      excellence. It came into existence with the wisdom and
+                      foresightedness of its founder Directors and their team.
+                    </FadeUp>
                   </p>
                 </div>
               </>
             ) : (
               <p>
-                Goyal Hospital & Urology Centre is a 100 bedded NABH & NABL
-                Accredited Multispeciality hospital situated in East Delhi,
-                founded by Dr Anil Goyal (MBBS, MS, Mch, DNB) who is a senior
-                and leading Urologist of North India . The hospital was started
-                in 1997.It is a centre involved in the never ending pursuit of
-                excellence. It came into existence with the wisdom and
-                foresightedness of its founder Directors and their team.
+                <FadeUp>
+                  Goyal Hospital & Urology Centre is a 100 bedded NABH & NABL
+                  Accredited Multispeciality hospital situated in East Delhi,
+                  founded by Dr Anil Goyal (MBBS, MS, Mch, DNB) who is a senior
+                  and leading Urologist of North India . The hospital was
+                  started in 1997.It is a centre involved in the never ending
+                  pursuit of excellence. It came into existence with the wisdom
+                  and foresightedness of its founder Directors and their team.
+                </FadeUp>
               </p>
             )}
           </div>
@@ -54,11 +67,15 @@ const Aim = () => {
               <img src={aimArrow} alt="Aim" />
             </div>
             <div className="aimOfHospital">
-              <h3>Aims of the Hospital</h3>
+              <h3>
+                <FadeUp>Aims of the Hospital</FadeUp>
+              </h3>
               <div className="listContainer">
                 <ul>
                   {aimOfHospitalList.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index}>
+                      <FadeUp> {item}</FadeUp>
+                    </li>
                   ))}
                 </ul>
               </div>
