@@ -13,6 +13,9 @@
         display: flex;
         gap: 24px;
         margin-left: 32px;
+        max-width: 405px;
+        min-width: 405px;
+        min-height: 124px;
         .imageWrapper {
           width: 64px;
           height: 64px;
@@ -20,7 +23,8 @@
         .textContainer {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          // gap: 8px;
+          justify-content: center;
           .cardTitle {
             color: var(--dark-primary, #031e2d);
 
@@ -33,15 +37,12 @@
           }
           .cardContent {
             color: var(--dark, #131313);
-
-            /* body/normal */
             font-family: Inter;
-            font-size: 16px;
+            font-size: 24px;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px; /* 150% */
-            letter-spacing: 0.16px;
-            max-width: 253px;
+            line-height: 30px; /* 125% */
+            letter-spacing: 0.24px;
           }
         }
       }
@@ -52,14 +53,19 @@
 @media screen and (max-width: 992px) {
   .marqueeCards {
     .marqueeCardsContainer {
-      padding: 48px 60px;
+      padding: 48px 0px 48px 60px;
+      .marqueeTag {
+        .cardContainer {
+          min-width: unset;
+        }
+      }
     }
   }
 }
 @media screen and (max-width: 568px) {
   .marqueeCards {
     .marqueeCardsContainer {
-      padding: 20px;
+      padding: 20px 0px 20px 20px ;
 
       .marqueeTag {
         .cardContainer {
@@ -67,6 +73,10 @@
           gap: 6px;
           align-items: center;
           border-radius: 8px;
+          min-height: 64px;
+          min-width: unset;
+          max-width: 250px;
+          margin-left: 12px;
           .imageWrapper {
             width: 24px;
             height: 24px;
