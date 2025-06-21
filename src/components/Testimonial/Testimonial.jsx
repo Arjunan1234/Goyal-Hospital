@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import "./testimonial.scss";
+import google from "../../assets/images/google.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -128,6 +129,7 @@ const Testimonial = () => {
                     <FadeUp> {item?.name}</FadeUp>
                   </h3>
                   <div className="stars">
+                    <img src={google} alt=""  className="google"/>
                     {[...Array(5)].map((_, i) => (
                       <img src={star} alt="" index={i} />
                     ))}

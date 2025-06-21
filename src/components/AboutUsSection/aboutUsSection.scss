@@ -8,8 +8,39 @@
     flex-wrap: wrap;
 
     .aboutImage {
+        position: relative;
         flex: 1;
         min-width: 300px;
+
+        .aboutContent {
+            position: absolute;
+            bottom: 10px;
+            margin-left: 18px;
+
+            p {
+                color: #FFF;
+                text-align: start;
+
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+            }
+
+            span {
+                color: #FFF;
+                text-align: start;
+
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.16px;
+                opacity: 0.7;
+            }
+        }
 
         img {
             width: 100%;
@@ -257,8 +288,8 @@
     }
 }
 
-@media screen and (max-width: 568px){
-    .aboutUsSection{
+@media screen and (max-width: 568px) {
+    .aboutUsSection {
         padding: 48px 20px;
     }
 }

@@ -93,6 +93,12 @@
     .stars {
         display: flex;
         margin-top: 4px;
+        align-items: center;
+
+        .google {
+            margin-right: 8px;
+            max-width: 20px;
+        }
 
         img {
             max-width: 16px;

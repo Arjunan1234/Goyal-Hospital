@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutUsSection.scss";
-import aboutUs from "../../assets/images/aboutUs.png";
+import aboutUs from "../../assets/images/about.png";
 import aboutUsMobile from "../../assets/images/aboutUsMobile.png";
 
 import eye from "../../assets/images/eye.svg";
@@ -9,13 +9,19 @@ import rocket from "../../assets/images/rocket.svg";
 import rightArrow from "../../assets/images/rightArrow.svg";
 import useScreenMobile from "../../hooks/useScreenMobile";
 import FadeUp from "../FadeUp/FadeUp";
+import { useNavigate } from "react-router-dom";
 
 const AboutUsSection = () => {
+   const navigate = useNavigate();
   const isMobile = useScreenMobile({ size: 992 });
   return (
     <div className="container aboutUsSection">
       <div className="aboutImage">
         <img src={isMobile ? aboutUsMobile : aboutUs} alt="About Us" />
+        <div className="aboutContent">
+          <p>Dr. Anil Goyal</p>
+          <span>MBBS, MS, MCh (Urology), DNB (Urology)</span>
+        </div>
       </div>
       <div className="aboutContent">
         <p className="sectionLabel">
@@ -81,7 +87,7 @@ const AboutUsSection = () => {
           </div>
         </div>
 
-        <button className="aboutButton">
+        <button className="aboutButton" onClick={() => navigate("/about")}>
           About Us <img src={rightArrow} alt="" />
         </button>
       </div>
