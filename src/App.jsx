@@ -15,6 +15,7 @@ import NavHeader from "./components/NavHeader/NavHeader";
 import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./containers/PrivacyPolicy/PrivacyPolicy";
 import Disclaimer from "./containers/Disclaimer/Disclaimer";
+import TPA from "./containers/TPA/TPA";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
   return (
@@ -29,7 +30,7 @@ const App = () => {
         <Route path="/service-details" element={<ServiceDetails />} />
         <Route path="/career" element={<Career />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/tpa" element={<Gallery />} />
+        <Route path="/tpa" element={<TPA />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>

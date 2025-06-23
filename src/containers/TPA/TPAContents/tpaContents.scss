@@ -1,0 +1,58 @@
+@use "/src/styles/variables.scss" as variable;
+.tpaContents {
+  .tpaContentContainer {
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      h1 {
+        color: #333;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; /* 125% */
+      }
+      p {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .tpaContents {
+    .tpaContentContainer {
+      padding: 64px 60px;
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .tpaContents {
+    .tpaContentContainer {
+      padding: 40px 20px;
+      gap: 24px;
+
+      .titleContainer {
+        gap: 12px;
+        h1 {
+          color: #333;
+          font-family: Inter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 40px; /* 142.857% */
+        }
+      }
+    }
+  }
+}
