@@ -1,0 +1,62 @@
+@use "/src/styles/variables.scss" as variable;
+.tpaImage {
+  .tpaImageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .imageTitlContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h1 {
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 120% */
+      }
+      p {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+    }
+    .logoWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 1430px){
+    .tpaImage{
+        .tpaImageContainer{
+            .logoWrapper{
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 568px){
+    .tpaImage{
+        .tpaImageContainer{
+            gap: 12px;
+            .logoWrapper{
+                .imageWrapper{
+                    width: 100%;
+                    max-height: 120px;
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
