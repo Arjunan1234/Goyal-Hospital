@@ -51,8 +51,15 @@ const Terms = () => {
             </ul>
             <p>
               If you have questions or concerns about how your data is handled,
-              feel free to email us at <a className="email">privacy@goyalhospital.com</a>, and we will
-              respond within 24 hours.
+              feel free to email us at{" "}
+              <a
+                className="email"
+                href="mailto:privacy@goyalhospital.com"
+                target="_blank"
+              >
+                privacy@goyalhospital.com
+              </a>
+              , and we will respond within 24 hours.
             </p>
           </div>
           <div className="policyWrapper">
@@ -93,7 +100,14 @@ const Terms = () => {
             </p>
             <p className="query">
               If you have any privacy-related queries, reach us at:
-              <a className="email"> privacy@goyalhospital.com</a>
+              <a
+                className="email"
+                href="mailto:privacy@goyalhospital.com"
+                target="_blank"
+              >
+                {" "}
+                privacy@goyalhospital.com
+              </a>
             </p>
           </div>
         </div>

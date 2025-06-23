@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../src/styles/common.scss";
 
@@ -14,7 +13,8 @@ import SearchHeader from "./components/SearchHeader/SearchHeader";
 import useScreenMobile from "./hooks/useScreenMobile";
 import NavHeader from "./components/NavHeader/NavHeader";
 import Footer from "./components/Footer/Footer";
-import PrivacyPolicy from "./containers/About/PrivacyPolicy/PrivacyPolicy";
+import PrivacyPolicy from "./containers/PrivacyPolicy/PrivacyPolicy";
+import Disclaimer from "./containers/Disclaimer/Disclaimer";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
   return (
@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/tpa" element={<Gallery />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
       </Routes>
       <Footer />
     </>
