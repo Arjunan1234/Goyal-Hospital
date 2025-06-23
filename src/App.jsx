@@ -14,6 +14,7 @@ import SearchHeader from "./components/SearchHeader/SearchHeader";
 import useScreenMobile from "./hooks/useScreenMobile";
 import NavHeader from "./components/NavHeader/NavHeader";
 import Footer from "./components/Footer/Footer";
+import PrivacyPolicy from "./containers/About/PrivacyPolicy/PrivacyPolicy";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/career" element={<Career />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/tpa" element={<Gallery />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </>

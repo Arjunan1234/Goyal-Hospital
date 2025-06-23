@@ -1,0 +1,216 @@
+@use "/src/styles/variables.scss" as variable;
+.terms {
+  .termsContianer {
+    padding: 64px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    .email {
+      color: #195aff;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+    .termsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h1 {
+        color: #333;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; /* 125% */
+      }
+      p {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+      h3 {
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 120% */
+      }
+      .ensure {
+        list-style-type: disc;
+        margin-left: 25px;
+        li {
+          color: #333;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+      }
+    }
+    .policyWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      h1 {
+        color: #333;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 40px; /* 125% */
+      }
+      .policyList {
+        list-style-type: disc;
+        margin-left: 25px;
+        li {
+          color: #333;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 166.667% */
+        }
+      }
+      h2 {
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 120% */
+      }
+      p {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+      h3 {
+        color: #333;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px; /* 133.333% */
+      }
+      .informationList {
+        list-style-type: disc;
+        margin-left: 25px;
+        li {
+          color: #333;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+      }
+      .autoInformationList {
+        list-style-type: disc;
+        margin-left: 25px;
+        li {
+          color: #333;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+      }
+      .useOfInformationList {
+        list-style-type: disc;
+        margin-left: 25px;
+        li {
+          color: #333;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 166.667% */
+        }
+      }
+      .analytics {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+      .query {
+        color: #374151;
+        font-family: Inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .terms {
+    .termsContianer {
+      padding: 64px 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .terms {
+    .termsContianer {
+      padding: 40px 20px;
+      .termsWrapper {
+        h1 {
+          color: #333;
+          font-family: Inter;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 40px; /* 142.857% */
+        }
+        p {
+          color: #374151;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 155.556% */
+        }
+        h3 {
+        }
+      }
+      .policyWrapper {
+        h1 {
+          color: #333;
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 40px; /* 166.667% */
+        }
+      }
+      .query{
+        a{
+            display: block;
+        }
+      }
+    }
+  }
+}
