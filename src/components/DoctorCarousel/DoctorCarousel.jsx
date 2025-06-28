@@ -11,51 +11,51 @@ import "swiper/css/pagination";
 import leftArrow from "../../assets/svg/leftArrow.svg";
 import rightArrow from "../../assets/svg/rightArrow.svg";
 
-import image1 from "../../assets/images/doctors/image1.png";
-import image2 from "../../assets/images/doctors/image2.png";
-import image3 from "../../assets/images/doctors/image3.png";
-import image4 from "../../assets/images/doctors/image4.png";
+import image1 from "../../assets/images/doctors/agarwal.png";
+import image2 from "../../assets/images/doctors/nirupama.png";
+import image3 from "../../assets/images/doctors/paremma.png";
+import image4 from "../../assets/images/doctors/radha.png";
 import FadeUp from "../FadeUp/FadeUp";
 
 const doctors = [
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Anil Goyal",
+    specialty: "MBBS, MS,Mch (urology)",
     image: image1,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Nirupama Goyal",
+    specialty: "MBBS, MS (OB-GYN)",
     image: image2,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Parmeena Sachdeva",
+    specialty: "MBBS, DGO",
     image: image3,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Radha Jain",
+    specialty: "MBBS, DGO",
     image: image4,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Anil Goyal",
+    specialty: "MBBS, MS,Mch (urology)",
     image: image1,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Nirupama Goyal",
+    specialty: "MBBS, MS (OB-GYN)",
     image: image2,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Parmeena Sachdeva",
+    specialty: "MBBS, DGO",
     image: image3,
   },
   {
-    name: "Dr. John Smith",
-    specialty: "Cardiologist",
+    name: "Dr. Radha Jain",
+    specialty: "MBBS, DGO",
     image: image4,
   },
 ];
@@ -130,7 +130,7 @@ const DoctorCarousel = () => {
           },
         }}
         breakpoints={{
-          768: { slidesPerView: 2 },
+          768: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
           1280: { slidesPerView: 4 },
         }}
@@ -145,9 +145,7 @@ const DoctorCarousel = () => {
                 <h3>
                   <FadeUp>{doctor.name}</FadeUp>
                 </h3>
-                <p>
-                  <FadeUp>{doctor.specialty}</FadeUp>
-                </p>
+                <p>{doctor.specialty}</p>
               </div>
             </div>
           </SwiperSlide>
