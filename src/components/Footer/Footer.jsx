@@ -7,8 +7,10 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 import phone from "../../assets/svg/phoneCall.svg";
 import calender from "../../assets/svg/calender.svg";
 import FadeUp from "../FadeUp/FadeUp";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
   const isMobile = useScreenMobile({ size: 992 });
+  const navigate = useNavigate();
   return (
     <footer className="footer container">
       {!isMobile && <img src={backgroundPattern} alt="" className="pattern" />}
@@ -49,7 +51,7 @@ const Footer = () => {
               <FadeUp>Contact Us</FadeUp>
               <img src={phone} alt="" />
             </button>
-            <button>
+            <button onClick={() => navigate("/book-appointment")}>
               <FadeUp> Book Appointment </FadeUp>
               <img src={calender} alt="" />
             </button>
@@ -77,7 +79,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="linksSection">
+          {/* <div className="linksSection">
             <h3>
               <FadeUp> Services</FadeUp>
             </h3>
@@ -98,11 +100,16 @@ const Footer = () => {
                 <FadeUp> Emergency Services</FadeUp>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footerBottom">
-        <FadeUp> Copyright © 2023 Goyal Hospital & Urology Centre</FadeUp>
+        <p className="footerCopyright">
+          <FadeUp> Copyright © 2023 Goyal Hospital & Urology Centre</FadeUp>
+        </p>
+        <div className="privacyContainer">
+            <span onClick={()=>navigate("/privacy-policy")}>Privacy Policy</span> | <span onClick={()=>navigate("/disclaimer")}>Terms and Condition</span>
+        </div>
       </div>
     </footer>
   );

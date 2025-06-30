@@ -1,0 +1,44 @@
+@use "/src/styles/variables.scss" as variable;
+.otpInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  label {
+    color: var(--Gray-700, #344054);
+    font-family: var(--Static-Label-Large-Font, Roboto);
+    font-size: var(--Static-Label-Large-Size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Static-Label-Large-Line-Height, 20px); /* 142.857% */
+  }
+  .digitsContainer {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    .inputsWrapper {
+      display: flex;
+      gap: 6px;
+      .otpDigit {
+        padding: 16px;
+        border-radius: 1000px;
+        border: 1px solid #ededed;
+        background: #fff;
+        outline: none;
+        width: 56px;
+        height: 56px;
+        text-align: center;
+      }
+    }
+    .timer {
+      color: var(--dark, #131313);
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.32px;
+      opacity: 0.7;
+    }
+  }
+}

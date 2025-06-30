@@ -1,0 +1,26 @@
+@use "/src/styles/variables.scss" as variable;
+.successMessage {
+  max-width: 400px;
+  padding: 62px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  .imageWrapper {
+    width: 60px;
+    height: 60px;
+    img {
+      height: 100%;
+    }
+  }
+  p {
+    color: #333;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+  }
+}

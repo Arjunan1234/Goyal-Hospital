@@ -1,23 +1,29 @@
 @use "/src/styles/variables.scss" as variable;
+
 .searchHeader {
   padding: 20px 80px;
   background-color: #fff;
   border-bottom: 1.5px solid #eef0f3;
   background: #fff;
+
   .searchHeaderContainer {
     @include variable.d-flex($jc: space-between);
     gap: 20px;
+
     .mainContent {
       display: flex;
       gap: 32px;
+
       .logo {
         cursor: pointer;
+
         .imageWrapper {
           width: 120px;
           height: 40px;
         }
       }
     }
+
     .buttonContainer {
       max-width: 179px;
     }
@@ -27,9 +33,11 @@
 @media screen and (max-width: 992px) {
   .searchHeader {
     padding: 20px 60px;
+
     .searchHeaderContainer {
       justify-content: center;
       gap: 20px;
+
       .mainContent {
         justify-content: center;
         gap: 20px;
@@ -37,15 +45,19 @@
     }
   }
 }
+
 @media screen and (max-width: 568px) {
   .searchHeader {
     padding: 20px 20px;
     position: sticky;
     top: 0;
     z-index: 10;
+
     .searchHeaderContainer {
       gap: 12px;
       position: relative;
+      justify-content: space-between;
+
       .mainContent {
         gap: 12px;
 
@@ -53,6 +65,7 @@
           max-width: 151px;
         }
       }
+
       .buttonContainer {
         max-width: unset;
 
@@ -62,6 +75,7 @@
         }
       }
     }
+
     .dropDownWrapper {
       position: absolute;
       top: 99%;
@@ -85,13 +99,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         span {
           padding: 16px 0;
         }
+
         .highLighted {
           color: #195aff;
         }
       }
+
       .buttonWrapper {
         display: flex;
         flex-direction: column;
@@ -102,13 +119,13 @@
   }
 }
 
-@media screen and (max-width: 350px){
-  .searchHeader{
-    .searchHeaderContainer{
+@media screen and (max-width: 350px) {
+  .searchHeader {
+    .searchHeaderContainer {
       flex-direction: column;
       align-items: center;
 
-      .mainContent{
+      .mainContent {
         flex-wrap: wrap;
       }
     }

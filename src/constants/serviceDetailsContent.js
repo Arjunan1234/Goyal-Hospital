@@ -36,18 +36,15 @@ export const urologyFacilityHeaderContent = [
 export const urologyOdpBookingHeader = "OPD Booking";
 export const urologyOdpBookingContent = [
   {
-    drName: "Dr. Anil Goyal",
-    design: "MBBS, MS,MCh (UROLOGY)",
+    drName: "Dr. Michael Chen",
+    design: "MBBS, MD (CARDIOLOGY)",
     drPhoto: sampleDoctor,
     details: [
       {
         icon: panel,
         content: "On Panel: Yes",
       },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
+     
       {
         icon: clock,
         content: "Monday to Saturday 11 am to 1 pm",

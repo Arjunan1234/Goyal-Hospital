@@ -1,0 +1,27 @@
+@use "/src/styles/variables.scss" as variables;
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 110;
+
+  &Container {
+    max-height: 800px;
+    border-radius: 16px;
+    background: #fff;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    max-width: 560px;
+  }
+}

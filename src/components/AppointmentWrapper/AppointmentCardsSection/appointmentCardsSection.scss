@@ -1,0 +1,33 @@
+@use "/src/styles/variables.scss" as variable;
+.appointmentCardsSection {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  h4 {
+    color: #333;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 120% */
+  }
+  .appointsCardsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    .bookingCardContainer {
+      position: relative;
+      .calenderWrapper {
+        position: absolute;
+        width: max-content;
+        top: 100%; // right below the card
+        left: 0; // align left edge with card
+        z-index: 3;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+        margin-top: 8px; // optional: small gap between card and calendar      }
+      }
+    }
+  }
+}

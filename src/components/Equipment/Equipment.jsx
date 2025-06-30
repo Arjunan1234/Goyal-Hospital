@@ -7,11 +7,13 @@ const Equipment = ({ title, content }) => {
       <div className="equipmentWrapper">
         <h2>{title}</h2>
         <div className="equipmentCarContainer">
-            {
-                content.map((item)=>(
-                    <EquipmentCard icon={item.icon} title={item.title} content={item.content}/>
-                ))
-            }
+          {content.map((item) => (
+            <EquipmentCard
+              icon={item.icon}
+              title={item.title}
+              content={item.content}
+            />
+          ))}
         </div>
       </div>
     </>
