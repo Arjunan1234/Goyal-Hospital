@@ -1,10 +1,18 @@
-import  "./odpBookingCard.scss";
+import "./odpBookingCard.scss";
 import IconButton from "../../IconButton/IconButton";
 
-const OdpBookingCard = ({ drImage, drName, design, details, buttonText }) => {
+const OdpBookingCard = ({
+  drImage,
+  drName,
+  design,
+  details,
+  buttonText,
+  overWriteClass,
+  onButtonClick,
+}) => {
   return (
     <>
-      <div className="odpBookingCardContainer">
+      <div className={`odpBookingCardContainer ${overWriteClass}`}>
         <div className="imageWrapper">
           <img src={drImage} alt={drName} />
         </div>
@@ -24,7 +32,7 @@ const OdpBookingCard = ({ drImage, drName, design, details, buttonText }) => {
             ))}
           </div>
           <div className="availButton">
-            <IconButton buttonContent={buttonText} isIconNeed={false} />
+            <IconButton buttonContent={buttonText} isIconNeed={false} onClick={onButtonClick}/>
           </div>
         </div>
       </div>

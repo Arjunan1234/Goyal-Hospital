@@ -4,7 +4,6 @@ import {
   navBoxTitle,
   navBoxContent,
 } from "../../constants/serviceDetailsContent";
-import leftArrow from "../../assets/images/leftArrow.svg";
 import Urology from "../urology/Urology";
 import useScreenMobile from "../../hooks/useScreenMobile";
 import { useEffect, useState } from "react";

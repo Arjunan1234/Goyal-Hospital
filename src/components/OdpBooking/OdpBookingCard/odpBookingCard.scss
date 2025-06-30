@@ -58,6 +58,26 @@
   }
 }
 
+.appointmentCards{
+  .cardMainContent{
+    .drName{
+      h5{
+        max-width: 200px;
+      }
+    }
+    .drDetailsContainer{
+      .detailsItem{
+        span{
+          max-width: 169px;
+        }
+      }
+    }
+    .availButton{
+      margin-top: auto;
+    }
+  }
+}
+
 @media screen and (max-width: 568px){
   .odpBookingCardContainer{
     flex-direction: column;

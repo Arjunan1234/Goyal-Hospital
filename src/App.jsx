@@ -16,6 +16,7 @@ import Footer from "./components/Footer/Footer";
 import PrivacyPolicy from "./containers/PrivacyPolicy/PrivacyPolicy";
 import Disclaimer from "./containers/Disclaimer/Disclaimer";
 import TPA from "./containers/TPA/TPA";
+import BookAppointment from "./containers/BookAppointment/BookAppointment";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
   return (
@@ -33,6 +34,7 @@ const App = () => {
         <Route path="/tpa" element={<TPA />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/book-appointment" element={<BookAppointment />} />
       </Routes>
       <Footer />
     </>
