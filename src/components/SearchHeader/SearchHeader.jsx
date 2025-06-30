@@ -9,7 +9,6 @@ import menuNormal from "../../assets/images/menuNormal.svg";
 import menuClose from "../../assets/images/menuClose.svg";
 import SearchBar from "../SearchBar/SearchBar";
 import { useState, useEffect } from "react";
-import report from "../../assets/images/report.svg";
 import phoneCall from "../../assets/images/phoneCall.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 
