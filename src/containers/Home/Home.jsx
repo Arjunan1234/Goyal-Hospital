@@ -14,7 +14,7 @@ import {
   homePageBannerTitle,
 } from "../../constants/bannerContents";
 const Home = () => {
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
   return (
@@ -33,7 +33,6 @@ const Home = () => {
 
       <EconomicTimes />
       <ContactUs />
-      
     </div>
   );
 };

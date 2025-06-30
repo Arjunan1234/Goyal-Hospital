@@ -2,13 +2,18 @@ import { useState } from "react";
 import OdpBookingCard from "../../OdpBooking/OdpBookingCard/OdpBookingCard";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import "./appointmentCardsSection.scss";
+import Modal from "../../Modal/Modal";
+import ModalContents from "../../ModalContents/ModalContents";
+import SuccessMessage from "../../ModalContents/SuccessMessage/SuccessMessage";
 
 const AppointmentCardsSection = ({ cardsData }) => {
   const [openCalendarIndex, setOpenCalendarIndex] = useState(null);
-
+  const [showSuccess, setShowSuccess] = useState(false);
   const [selectedDates, setSelectedDates] = useState({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   console.log(selectedDates, "selectedDates");
-console.log(openCalendarIndex,"openCalendarIndex");
+  console.log(openCalendarIndex, "openCalendarIndex");
 
   const handleButtonClick = (index) => {
     setOpenCalendarIndex(openCalendarIndex === index ? null : index);
@@ -19,9 +24,17 @@ console.log(openCalendarIndex,"openCalendarIndex");
       ...prev,
       [index]: date,
     }));
-    setOpenCalendarIndex(null); // Close calendar after selection
+    setOpenCalendarIndex(null);
+    setIsModalOpen(true); // Open the modal
+    setShowSuccess(false); // Close calendar after selection
   };
 
+  // Close modal and reset state if needed
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setShowSuccess(false);
+    setSelectedDates({}); // Optionally clear selection
+  };
 
   return (
     <>
@@ -45,11 +58,18 @@ console.log(openCalendarIndex,"openCalendarIndex");
                     <DateCalendar
                       value={selectedDates[index] || null}
                       onChange={(date) => handleDateChange(index, date)}
-                       disablePast  // disables past dates
+                      disablePast // disables past dates
                     />
                   </div>
                 )}
               </div>
+              <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
+                {!showSuccess ? (
+                  <ModalContents onSuccess={() => setShowSuccess(true)} />
+                ) : (
+                  <SuccessMessage />
+                )}
+              </Modal>
             </div>
           ))}
         </div>

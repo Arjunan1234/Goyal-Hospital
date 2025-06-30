@@ -33,3 +33,27 @@
     }
   }
 }
+
+@media screen and (max-width: 992px){
+    .appointment{
+        .appointmentContainer{
+            padding: 64px 60px;
+        }
+    }
+}
+@media screen and (max-width: 568px){
+    .appointment{
+        .appointmentContainer{
+            padding: 48px 20px;
+            .searchContainer{
+                .search{
+                    max-width: unset;
+                    width: 100%;
+                }
+            }
+            .bookingCardContainer{
+                width: 100%;
+            }
+        }
+    }
+}

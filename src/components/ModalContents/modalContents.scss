@@ -1,0 +1,29 @@
+@use "/src/styles/variables.scss" as variable;
+.modalConntensWrapper {
+  padding: 49px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 400px;
+  .title {
+    color: #333;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 120% */
+  }
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .submitButton {
+      .getOtpButtonWrapper {
+        max-width: 111px;
+      }
+      .verifyOtpButtonWrapper {
+        max-width: 130px;
+      }
+    }
+  }
+}

@@ -16,7 +16,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 const mobileNavContents = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Services", path: "/services" },
+  { label: "Speciality", path: "/speciality" },
   { label: "Careers", path: "/career" },
   { label: "Gallery", path: "/gallery" },
 ];
