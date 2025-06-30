@@ -77,7 +77,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="linksSection">
+          {/* <div className="linksSection">
             <h3>
               <FadeUp> Services</FadeUp>
             </h3>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <FadeUp> Emergency Services</FadeUp>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footerBottom">

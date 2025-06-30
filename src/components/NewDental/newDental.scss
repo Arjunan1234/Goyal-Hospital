@@ -1,0 +1,50 @@
+@use "/src/styles/variables.scss" as variable;
+
+.newDental {
+    display: flex;
+    padding: 80px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .doctor-section {
+        background: #fff;
+
+        .custom-prev {
+            top: 43%;
+        }
+
+        .custom-next {
+            top: 43%;
+        }
+    }
+
+    .newHeading {
+        color: var(--dark-primary, #031E2D);
+        text-align: center;
+
+        max-width: 818px;
+        /* heading/4 */
+        font-family: Mulish;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px;
+        padding-bottom: 28px;
+        /* 120% */
+        text-transform: capitalize;
+    }
+
+    .newSubHeading {
+        color: #444;
+        text-align: center;
+        max-width: 818px;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        /* 140% */
+        letter-spacing: 0.2px;
+    }
+}
