@@ -64,16 +64,16 @@ const Footer = () => {
               <FadeUp> Quick links</FadeUp>
             </h3>
             <ul>
-              <li>
+              <li onClick={() => navigate("/about")}>
                 <FadeUp> About Us</FadeUp>
               </li>
-              <li>
+              <li onClick={() => navigate("/speciality")}>
                 <FadeUp> Our Mission & Vision</FadeUp>
               </li>
-              <li>
+              <li onClick={() => navigate("/career")}>
                 <FadeUp> Careers</FadeUp>
               </li>
-              <li>
+              <li onClick={() => navigate("/gallery")}>
                 <FadeUp> Our Gallery</FadeUp>
               </li>
             </ul>
@@ -108,7 +108,13 @@ const Footer = () => {
           <FadeUp> Copyright © 2023 Goyal Hospital & Urology Centre</FadeUp>
         </p>
         <div className="privacyContainer">
-            <span onClick={()=>navigate("/privacy-policy")}>Privacy Policy</span> | <span onClick={()=>navigate("/disclaimer")}>Terms and Condition</span>
+          <span onClick={() => navigate("/privacy-policy")}>
+            Privacy Policy
+          </span>{" "}
+          |{" "}
+          <span onClick={() => navigate("/disclaimer")}>
+            Terms and Condition
+          </span>
         </div>
       </div>
     </footer>
