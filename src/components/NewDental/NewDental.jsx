@@ -14,7 +14,13 @@ import rightArrow from "../../assets/svg/rightArrow.svg";
 
 import FadeUp from "../FadeUp/FadeUp";
 
-const NewDental = ({ heading, para, images, para2 }) => {
+const NewDental = ({
+  heading,
+  para,
+  images,
+  para2,
+  paginationClassName = "customPagination",
+}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -39,7 +45,6 @@ const NewDental = ({ heading, para, images, para2 }) => {
         >
           <img src={rightArrow} alt="Next" />
         </button>
-
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={20}
@@ -54,7 +59,7 @@ const NewDental = ({ heading, para, images, para2 }) => {
             swiper.params.navigation.nextEl = nextRef.current;
           }}
           pagination={{
-            el: ".customPagination",
+            el: `.${paginationClassName}`,
             clickable: true,
             renderBullet: (index, className) =>
               `<span class="${className}"></span>`,
@@ -82,7 +87,7 @@ const NewDental = ({ heading, para, images, para2 }) => {
           ))}
         </Swiper>
 
-        <div className="customPagination"></div>
+        <div className={paginationClassName}></div>
       </section>
     </div>
   );
