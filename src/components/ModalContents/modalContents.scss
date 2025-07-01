@@ -27,3 +27,8 @@
     }
   }
 }
+@media screen and (max-width: 568px){
+  .modalConntensWrapper{
+    min-width: unset;
+  }
+}

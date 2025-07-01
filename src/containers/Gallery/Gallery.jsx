@@ -66,20 +66,22 @@ const Gallery = () => {
         para="GOYAL HOSPITAL & UROLOGY CENTRE "
         para2="Dr Anil Goyal, Dr Anil Chaturvedi,Dr S.S BHAGAT,Dr Megha Goyal,Dr Vivek Chimpa and Dr Vipin Rastogi"
         images={doctors}
+        paginationClassName="customPagination1"
       />
       <NewDental
         heading="World no Tobacco Day 31st May 2023"
         para="GOYAL HOSPITAL & UROLOGY CENTRE "
         para2="Dr Anil Goyal, Dr Anil Chaturvedi,Dr S.S BHAGAT,Dr Megha Goyal,Dr Vivek Chimpa and Dr Vipin Rastogi"
         images={tobacoo}
+        paginationClassName="customPagination2"
       />
 
       <NewDental
         heading="World Hypertension Day 2023"
         para="GOYAL HOSPITAL & UROLOGY CENTRE "
-        para2=" Dr Anil Goyal, Dr Anil Chaturvedi and Dr Megha Goyal
-"
+        para2=" Dr Anil Goyal, Dr Anil Chaturvedi and Dr Megha Goyal"
         images={world}
+        paginationClassName="customPagination3"
       />
       <ContactUs />
     </div>

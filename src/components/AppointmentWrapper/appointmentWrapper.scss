@@ -29,6 +29,30 @@
       justify-content: center;
       .search {
         max-width: 300px;
+          position: relative;
+        .dropDownContainer {
+          max-height: 145px;
+          overflow-y: auto;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 100%;
+          z-index: 11;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+
+          p {
+            padding: 8px 20px;
+            cursor: pointer;
+
+            &:hover{
+              background-color: blue;
+              color: white;
+              opacity: 0.9;
+            }
+          }
+        }
       }
     }
   }

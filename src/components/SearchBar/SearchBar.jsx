@@ -1,7 +1,12 @@
 import React from "react";
 import search from "../../assets/images/search.svg";
 import "./searchBar.scss";
-const SearchBar = ({ placeHolerText = "Find a doctor" }) => {
+const SearchBar = ({
+  placeHolerText = "Find a doctor",
+  value,
+  onChange,
+  onFocus,
+}) => {
   return (
     <>
       <div className="searchBarContainer">
@@ -12,6 +17,10 @@ const SearchBar = ({ placeHolerText = "Find a doctor" }) => {
           type="text"
           className="searchBarInput"
           placeholder={placeHolerText}
+          value={value}
+          onChange={onChange}
+          onFocus={onFocus}
+          autoComplete="off"
         />
       </div>
     </>

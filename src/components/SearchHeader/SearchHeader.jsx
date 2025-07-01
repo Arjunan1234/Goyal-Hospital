@@ -8,9 +8,10 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 import menuNormal from "../../assets/images/menuNormal.svg";
 import menuClose from "../../assets/images/menuClose.svg";
 import SearchBar from "../SearchBar/SearchBar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import phoneCall from "../../assets/images/phoneCall.svg";
 import { useLocation, useNavigate } from "react-router-dom";
+import { doctorsList } from "../../constants/doctors";
 
 const mobileNavContents = [
   { label: "Home", path: "/" },
@@ -23,8 +24,32 @@ const SearchHeader = () => {
   const isMobile = useScreenMobile({ size: 568 });
   const [isDropDownShow, setIsDropDownShow] = useState(false);
 
+  const [searchValue, setSearchValue] = useState("");
+  const [showSearchDropdown, setShowSearchDropdown] = useState(false);
+
+  const inputContainerRef = useRef(null);
+
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Filtered list based on search input
+  const filteredDoctors = doctorsList.filter((item) =>
+    item.drName.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  // Hide dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        inputContainerRef.current &&
+        !inputContainerRef.current.contains(event.target)
+      ) {
+        setShowSearchDropdown(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     if (isDropDownShow && isMobile) {
@@ -49,7 +74,39 @@ const SearchHeader = () => {
                 <img src={logo} alt="logo" />
               </div>
             </div>
-            <div className="inputContainer">{/* <SearchBar /> */}</div>
+            <div className="inputContainer" ref={inputContainerRef}>
+              <SearchBar
+                value={searchValue}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                  setShowSearchDropdown(true);
+                }}
+                onFocus={() => {
+                  if (searchValue.trim() !== "") setShowSearchDropdown(true);
+                }}
+              />
+              {showSearchDropdown && searchValue.trim() !== "" && (
+                <div className="dropDownContainer">
+                  {filteredDoctors.length > 0 ? (
+                    filteredDoctors.map((item, index) => (
+                      <p
+                        key={index}
+                        onClick={() => {
+                          setSearchValue(item.drName);
+                          setShowSearchDropdown(false);
+                          navigate("/book-appointment")
+                        }}
+                        className="dropdown-item"
+                      >
+                        {item.drName}
+                      </p>
+                    ))
+                  ) : (
+                    <p className="dropdown-item">No doctors found</p>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
           {/* <div className="buttonContainer">
             {!isMobile ? (

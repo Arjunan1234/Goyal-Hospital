@@ -6,6 +6,8 @@ import "./appointmentWrapper.scss";
 import sampleDoctor from "../../assets/images/sampleDoctor.png";
 import panel from "../../assets/images/panel.svg";
 import blueClock from "../../assets/images/blueClock.svg";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AppointmentWrapper = () => {
   const appointmentCardsData = [
@@ -128,6 +130,30 @@ const AppointmentWrapper = () => {
       buttonText: "Schedule Appointment",
     },
   ];
+  const [searchValue, setSearchValue] = useState("");
+  const [showSearchDropdown, setShowSearchDropdown] = useState(false);
+  const inputContainerRef = useRef(null);
+  const navigate = useNavigate();
+
+  // Filtered list based on search input
+  const filteredDoctors = appointmentCardsData.filter((item) =>
+    item.drName.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  // Hide dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        inputContainerRef.current &&
+        !inputContainerRef.current.contains(event.target)
+      ) {
+        setShowSearchDropdown(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <>
       <secion className="appointment">
@@ -142,11 +168,42 @@ const AppointmentWrapper = () => {
           </div>
           <div className="searchContainer">
             <div className="search">
-              <SearchBar placeHolerText="Search by Doctor or Speciality" />
+              <SearchBar
+                placeHolerText="Search by Doctor or Speciality"
+                value={searchValue}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                  setShowSearchDropdown(true);
+                }}
+                onFocus={() => {
+                  if (searchValue.trim() !== "") setShowSearchDropdown(true);
+                }}
+              />
+              {showSearchDropdown && searchValue.trim() !== "" && (
+                <div className="dropDownContainer">
+                  {filteredDoctors.length > 0 ? (
+                    filteredDoctors.map((item, index) => (
+                      <p
+                        key={index}
+                        onClick={() => {
+                          setSearchValue(item.drName);
+                          setShowSearchDropdown(false);
+                          navigate("/book-appointment");
+                        }}
+                        className="dropdown-item"
+                      >
+                        {item.drName}
+                      </p>
+                    ))
+                  ) : (
+                    <p className="dropdown-item">No doctors found</p>
+                  )}
+                </div>
+              )}
             </div>
           </div>
           <div className="appointmentsCardsContainer">
-            <AppointmentCardsSection cardsData={appointmentCardsData} />
+            <AppointmentCardsSection cardsData={filteredDoctors} />
           </div>
         </div>
       </secion>
