@@ -12,6 +12,7 @@ import { useState, useEffect, useRef } from "react";
 import phoneCall from "../../assets/images/phoneCall.svg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { doctorsList } from "../../constants/doctors";
+import usePersistentSearch from "../../hooks/usePersistentSearch";
 
 const mobileNavContents = [
   { label: "Home", path: "/" },
@@ -21,10 +22,11 @@ const mobileNavContents = [
   { label: "Gallery", path: "/gallery" },
 ];
 const SearchHeader = () => {
+  const [searchValue, setSearchValue] = usePersistentSearch();
+
   const isMobile = useScreenMobile({ size: 568 });
   const [isDropDownShow, setIsDropDownShow] = useState(false);
 
-  const [searchValue, setSearchValue] = useState("");
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
 
   const inputContainerRef = useRef(null);
@@ -74,39 +76,41 @@ const SearchHeader = () => {
                 <img src={logo} alt="logo" />
               </div>
             </div>
-            <div className="inputContainer" ref={inputContainerRef}>
-              <SearchBar
-                value={searchValue}
-                onChange={(e) => {
-                  setSearchValue(e.target.value);
-                  setShowSearchDropdown(true);
-                }}
-                onFocus={() => {
-                  if (searchValue.trim() !== "") setShowSearchDropdown(true);
-                }}
-              />
-              {showSearchDropdown && searchValue.trim() !== "" && (
-                <div className="dropDownContainer">
-                  {filteredDoctors.length > 0 ? (
-                    filteredDoctors.map((item, index) => (
-                      <p
-                        key={index}
-                        onClick={() => {
-                          setSearchValue(item.drName);
-                          setShowSearchDropdown(false);
-                          navigate("/book-appointment")
-                        }}
-                        className="dropdown-item"
-                      >
-                        {item.drName}
-                      </p>
-                    ))
-                  ) : (
-                    <p className="dropdown-item">No doctors found</p>
-                  )}
-                </div>
-              )}
-            </div>
+            {location.pathname !== "/book-appointment" && (
+              <div className="inputContainer" ref={inputContainerRef}>
+                <SearchBar
+                  value={searchValue}
+                  onChange={(e) => {
+                    setSearchValue(e.target.value);
+                    setShowSearchDropdown(true);
+                  }}
+                  onFocus={() => {
+                    if (searchValue.trim() !== "") setShowSearchDropdown(true);
+                  }}
+                />
+                {showSearchDropdown && searchValue.trim() !== "" && (
+                  <div className="dropDownContainer">
+                    {filteredDoctors.length > 0 ? (
+                      filteredDoctors.map((item, index) => (
+                        <p
+                          key={index}
+                          onClick={() => {
+                            setSearchValue(item.drName);
+                            setShowSearchDropdown(false);
+                            navigate("/book-appointment");
+                          }}
+                          className="dropdown-item"
+                        >
+                          {item.drName}
+                        </p>
+                      ))
+                    ) : (
+                      <p className="dropdown-item">No doctors found</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
           {/* <div className="buttonContainer">
             {!isMobile ? (
