@@ -130,33 +130,30 @@ export const cardsContent = [
       icon: cardiology,
       redirection: "Neurology",
       iconAltText: "Neurology",
-      doctorsList: [
-       "Dr. Abhinav Gupta",
-       "Dr. Shitla Prasad Pathak",
-       ""
-      ],
+      doctorsList: ["Dr. Abhinav Gupta", "Dr. Shitla Prasad Pathak", ""],
     },
     {
       Title: "Gastroenterology",
       icon: cardiology,
       redirection: "Gastroenterology",
       iconAltText: "Gastroenterology",
-      doctorsList: [
-       "Dr. Ashish Garg",
-       "Dr. Anando Sengupta",
-       
-      ],
+      doctorsList: ["Dr. Ashish Garg", "Dr. Anando Sengupta"],
     },
     {
       Title: "Dermatology",
       icon: cardiology,
       redirection: "Dermatology",
       iconAltText: "Dermatology",
-      doctorsList: [
-       "Dr. Puneet Aggarwal",
-       "Dr. Navrattan Surana",
-       
-      ],
+      doctorsList: ["Dr. Puneet Aggarwal", "Dr. Navrattan Surana"],
+    },
+  ],
+  [
+    {
+      Title: "Bariatric",
+      icon: cardiology,
+      redirection: "Bariatric",
+      iconAltText: "Bariatric",
+      doctorsList: ["Dr. Yogesh Agarwal"],
     },
   ],
 ];
@@ -169,7 +166,7 @@ const DoctorCards = () => {
   };
   const isMobile = useScreenMobile({ size: 568 });
 
-  const defaultVisibleRows = isMobile ? 1 : 4;
+  const defaultVisibleRows = isMobile ? 1 : 5;
   const [visibleRows, setVisibleRows] = useState(defaultVisibleRows);
 
   useEffect(() => {

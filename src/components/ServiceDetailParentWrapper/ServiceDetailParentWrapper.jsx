@@ -19,6 +19,7 @@ import Cardiology from "../IndividualServicePages/Cardiology";
 import Neurology from "../IndividualServicePages/Neurology";
 import Gastroenterology from "../IndividualServicePages/Gastroenterology";
 import Dermatology from "../IndividualServicePages/Dermatology";
+import Bariatric from "../IndividualServicePages/Bariatric";
 const departmentComponents = {
   Cardiology: Cardiology,
   Neurology: Neurology,
@@ -32,12 +33,12 @@ const departmentComponents = {
   ),
   Pediatrics: Pediatrics,
   Dermatology: Dermatology,
-  Bariatric: () => <div></div>,
+  Bariatric: Bariatric,
   Plastic: () => <div>Pediatrics Component</div>,
   Surgery:  SurgeryContent,
   Eye: EyeContent,
   Medicine:MedicineContent,
-  Anesthesia:Anesthesia
+  Anesthesia:Anesthesia,
 };
 const ServiceDetailParentWrapper = ({ initialDepartment }) => {
   const [selectedDept, setSelectedDept] = useState("Urology & Andrology");

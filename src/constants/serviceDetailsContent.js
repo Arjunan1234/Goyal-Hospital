@@ -22,6 +22,42 @@ export const navBoxContent = [
   "Medicine",
   "Anesthesia",
 ];
+// bariatric
+export const bariatricDepartmentHeader =
+  "Department of Minimal Access & Bariatric Surgery";
+export const bariatricDepartmentHeaderContent =
+  "The Department of Minimal Access & Bariatric Surgery offers advanced facilities for both minimal access (laparoscopic) and bariatric (weight loss and metabolic) surgeries. The team specializes in a range of minimally invasive procedures and metabolic operations, utilizing state-of-the-art technology and modern techniques to ensure patient safety, quick recovery, and effective outcomes.";
+export const bariatricOdpBookingHeader = "OPD Booking";
+export const bariatricOdpBookingContent = [
+  {
+    drName: "Dr. Yogesh Agarwal",
+    design: "MBBS, MS, FIAGES, FALS (Bariatric), MBA(FMS)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const bariatricFacilityHeader = "Facilities Available";
+
+export const bariatricFacilityHeaderContent = [
+  "Hepato Pancreato Biliary Surgeries",
+  "Hernia",
+  "Upper GI (GERD, Hiatus, Esophagectomy)",
+  "Solid Organ Surgeries",
+  "Laser/MIS Proctocology",
+  "Upper GI and Lower GI Endoscopy",
+];
+
 // dermatology
 export const dermatologyDepartmentHeader = "Department of Dermatology";
 export const dermatologyDepartmentHeaderContent =
