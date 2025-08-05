@@ -21,25 +21,26 @@ export const navBoxContent = [
 
 export const urologyDepartmentHeader = "DEPARTMENT OF UROLOGY & ANDROLOGY";
 export const urologyDepartmentHeaderContent =
-  "The department offers comprehensive Urologic Surgeries by a Senior Urologist as pioneer in field of Urology and Andrology with availability of all latest equipments needed for advanced care of kidney, Stone Disease , Prostate surgery , Paediatric Urology, Female Urology & Male infertility and all the Urologic problems. The Department is well equipped with Urodynamics , Lithotripsy (ESWL), C-Arm, Lithoblast etc. with Endourological & Laparoscopic instruments.";
+  "As a pioneer in the field of Urology/ Andrology, all latest equipment needed for advanced care of stone disease / all urologic disease are being made available at this center. Latest Treatment of Complex Stone & Prostate Surgery Even In High Risk Cases";
 
 export const urologyFacilityHeader =
   "The Department has facilities for the following";
 export const urologyFacilityHeaderContent = [
-  "Endourology/TURP/PCNL/URS/Diode Laser/Enucleation of Prostate/TURBT",
-  "Laparoscopic urological surgeries",
-  "Sexual Dysfunction",
-  "Urodynamics Paediatric, Onco & Reconstructive urology",
-  "Infertility (Male)",
-  "ESWL (Lithotripsy)",
-  "Urine Incontinence for Male/Female",
+ "Lithotripsy",
+ "Percutaneous Nephro Lithotomy (PCNL)",
+ "Ureteroscopy for ureteral stones (Flexible & Rigid)",
+ "Lower Tract Surgery – Diode Laser Enucleation",
+ "Gynae Urology",
+ "Paediatric Urology – Endoscopic & Open Surgery like Hypospadias",
+ "Laparoscopic & Urology Surgery with HD Vision Camera",
+ "Urodynamics"
 ];
 
 export const urologyOdpBookingHeader = "OPD Booking";
 export const urologyOdpBookingContent = [
   {
-    drName: "Dr. Michael Chen",
-    design: "MBBS, MD (CARDIOLOGY)",
+    drName: "Dr. Nirupama Goyal",
+    design: "MBBS, MS",
     drPhoto: sampleDoctor,
     details: [
       {
@@ -55,8 +56,108 @@ export const urologyOdpBookingContent = [
     buttonText: "Confirm Availabilty",
   },
   {
-    drName: "Dr Arvind Tiwari",
-    design: "MBBS, MS,MCh (UROLOGY)",
+    drName: "Dr. Anuj Gautam",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+   {
+    drName: "Dr. Aparna Gupta",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+   {
+    drName: "Dr. Parmeen Sachdeva",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+   {
+    drName: "Dr. Radha Jain",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+   {
+    drName: "Dr. Madhu Sarkar",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+   {
+    drName: "Dr. Santosh Sharma",
+    design: "MBBS, DGO",
     drPhoto: sampleDoctor,
     details: [
       {
@@ -241,15 +342,10 @@ export const minimalAccessOperationContent = [
 
 // 4thdata
 
-
-
-
-
 /* Department Header & Intro */
 export const paediatricsDepartmentHeader = "DEPARTMENT OF PAEDIATRICS";
 export const paediatricsDepartmentHeaderContent =
   "GHUC has a team of qualified, experienced and competent pediatricians who ensure 24 hours availability of their service for morning and evening OPD and emergency cases.";
-
 
 /* Facilities/Scope */
 export const paediatricsFacilityHeader = "FACILITIES AVAILABLE";
@@ -266,7 +362,6 @@ export const paediatricsFacilityHeaderContent = [
   "Pediatric scopes enabling all diagnostic & therapeutic procedure even in neonates",
 ];
 
-
 /* Nursery Facilities */
 export const nurseryFacilityHeader = "NURSERY";
 export const nurseryFacilityContent = [
@@ -276,7 +371,6 @@ export const nurseryFacilityContent = [
   "Pulse Oximeter and apnea monitor",
   "CPAP",
 ];
-
 
 /* Doctor Panel */
 export const paediatricsDoctorPanelHeader = "DOCTOR PANEL";

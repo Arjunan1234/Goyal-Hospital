@@ -54,45 +54,49 @@
         }
       }
     }
-   
-  }
-}
-
-.appointmentCards{
-  .cardMainContent{
-    .drName{
-      h5{
-        max-width: 200px;
-      }
-    }
-    .drDetailsContainer{
-      .detailsItem{
-        span{
-          max-width: 169px;
-        }
-      }
-    }
-    .availButton{
+    .availButton {
+      justify-self: end;
+      display: flex;
       margin-top: auto;
     }
   }
 }
 
-@media screen and (max-width: 568px){
-  .odpBookingCardContainer{
+.appointmentCards {
+  .cardMainContent {
+    .drName {
+      h5 {
+        max-width: 200px;
+      }
+    }
+    .drDetailsContainer {
+      .detailsItem {
+        span {
+          max-width: 169px;
+        }
+      }
+    }
+    .availButton {
+      margin-top: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .odpBookingCardContainer {
     flex-direction: column;
     width: 100%;
-    .imageWrapper{
+    .imageWrapper {
       height: 233px;
       object-fit: cover;
       overflow: hidden;
-      img{
+      img {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         border-bottom-left-radius: unset;
       }
     }
-    .cardMainContent{
+    .cardMainContent {
       padding: 12px;
     }
   }

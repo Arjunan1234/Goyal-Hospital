@@ -23,7 +23,7 @@ export const cardsContent = [
       icon: uro,
       iconAltText: "Urology",
       Title: "Urology",
-      doctorsList: ["Dr. Anil Goyal", "Dr. Arvind Tiwari"],
+      doctorsList: ["DR. ANIL GOYAL"],
     },
     {
       icon: surgery,
