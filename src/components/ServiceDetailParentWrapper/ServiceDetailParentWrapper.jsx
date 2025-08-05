@@ -12,10 +12,11 @@ import DepartmentPage from "../urology/DepartmentPage";
 import SurgeryContent from "../IndividualServicePages/SurgeryContent";
 import EyeContent from "../IndividualServicePages/EyeContent";
 import MedicineContent from "../IndividualServicePages/MedicineContent";
+import Ortho from "../IndividualServicePages/Ortho";
 const departmentComponents = {
   Cardiology: () => <div>Cardiology</div>,
   Neurology: () => <div>Neurology</div>,
-  Orthopedics: () => <div>Orthopedics Component</div>,
+  Orthopedics:  Ortho,
   Gastroenterology: () => <div>Gastroenterology Component</div>,
   "Urology & Andrology": Urology,
   Gynecology: () => (

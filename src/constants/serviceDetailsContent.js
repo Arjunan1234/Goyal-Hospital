@@ -21,6 +21,105 @@ export const navBoxContent = [
   "Eye",
   "Medicine",
 ];
+// ortho
+export const orthoDepartmentHeader = "DEPARTMENT OF ORTHOPAEDICS";
+export const orthoDepartmentHeaderContent =
+  "Treatment of spinal instability and decompression of the spinal cord and nerves.";
+export const orthoOdpBookingHeader = "OPD Booking";
+export const orthoOdpBookingContent = [
+  {
+    drName: "Dr. Amit Srivastava",
+    design: "Ortho",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Vivek Chhimpa",
+    design: "Ortho",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Rahul Sahu",
+    design: "Ortho",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Apoorv Sehgal",
+    design: "Ortho",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Sanyam Jain",
+    design: "Ortho",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const orthoFacilityHeader =
+  "The Department has facilities for the following";
+export const orthoFacilityHeaderContent = [
+  "Arthritis & Osteoporosis Management",
+  "Paediatric Orthopaedics",
+];
+
 // medicine
 export const medicineDepartmentHeader = "DEPARTMENT OF MEDICINE";
 export const medicineDepartmentHeaderContent =
