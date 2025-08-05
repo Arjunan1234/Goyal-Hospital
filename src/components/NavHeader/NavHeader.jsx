@@ -71,7 +71,7 @@ const NavHeader = () => {
   const navContents = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Speciality", path: "/speciality" },
+    { label: "Speciality", path: "" },
     { label: "Careers", path: "/career" },
     { label: "Gallery", path: "/gallery" },
     { label: "TPA", path: "/tpa" },
@@ -108,8 +108,9 @@ const NavHeader = () => {
                 key={index}
                 className={location.pathname === item.path ? "highLighted" : ""}
                 onClick={() => {
-                  // Always navigate to the item's path
-                  navigate(item.path);
+                  if (item.path) {
+                    navigate(item.path);
+                  }
                 }}
                 onMouseEnter={() => handleMouseEnter(item.label)}
                 onMouseLeave={() => handleMouseLeave()}

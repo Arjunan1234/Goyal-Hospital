@@ -114,7 +114,11 @@ const SearchHeader = () => {
           </div>
           <div className="buttonContainer">
             {!isMobile ? (
-              <IconButton buttonContent="Book Appointment" image={Calendar} />
+              <IconButton
+                buttonContent="Book Appointment"
+                image={Calendar}
+                onClick={() => navigate("/book-appointment")}
+              />
             ) : (
               <div
                 className="humburger"
@@ -164,7 +168,13 @@ const SearchHeader = () => {
                 image={report}
                 buttonContent="Online Report"
               /> */}
-              <IconButton buttonContent="Contact Us" image={phoneCall} />
+              <IconButton
+                buttonContent="Contact Us"
+                image={phoneCall}
+                onClick={() => {
+                  window.location.href = "tel:+919841248842";
+                }}
+              />
             </div>
           </div>
         )}

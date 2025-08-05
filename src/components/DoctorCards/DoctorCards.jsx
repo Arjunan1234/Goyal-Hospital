@@ -21,6 +21,7 @@ export const cardsContent = [
   [
     {
       Title: "Urology",
+      redirection:"Urology & Andrology",
       icon: uro,
       iconAltText: "Urology",
       doctorsList: ["DR. ANIL GOYAL"],

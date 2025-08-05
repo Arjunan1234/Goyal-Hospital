@@ -72,9 +72,12 @@
   display: flex;
   gap: 30px;
   z-index: 1000;
-  width: 500px;
+  // width: 500px;
   justify-content: space-between;
   min-width: 300px;
+  @media screen and (max-width:992px){
+    flex-wrap: wrap;
+  }
 }
 
 .dropdownRow {

@@ -21,6 +21,10 @@
     padding: 16px;
     min-width: 402px;
 
+    @media screen and (max-width:568px){
+      min-width: unset;
+    }
+
     .drName {
       h4 {
         color: #333;
