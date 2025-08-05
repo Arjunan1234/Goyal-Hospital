@@ -1,0 +1,35 @@
+.sendButton {
+    margin-top: 20px;
+    border-radius: var(--medium, 24px);
+    max-width: 153px;
+    background: #195AFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    img {
+        max-width: 16px;
+    }
+
+    &:hover {
+        background-color: #0034b8;
+    }
+
+    .abc {
+        margin-top: 10px;
+        color: #333;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        /* 120% */
+    }
+}

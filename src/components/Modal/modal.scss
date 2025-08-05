@@ -14,8 +14,10 @@
   background-color: rgba(0, 0, 0, 0.05);
   z-index: 110;
 
+
   &Container {
-    max-height: 800px;
+    padding: 30px;
+    width: 100%;
     border-radius: 16px;
     background: #fff;
     overflow: auto;

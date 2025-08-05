@@ -42,8 +42,7 @@ const ContactUs = () => {
       setLoading(true);
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzpPiM-NiL0di_99KMUOm_FvyEF2yN1MKR_kHzpXNI4oBZ2nYTN5cC2ei88hlSv7KxX/exec";
-
+        "https://script.google.com/macros/s/AKfycbyrwtj0QKuJJkiA9fNNWC4rY5DVQuSIKfW5w-xlhY9v3GtvvB98hfXOoXma2haqrF0F/exec";
       const payload = {
         fullName: formData.fullName,
         phone: formData.phone,
