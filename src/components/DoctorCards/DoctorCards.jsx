@@ -102,7 +102,7 @@ export const cardsContent = [
     {
       icon: anesthesia,
       iconAltText: "anesthesia",
-      redirection: null,
+      redirection: "Anesthesia",
       Title: "Anesthesia",
       doctorsList: [
         "Dr. Pradeep Sharma",

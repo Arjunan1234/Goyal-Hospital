@@ -20,7 +20,182 @@ export const navBoxContent = [
   "Surgery",
   "Eye",
   "Medicine",
+  "Anesthesia",
 ];
+// cardiology
+export const cardiologyDepartmentHeader =
+  "DEPARTMENT OF NON-INVASIVE CARDIOLOGY";
+export const cardiologyDepartmentHeaderContent =
+  "Goyal Hospital & Urology Centre has installed a fully functional, state-of-the-art Non-Invasive Cardiology lab, featuring a functional Echocardiography with a color Doppler machine.";
+export const cardiologyOdpBookingHeader = "OPD Booking";
+export const cardiologyOdpBookingContent = [
+  {
+    drName: "Dr. Dheeraj Garg",
+    design: "MBBS, MD (Medicine), MD (Cardiology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Lalit Gupta",
+    design: "MD (Physiology), PGDCC",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Parnessh Arora",
+    design: "MBBS, MD (Medicine), DNB (Cardiology), DM (Cardiology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Vineet Bhatia",
+    design: "MBBS, MD (General Medicine), DM (Cardiology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const cardiologyFacilityHeader =
+  "The Department has facilities for the following";
+export const cardiologyFacilityHeaderContent = [
+  "Air Handling Units (AHU)",
+  "Laminar flow anaesthesia gas delivery systems",
+  "Modern anaesthesia machines",
+  "Structured, protocolized care",
+  "Non-invasive monitors",
+  "Next-generation ventilators",
+];
+
+// anesthesia
+export const anesthesiaDepartmentHeader =
+  "DEPARTMENT OF ANAESTHESIA & CRITICAL CARE";
+export const anesthesiaDepartmentHeaderContent =
+  "The strength of the department lies in its robust team structure, including Senior Residents, Resident Medical Officers, Anaesthetists, and support from consultants in other departments. The department provides comprehensive anaesthesia services, including for all types of pediatric and neonatal surgeries, with support from a Level II care Nursery and a 16-bedded ICU.";
+export const anesthesiaOdpBookingHeader = "OPD Booking";
+export const anesthesiaOdpBookingContent = [
+  {
+    drName: "Dr. Pradeep Sharma",
+    design: "(MBBS, DA Anaesthesia)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Shiv Patel",
+    design: "(MBBS, DA Anaesthesia)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Ankit Luthra",
+    design: "(MBBS, DA Anaesthesia)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Ramesh Subedi",
+    design: "(MBBS, DA Anaesthesia)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const anesthesiaFacilityHeader =
+  "The Department has facilities for the following";
+export const anesthesiaFacilityHeaderContent = [
+  "Air Handling Units (AHU)",
+  "Laminar flow anaesthesia gas delivery systems",
+  "Modern anaesthesia machines",
+  "Structured, protocolized care",
+  "Non-invasive monitors",
+  "Next-generation ventilators",
+];
+
 // Pediatrics
 export const PediatricsDepartmentHeader = "DEPARTMENT OF PAEDIATRICS";
 export const PediatricsDepartmentHeaderContent =
