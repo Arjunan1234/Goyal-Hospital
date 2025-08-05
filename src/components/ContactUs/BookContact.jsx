@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./bookContact.scss";
 import Input from "../Input/Input";
 import TextArea from "../TextArea/TextArea";
@@ -16,6 +16,22 @@ const BookContact = ({ doctorName, selectedDate }) => {
     email: "",
     message: "",
   });
+
+  const [formattedDate, setFormattedDate] = useState("");
+
+  useEffect(() => {
+    if (selectedDate) {
+      setFormattedDate(
+        selectedDate.toLocaleDateString("en-IN", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      );
+    } else {
+      setFormattedDate("Not selected");
+    }
+  }, [selectedDate]);
 
   const [errors, setErrors] = useState({});
 
@@ -40,7 +56,7 @@ const BookContact = ({ doctorName, selectedDate }) => {
       console.log(selectedDate, "selectedDate");
 
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyrwtj0QKuJJkiA9fNNWC4rY5DVQuSIKfW5w-xlhY9v3GtvvB98hfXOoXma2haqrF0F/exec";
+        "https://script.google.com/macros/s/AKfycbwmYFyZ0qCnzZIradspRZHNW6rAl5YZm_sLVDFzHq7-rJi22kZfcix9iVB29EbmvFSH/exec";
 
       const payload = {
         fullName: formData.fullName,
@@ -48,7 +64,7 @@ const BookContact = ({ doctorName, selectedDate }) => {
         email: formData.email,
         message: formData.message,
         doctorName: doctorName || "Unknown Doctor",
-        selectedDate: selectedDate,
+        selectedDate: formattedDate,
       };
 
       const formBody = new URLSearchParams(payload).toString();
@@ -123,17 +139,10 @@ const BookContact = ({ doctorName, selectedDate }) => {
           error={errors.message}
         />
 
-        <p className="abc">Doctor: {doctorName || "Unknown Doctor"}</p>
-        <p className="abc">
-          Selected Date:{" "}
-          {selectedDate
-            ? selectedDate.toLocaleDateString("en-IN", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })
-            : "Not selected"}
-        </p>
+        <p className="example">Doctor: {doctorName || "Unknown Doctor"}</p>
+        {selectedDate && (
+          <p className="example">Selected Date: {formattedDate}</p>
+        )}
 
         <button
           type="submit"
