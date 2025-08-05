@@ -22,6 +22,106 @@ export const navBoxContent = [
   "Medicine",
   "Anesthesia",
 ];
+// dermatology
+export const dermatologyDepartmentHeader = "Department of Dermatology";
+export const dermatologyDepartmentHeaderContent =
+  "The Dermatology department at Goyal Hospital offers expert care for all skin, hair, and nail disorders. It provides consultation for common conditions like acne, psoriasis, leucoderma, and fungal infections. The department is equipped with advanced facilities including CO2 laser, radio frequency ablation, and electrocautery. Treatments for warts, moles, skin tags, and unwanted hair are routinely performed. Skilled dermatologists ensure comprehensive care for both cosmetic and medical dermatological needs.";
+export const dermatologyOdpBookingHeader = "OPD Booking";
+export const dermatologyOdpBookingContent = [
+  {
+    drName: "Dr. Puneet Aggarwal",
+    design: "MBBS, MD (DVL)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Navrattan Surana",
+    design: "MBBS, DDVL",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const dermatologyFacilityHeader = "Department Overview";
+
+export const dermatologyFacilityHeaderContent = [
+  "Consultation available for all skin diseases such as acne, psoriasis, leucoderma, fungal infections, and pigmentation issues.",
+  "Consultation for all hair & nail disorders and STDs/venereal diseases.",
+  "Hospital is equipped with dermatology facilities like CO2 laser, radio frequency ablator, and electrocautery.",
+  "Treatment of warts, moles, skin tags, and unwanted hair.",
+];
+
+// gastroenterology
+export const gastroenterologyDepartmentHeader =
+  "DEPARTMENT OF GASTROENTEROLOGY";
+export const gastroenterologyDepartmentHeaderContent =
+  "The Department of Gastroenterology at Goyal Hospital & Urology Centre has an excellent team and provides both OPD (Outpatient Department) and IPD (Inpatient Department) facilities.";
+export const gastroenterologyOdpBookingHeader = "OPD Booking";
+export const gastroenterologyOdpBookingContent = [
+  {
+    drName: "Dr. Ashish Garg",
+    design: "MBBS, MD (Med.), DNB (Gastro)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Anando Sengupta",
+    design: "MBBS, DNB (Med.), DNB (Gastro)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const gastroenterologyFacilityHeader =
+  "The Department has facilities for the following";
+
+export const gastroenterologyFacilityHeaderContent = [
+  "OPD of Medical / Gastroenterologist / Hepatologist with availability of VIDEO Endoscopy and Colonoscopy.",
+  "Treatment of gastrointestinal diseases and liver diseases is also available.",
+];
+
 // neurology
 export const neurologyDepartmentHeader = "DEPARTMENT OF NEUROLOGY";
 export const neurologyDepartmentHeaderContent =
@@ -63,15 +163,14 @@ export const neurologydpBookingContent = [
     buttonText: "Confirm Availabilty",
   },
 ];
-export const neurologyFacilityHeader =
-  "TTeam with vast experience in";
+export const neurologyFacilityHeader = "Team with vast experience in";
 export const neurologyFacilityHeaderContent = [
   "Neurological Disorders",
   "Stroke",
   "Epilepsy",
   "Dementia Movement Disorders",
   "Chronic Headache",
-  "Neuromuscular Disorders"
+  "Neuromuscular Disorders",
 ];
 // cardiology
 export const cardiologyDepartmentHeader =

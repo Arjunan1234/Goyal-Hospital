@@ -1,0 +1,6 @@
+@use "/src/styles/variables.scss" as variable;
+.dermatologyWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}

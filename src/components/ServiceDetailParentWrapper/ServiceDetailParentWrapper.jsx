@@ -17,11 +17,13 @@ import Pediatrics from "../IndividualServicePages/Pediatrics";
 import Anesthesia from "../IndividualServicePages/Anesthesia";
 import Cardiology from "../IndividualServicePages/Cardiology";
 import Neurology from "../IndividualServicePages/Neurology";
+import Gastroenterology from "../IndividualServicePages/Gastroenterology";
+import Dermatology from "../IndividualServicePages/Dermatology";
 const departmentComponents = {
   Cardiology: Cardiology,
   Neurology: Neurology,
   Orthopedics:  Ortho,
-  Gastroenterology: () => <div>Gastroenterology Component</div>,
+  Gastroenterology: Gastroenterology,
   "Urology & Andrology": Urology,
   Gynecology: () => (
     <div>
@@ -29,7 +31,7 @@ const departmentComponents = {
     </div>
   ),
   Pediatrics: Pediatrics,
-  Dermatology: () => <div>Dermatology Component</div>,
+  Dermatology: Dermatology,
   Bariatric: () => <div></div>,
   Plastic: () => <div>Pediatrics Component</div>,
   Surgery:  SurgeryContent,

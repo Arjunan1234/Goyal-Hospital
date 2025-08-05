@@ -20,32 +20,32 @@ import cardRedirection from "../../assets/images/cardRedirection.svg";
 export const cardsContent = [
   [
     {
+      Title: "Urology",
       icon: uro,
       iconAltText: "Urology",
-      Title: "Urology",
       doctorsList: ["DR. ANIL GOYAL"],
     },
     {
+      Title: "Surgery",
       icon: surgery,
       iconAltText: "surgery",
       redirection: "Surgery",
-      Title: "Surgery",
       doctorsList: ["Dr. S.S. Bhagat", "Dr. Sandeep Jain", "Dr. Pradeep Saini"],
     },
     {
+      Title: "EYE",
       icon: eye,
       iconAltText: "eye",
       redirection: "Eye",
-      Title: "EYE",
       doctorsList: ["Dr. Pravin Kumar"],
     },
   ],
   [
     {
+      Title: "Gynocology & Obsetetrics",
       icon: gyno,
       redirection: "Gynecology",
       iconAltText: "gyno",
-      Title: "Gynocology & Obsetetrics",
       doctorsList: [
         "Dr. Nirupama Goyal",
         "Dr. Aparna Gupta",
@@ -57,10 +57,10 @@ export const cardsContent = [
       ],
     },
     {
+      Title: "Medicine",
       icon: medicine,
       redirection: "Medicine",
       iconAltText: "medicine",
-      Title: "Medicine",
       doctorsList: [
         "Dr. Rajiv Bansal",
         "Dr. Atul kumar Gupta",
@@ -71,10 +71,10 @@ export const cardsContent = [
       ],
     },
     {
+      Title: "Orthopaedics",
       icon: ortho,
       iconAltText: "ortho",
       redirection: "Orthopedics",
-      Title: "Orthopaedics",
       doctorsList: [
         "Dr. Amit Srivastava ",
         "Dr. Vivek Chhimpa ",
@@ -86,10 +86,10 @@ export const cardsContent = [
   ],
   [
     {
+      Title: "Pediatrics",
       icon: pediatrics,
       redirection: "Pediatrics",
       iconAltText: "pediatrics",
-      Title: "Pediatrics",
       doctorsList: [
         " Dr. Piyush Jain",
         "Dr. Sanjay Kappor",
@@ -100,10 +100,10 @@ export const cardsContent = [
     },
 
     {
+      Title: "Anesthesia",
       icon: anesthesia,
       iconAltText: "anesthesia",
       redirection: "Anesthesia",
-      Title: "Anesthesia",
       doctorsList: [
         "Dr. Pradeep Sharma",
         "Dr. Shiv Patel",
@@ -112,10 +112,10 @@ export const cardsContent = [
       ],
     },
     {
+      Title: "Cardiology",
       icon: cardiology,
       redirection: "Cardiology",
       iconAltText: "cardiology",
-      Title: "Cardiology",
       doctorsList: [
         "Dr. Dheeraj Garg",
         "Dr. Lalit Gupta",
@@ -126,14 +126,36 @@ export const cardsContent = [
   ],
   [
     {
+      Title: "Neurology",
       icon: cardiology,
       redirection: "Neurology",
       iconAltText: "Neurology",
-      Title: "Neurology",
       doctorsList: [
        "Dr. Abhinav Gupta",
        "Dr. Shitla Prasad Pathak",
        ""
+      ],
+    },
+    {
+      Title: "Gastroenterology",
+      icon: cardiology,
+      redirection: "Gastroenterology",
+      iconAltText: "Gastroenterology",
+      doctorsList: [
+       "Dr. Ashish Garg",
+       "Dr. Anando Sengupta",
+       
+      ],
+    },
+    {
+      Title: "Dermatology",
+      icon: cardiology,
+      redirection: "Dermatology",
+      iconAltText: "Dermatology",
+      doctorsList: [
+       "Dr. Puneet Aggarwal",
+       "Dr. Navrattan Surana",
+       
       ],
     },
   ],
