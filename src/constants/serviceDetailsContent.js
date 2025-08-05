@@ -232,7 +232,7 @@ export const gynaeOdpBookingHeader = "OPD Booking";
 export const gynaeOdpBookingContent = [
   {
     drName: "Dr. Nirupama Goyal",
-    design: "MBBS, MS (Obstetrics & Gynaecology)",
+    design: "MBBS, MS",
     drPhoto: sampleDoctor,
     details: [
       {
@@ -266,7 +266,106 @@ export const gynaeOdpBookingContent = [
     ],
     buttonText: "Confirm Availability",
   },
-  // Repeat for other doctors (Dr. Aparna Gupta, Dr. Parmeen Sachdeva, etc.)
+  {
+    drName: "Dr. Aparna Gupta",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availability",
+  },
+  {
+    drName: "Dr. Parmeen Sachdeva",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availability",
+  },
+  {
+    drName: "Dr. Radha Jain",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availability",
+  },
+  {
+    drName: "Dr. Madhu Sarkar",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availability",
+  },
+  {
+    drName: "Dr. Santosh Sharma",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+      {
+        icon: appointment,
+        content: "By Appointment",
+      },
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availability",
+  },
 ];
 
 /* Advanced Equipment */
