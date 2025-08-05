@@ -35,6 +35,7 @@ export const cardsContent = [
     {
       icon: eye,
       iconAltText: "eye",
+      redirection:"Eye",
       Title: "EYE",
       doctorsList: ["Dr. Pravin Kumar", "Dr. Anil Biltoria"],
     },

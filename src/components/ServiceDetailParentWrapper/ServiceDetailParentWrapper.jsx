@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DepartmentPage from "../urology/DepartmentPage";
 import SurgeryContent from "../IndividualServicePages/SurgeryContent";
+import EyeContent from "../IndividualServicePages/EyeContent";
 const departmentComponents = {
   Cardiology: () => <div>Cardiology</div>,
   Neurology: () => <div>Neurology</div>,
@@ -25,7 +26,8 @@ const departmentComponents = {
   Dermatology: () => <div>Dermatology Component</div>,
   Bariatric: () => <div></div>,
   Plastic: () => <div>Pediatrics Component</div>,
-  Surgery:  SurgeryContent
+  Surgery:  SurgeryContent,
+  Eye: EyeContent
 };
 const ServiceDetailParentWrapper = ({ initialDepartment }) => {
   const [selectedDept, setSelectedDept] = useState("Urology & Andrology");

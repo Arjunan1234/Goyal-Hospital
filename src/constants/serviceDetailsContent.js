@@ -18,7 +18,46 @@ export const navBoxContent = [
   "Bariatric",
   "Plastic",
   "Surgery",
+  "Eye",
 ];
+export const eyeDepartmentHeader = "DEPARTMENT OF OPHTHALMOLOGY";
+export const eyeDepartmentHeaderContent =
+  "Goyal Hospital & Urology Centre provides facilities for all types of eye problems. Besides routine OPD work like eye testing, contact lens fitting, and retina examination, almost all types of major and minor eye operations—including cataract extraction with intraocular lens (IOL) implantation and glaucoma—are performed with modern techniques like phacoemulsification on genuine charges, with few hours' stay in the hospital.";
+export const eyeOdpBookingHeader = "OPD Booking";
+export const eyeOdpBookingContent = [
+  {
+    drName: "Dr. Pravin Kumar",
+    design: "MBBS, MS (Ophthalmology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const eyeFacilityHeader =
+  "The Department has facilities for the following";
+export const eyeFacilityHeaderContent = [
+  "Cataract Services",
+  "Cornea Services",
+  "Refractive Surgery Services",
+  "Retina and Uvea Services",
+  "Glaucoma Services",
+  "Pediatric Ophthalmology Services",
+  "Squint & Oculoplasty Services",
+  "Neuro Ophthalmology Services",
+  "Low Vision Aids"
+];
+
+
 export const surgeryDepartmentHeader =
   "DEPARTMENT OF GENERAL / LAPAROSCOPIC SURGERY";
 export const surgeryDepartmentHeaderContent =
