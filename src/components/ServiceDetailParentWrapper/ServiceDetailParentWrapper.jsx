@@ -13,6 +13,7 @@ import SurgeryContent from "../IndividualServicePages/SurgeryContent";
 import EyeContent from "../IndividualServicePages/EyeContent";
 import MedicineContent from "../IndividualServicePages/MedicineContent";
 import Ortho from "../IndividualServicePages/Ortho";
+import Pediatrics from "../IndividualServicePages/Pediatrics";
 const departmentComponents = {
   Cardiology: () => <div>Cardiology</div>,
   Neurology: () => <div>Neurology</div>,
@@ -24,7 +25,7 @@ const departmentComponents = {
       <DepartmentPage />
     </div>
   ),
-  Pediatrics: () => <div>Pediatrics Component</div>,
+  Pediatrics: Pediatrics,
   Dermatology: () => <div>Dermatology Component</div>,
   Bariatric: () => <div></div>,
   Plastic: () => <div>Pediatrics Component</div>,

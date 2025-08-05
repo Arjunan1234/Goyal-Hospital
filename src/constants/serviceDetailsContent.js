@@ -21,6 +21,133 @@ export const navBoxContent = [
   "Eye",
   "Medicine",
 ];
+// Pediatrics
+export const PediatricsDepartmentHeader = "DEPARTMENT OF PAEDIATRICS";
+export const PediatricsDepartmentHeaderContent =
+  "GHUC has a team of qualified, experienced and competent pediatricians who ensure 24 hours availability of their service for morning and evening OPD and emergency cases.";
+export const PediatricsOdpBookingHeader = "OPD Booking";
+export const PediatricsOdpBookingContent = [
+  {
+    drName: "Dr. Piyush Jain",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Rajeev Gupta,",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Ajay Kumar",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Sanjay Kapoor",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Anil Jain",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Ramanand",
+    design: "MBBS, DCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const PediatricsFacilityHeader =
+  "The Department has facilities for the following";
+export const PediatricsFacilityHeaderContent = [
+  "Well Baby Clinic with vaccination facility",
+  "Pediatrics OPD and Emergency services",
+  "Nursery admission",
+  "Growth and Development monitoring",
+  "Adolescent Counseling",
+  "Neonatology Division (ICU/Nursery)",
+  "Level II care for LBW (Low Birth Weight) and sick neonates",
+  "Servo Controlled Warmer",
+  "Blue Light CFL Photo Therapy (Neonatal Jaundice)",
+  "Pulse Oximeter and Apnea Monitor CPAP",
+  "Experienced Nursing Care",
+  "Double CFL Photo Therapy for high risk NNH Neonates",
+  "Pediatric scopes enabling all diagnostic & therapeutic procedures even in neonates",
+];
+
 // ortho
 export const orthoDepartmentHeader = "DEPARTMENT OF ORTHOPAEDICS";
 export const orthoDepartmentHeaderContent =
