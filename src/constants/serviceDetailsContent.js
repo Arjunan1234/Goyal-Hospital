@@ -19,7 +19,149 @@ export const navBoxContent = [
   "Plastic",
   "Surgery",
   "Eye",
+  "Medicine",
 ];
+// medicine
+export const medicineDepartmentHeader = "DEPARTMENT OF MEDICINE";
+export const medicineDepartmentHeaderContent =
+  "The Department of Medicine is the backbone of any good hospital. A dedicated team of physicians in our hospital ensures round-the-clock availability, and prompt & timely care to all patients. ICU with central monitor ventilators, defibrillator, trained staff and 24-hour availability of intensivists ensures the handling of any emergency. ECHO, TMT, PFT, EEG & ABG facilities are available for cardiac care. The Department of Medicine also organizes various CME & camps from time to time to upgrade the knowledge of junior doctors, general practitioners, and general public.";
+
+export const medicineOdpBookingHeader = "OPD Booking";
+export const medicineOdpBookingContent = [
+  {
+    drName: "Dr. Rajeev Bansal",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Atul Gupta",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Susheel Garg",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Harbans Sachdeva",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Lalit",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Saurabh Kansal",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Bikramaditya Deb",
+    design: "MBBS, MD (Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+
+export const medicineFacilityHeader =
+  "The Department has facilities for the following";
+export const medicineFacilityHeaderContent = [
+  "Intensive Care Unit (ICU) with monitoring and emergency equipment",
+  "24-hour availability of intensivists",
+  "ECHO (Echocardiography)",
+  "TMT (Treadmill Test)",
+  "PFT (Pulmonary Function Test)",
+  "EEG (Electroencephalogram)",
+  "ABG (Arterial Blood Gas) analysis",
+  "Continuing Medical Education (CME) programs and camps for upskilling doctors and the general public",
+];
+
 export const eyeDepartmentHeader = "DEPARTMENT OF OPHTHALMOLOGY";
 export const eyeDepartmentHeaderContent =
   "Goyal Hospital & Urology Centre provides facilities for all types of eye problems. Besides routine OPD work like eye testing, contact lens fitting, and retina examination, almost all types of major and minor eye operations—including cataract extraction with intraocular lens (IOL) implantation and glaucoma—are performed with modern techniques like phacoemulsification on genuine charges, with few hours' stay in the hospital.";
@@ -54,9 +196,8 @@ export const eyeFacilityHeaderContent = [
   "Pediatric Ophthalmology Services",
   "Squint & Oculoplasty Services",
   "Neuro Ophthalmology Services",
-  "Low Vision Aids"
+  "Low Vision Aids",
 ];
-
 
 export const surgeryDepartmentHeader =
   "DEPARTMENT OF GENERAL / LAPAROSCOPIC SURGERY";
