@@ -17,6 +17,92 @@ export const navBoxContent = [
   "Dermatology",
   "Bariatric",
   "Plastic",
+  "Surgery",
+];
+export const surgeryDepartmentHeader =
+  "DEPARTMENT OF GENERAL / LAPAROSCOPIC SURGERY";
+export const surgeryDepartmentHeaderContent =
+  "The department of surgery at GHUC is a well-established unit with facilities to carry out the full spectrum of surgical procedures, including Accident (Polytrauma) and emergency services. 24-hour urgent surgery cover for accident, acute surgical cases, and trauma patients. All varieties of polytrauma cases are handled by a trauma team comprising General surgeons, Orthopaedicians, and Intensivists. All abdominal, urologic, and gynaecological laparoscopic surgeries are performed by a team of highly qualified, experienced, and well-trained surgeons.";
+
+export const surgeryFacilityHeader =
+  "The Department has facilities for the following";
+export const surgeryFacilityHeaderContent = [
+  "Laparoscopic Surgery",
+  "Gall Bladder Surgery",
+  "Onco Surgery",
+  "Biopsy",
+  "Appendix",
+  "Hernia Surgery",
+  "Fistula Fissures",
+  "Haemorrhoids",
+  "Laparotomy Surgery",
+  "Trauma Surgery",
+  "Stapled Haemorrhoidectomy (MIPH for Piles)",
+];
+
+export const surgeryOdpBookingHeader = "OPD Booking";
+export const surgeryOdpBookingContent = [
+  {
+    drName: "DR. S.S. BHAGAT",
+    design: "MBBS, MS (Gen. Surgery)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "DR. SANDEEP KUMAR JAIN",
+    design: "MBBS, DNB (Gen. Surgery)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "DR. PRADEEP SAINI",
+    design: "MBBS, MS (Gen. Surgery)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+
+export const surgeryEquipmentHeader = "Our Advanced Equipment";
+export const surgeryEquipmentContent = [
+  {
+    icon: micro,
+    title: "Laparoscopic Equipment",
+    content:
+      "Minimally invasive surgical tools for faster recovery and reduced complications.",
+  },
 ];
 
 export const urologyDepartmentHeader = "DEPARTMENT OF UROLOGY & ANDROLOGY";
@@ -26,21 +112,21 @@ export const urologyDepartmentHeaderContent =
 export const urologyFacilityHeader =
   "The Department has facilities for the following";
 export const urologyFacilityHeaderContent = [
- "Lithotripsy",
- "Percutaneous Nephro Lithotomy (PCNL)",
- "Ureteroscopy for ureteral stones (Flexible & Rigid)",
- "Lower Tract Surgery – Diode Laser Enucleation",
- "Gynae Urology",
- "Paediatric Urology – Endoscopic & Open Surgery like Hypospadias",
- "Laparoscopic & Urology Surgery with HD Vision Camera",
- "Urodynamics"
+  "Lithotripsy",
+  "Percutaneous Nephro Lithotomy (PCNL)",
+  "Ureteroscopy for ureteral stones (Flexible & Rigid)",
+  "Lower Tract Surgery – Diode Laser Enucleation",
+  "Gynae Urology",
+  "Paediatric Urology – Endoscopic & Open Surgery like Hypospadias",
+  "Laparoscopic & Urology Surgery with HD Vision Camera",
+  "Urodynamics",
 ];
 
 export const urologyOdpBookingHeader = "OPD Booking";
 export const urologyOdpBookingContent = [
   {
-    drName: "Dr. Nirupama Goyal",
-    design: "MBBS, MS",
+    drName: "DR. ANIL GOYAL",
+    design: "MBBS, MS, MCh (Urology),DNB (Urology)",
     drPhoto: sampleDoctor,
     details: [
       {
@@ -48,126 +134,6 @@ export const urologyOdpBookingContent = [
         content: "On Panel: Yes",
       },
 
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-  {
-    drName: "Dr. Anuj Gautam",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-   {
-    drName: "Dr. Aparna Gupta",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-   {
-    drName: "Dr. Parmeen Sachdeva",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-   {
-    drName: "Dr. Radha Jain",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-   {
-    drName: "Dr. Madhu Sarkar",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
-      {
-        icon: clock,
-        content: "Monday to Saturday 11 am to 1 pm",
-      },
-    ],
-    buttonText: "Confirm Availabilty",
-  },
-   {
-    drName: "Dr. Santosh Sharma",
-    design: "MBBS, DGO",
-    drPhoto: sampleDoctor,
-    details: [
-      {
-        icon: panel,
-        content: "On Panel: Yes",
-      },
-      {
-        icon: appointment,
-        content: "By Appointment",
-      },
       {
         icon: clock,
         content: "Monday to Saturday 11 am to 1 pm",
