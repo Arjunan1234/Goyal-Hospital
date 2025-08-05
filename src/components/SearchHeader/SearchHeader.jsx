@@ -76,7 +76,7 @@ const SearchHeader = () => {
                 <img src={logo} alt="logo" />
               </div>
             </div>
-            {location.pathname !== "/book-appointment" && (
+            {location.pathname !== "/book-appointment" && !isMobile && (
               <div className="inputContainer" ref={inputContainerRef}>
                 <SearchBar
                   value={searchValue}
@@ -112,7 +112,7 @@ const SearchHeader = () => {
               </div>
             )}
           </div>
-          {/* <div className="buttonContainer">
+          <div className="buttonContainer">
             {!isMobile ? (
               <IconButton buttonContent="Book Appointment" image={Calendar} />
             ) : (
@@ -126,8 +126,8 @@ const SearchHeader = () => {
                 />
               </div>
             )}
-          </div> */}
-          {isMobile && (
+          </div>
+          {/* {isMobile && (
             <div
               className="humburger"
               onClick={() => setIsDropDownShow((prev) => !prev)}
@@ -137,7 +137,7 @@ const SearchHeader = () => {
                 alt="dropdown"
               />
             </div>
-          )}
+          )} */}
         </div>
         {isMobile && isDropDownShow && (
           <div className="dropDownWrapper show">

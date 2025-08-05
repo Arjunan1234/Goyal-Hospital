@@ -17,7 +17,7 @@ import useScreenMobile from "../../hooks/useScreenMobile";
 import FadeUp from "../FadeUp/FadeUp";
 import { useNavigate } from "react-router-dom";
 import cardRedirection from "../../assets/images/cardRedirection.svg";
-const cardsContent = [
+export const cardsContent = [
   [
     {
       icon: uro,
@@ -168,9 +168,13 @@ const DoctorCards = () => {
                     key={index}
                     onClick={() => handleCardClick(item.redirection)}
                   >
-                    {/* <div className="imageWrapper">
-                      <img src={item.icon} alt={item.iconAltText} />
-                    </div> */}
+                    <div className="imageWrapper">
+                      <img
+                        className="logoIcon"
+                        src={item.icon}
+                        alt={item.iconAltText}
+                      />
+                    </div>
                     <div className="mainContent">
                       <div className="title">
                         <p>

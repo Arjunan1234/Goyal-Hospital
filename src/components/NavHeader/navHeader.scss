@@ -1,8 +1,10 @@
 @use "/src/styles/variables.scss" as variable;
+
 .navHeader {
   position: sticky;
   top: 0;
   z-index: 10;
+
   .navHeaderContainer {
     padding: 20px 80px;
     display: flex;
@@ -16,6 +18,7 @@
     .navigationContainer {
       display: flex;
       gap: 40px;
+
       span {
         color: #242424;
         text-align: center;
@@ -23,34 +26,80 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
-        line-height: 20px; /* 142.857% */
+        line-height: 20px;
+        /* 142.857% */
         cursor: pointer;
-        transition: color 0.3s ease;
-        transition: scale 0.3s ease;
 
         &:hover {
           color: #195aff;
           scale: 1.1;
         }
       }
+
       .highLighted {
         color: #195aff;
       }
     }
+
     .navButtonContainer {
       display: flex;
       gap: 8px;
+
       .navButton {
         max-width: 146px;
       }
     }
   }
 }
+
 @media screen and (max-width: 992px) {
   .navHeader {
     .navHeaderContainer {
       padding: 20px 60px;
       justify-content: center;
     }
+  }
+}
+
+.specialityDropdown {
+  position: absolute;
+  top: 100%;
+  border-radius: 10px;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  gap: 30px;
+  z-index: 1000;
+  width: 500px;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.dropdownRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  column-gap: 100px;
+}
+
+.dropdownCardTitle {
+  text-align: center;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  color: #242424;
+  font-weight: 500;
+  line-height: 20px;
+  /* Add some padding for clickable area */
+  border-radius: 4px;
+  /* Optional: rounded edges */
+
+  &:hover {
+    /* Black background on hover */
+    color: #195aff;
+    /* White text on hover */
   }
 }

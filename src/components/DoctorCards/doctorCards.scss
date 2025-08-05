@@ -1,25 +1,31 @@
 @use "/src/styles/variables.scss" as variable;
+
 .doctorCards {
   .doctorCardsContainer {
     padding: 80px;
     display: flex;
     flex-direction: column;
     gap: 32px;
+
     .searchWrapper {
       align-self: flex-end;
+
       .doctorSearchContainer {
         max-width: 340px;
       }
     }
+
     .cardsWrapper {
       display: flex;
       flex-direction: column;
       gap: 32px;
+
       .row {
         display: flex;
         gap: 32px;
         flex-wrap: wrap;
         justify-content: center;
+
         .doctorsCardsItem {
           display: flex;
           flex-direction: column;
@@ -33,13 +39,15 @@
           border: 1px solid transparent;
           transition: all 0.3s ease;
 
-        
+
 
           &:hover {
             border: 1px solid #b8c9ff;
+
             .mainContent {
               .title {
                 .imageWrapper {
+
                   opacity: 1;
                   transform: translateY(0);
                 }
@@ -48,9 +56,11 @@
           }
 
           .imageWrapper {
+
             width: 80px;
             height: 80px;
           }
+
           .mainContent {
             display: flex;
             flex-direction: column;
@@ -60,6 +70,7 @@
               display: flex;
               justify-content: space-between;
               min-height: 40px;
+
               p {
                 color: var(--dark-primary, #031e2d);
 
@@ -68,8 +79,10 @@
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 32px; /* 133.333% */
+                line-height: 32px;
+                /* 133.333% */
               }
+
               .imageWrapper {
                 opacity: 0;
                 transform: translateY(8px);
@@ -83,13 +96,15 @@
             .doctorList {
               display: flex;
               flex-direction: column;
+
               span {
                 color: var(--dark, #131313);
                 font-family: Inter;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 32px; /* 160% */
+                line-height: 32px;
+                /* 160% */
                 letter-spacing: 0.2px;
                 opacity: 0.7;
               }
@@ -97,6 +112,7 @@
           }
         }
       }
+
       .row2 {
         .doctorsCardsItem0 {
           .mainContent {
@@ -107,14 +123,17 @@
         }
       }
     }
+
     .loadButtonWrapper {
       align-self: center;
+
       .loadButtonContainer {
         max-width: 126px;
       }
     }
   }
 }
+
 
 @media screen and (max-width: 992px) {
   .doctorCards {
@@ -123,17 +142,20 @@
     }
   }
 }
+
 @media screen and (max-width: 568px) {
   .doctorCards {
     .doctorCardsContainer {
       padding: 48px 20px;
       gap: 40px;
+
       .searchWrapper {
         .doctorSearchContainer {
           max-width: unset;
           width: 100%;
         }
       }
+
       .cardsWrapper {
         .row {
           .doctorsCardsItem {
@@ -147,6 +169,7 @@
               width: 60px;
               height: 60px;
             }
+
             .mainContent {
               .doctorList {
                 span {
@@ -155,7 +178,8 @@
                   font-size: 18px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 32px; /* 177.778% */
+                  line-height: 32px;
+                  /* 177.778% */
                   letter-spacing: 0.18px;
                 }
               }
