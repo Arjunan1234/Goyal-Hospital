@@ -14,7 +14,7 @@ const OdpBookingCard = ({
     <>
       <div className={`odpBookingCardContainer ${overWriteClass}`}>
         <div className="imageWrapper">
-          <img src={drImage} alt={drName} />
+          {/* <img src={drImage} alt={drName} /> */}
         </div>
         <div className="cardMainContent">
           <div className="drName">
@@ -32,7 +32,11 @@ const OdpBookingCard = ({
             ))}
           </div>
           <div className="availButton">
-            <IconButton buttonContent={buttonText} isIconNeed={false} onClick={onButtonClick}/>
+            <IconButton
+              buttonContent={buttonText}
+              isIconNeed={false}
+              onClick={onButtonClick}
+            />
           </div>
         </div>
       </div>

@@ -8,15 +8,29 @@ import Urology from "../urology/Urology";
 import useScreenMobile from "../../hooks/useScreenMobile";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import DepartmentPage from "../urology/DepartmentPage";
+import BariatricSurgery from "../urology/BariatricSurgery";
+import PlasticSurgery from "../urology/PlasticSurgery";
+
 const departmentComponents = {
   Cardiology: () => <div>Cardiology</div>,
   Neurology: () => <div>Neurology</div>,
   Orthopedics: () => <div>Orthopedics Component</div>,
   Gastroenterology: () => <div>Gastroenterology Component</div>,
   "Urology & Andrology": Urology,
-  Gynecology: () => <div>Gynecology Component</div>,
+  Gynecology: () => (
+    <div>
+      <DepartmentPage />
+    </div>
+  ),
   Pediatrics: () => <div>Pediatrics Component</div>,
   Dermatology: () => <div>Dermatology Component</div>,
+  Bariatric: () => (
+    <div>
+      <BariatricSurgery />
+    </div>
+  ),
+  Plastic: () => <PlasticSurgery />,
 };
 const ServiceDetailParentWrapper = ({ initialDepartment }) => {
   const [selectedDept, setSelectedDept] = useState("Urology & Andrology");
