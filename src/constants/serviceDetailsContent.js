@@ -22,6 +22,61 @@ export const navBoxContent = [
   "Medicine",
   "Anesthesia",
 ];
+// plastic
+export const plasticDepartmentHeader = "Department of Plastic Surgery";
+export const plasticDepartmentHeaderContent =
+  "The Plastic Surgery Department at Goyal Hospital & Urology Centre is actively involved in emergency care for trauma patients, addressing cases from simple facial injuries to complex maxillofacial trauma and burns. The department works closely with orthopedic surgeons for primary reconstruction of defects and deformities. General awareness is consistently generated among general practitioners and surgeons regarding the importance of immediate trauma reconstruction.";
+export const plasticOdpBookingHeader = "OPD Booking";
+export const plasticOdpBookingContent = [
+  {
+    drName: "Dr. Ayush Jain",
+    design: "MBBS, MS, MCh",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. R.K. Sharma,",
+    design: "MBBS, MS",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const plasticFacilityHeader = "Facilities Available";
+
+export const plasticFacilityHeaderContent = [
+  "Cosmetic Surgery",
+  "Breast Surgery",
+  "Non-surgical cosmetic & anesthetic work",
+  "Hand trauma/hand surgery",
+  "Lower limb trauma",
+  "Burns care",
+  "Hair transplant",
+  "Microsvascular surgery",
+  "Congenital anomaly correction surgery",
+];
+
 // bariatric
 export const bariatricDepartmentHeader =
   "Department of Minimal Access & Bariatric Surgery";

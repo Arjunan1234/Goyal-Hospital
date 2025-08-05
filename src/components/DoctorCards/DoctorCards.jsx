@@ -155,6 +155,13 @@ export const cardsContent = [
       iconAltText: "Bariatric",
       doctorsList: ["Dr. Yogesh Agarwal"],
     },
+    {
+      Title: "Plastic",
+      icon: cardiology,
+      redirection: "Plastic",
+      iconAltText: "Plastic",
+      doctorsList: ["Dr. Ayush Jain", "Dr. R.K. Sharma"],
+    },
   ],
 ];
 
