@@ -16,9 +16,10 @@ import Ortho from "../IndividualServicePages/Ortho";
 import Pediatrics from "../IndividualServicePages/Pediatrics";
 import Anesthesia from "../IndividualServicePages/Anesthesia";
 import Cardiology from "../IndividualServicePages/Cardiology";
+import Neurology from "../IndividualServicePages/Neurology";
 const departmentComponents = {
   Cardiology: Cardiology,
-  Neurology: () => <div>Neurology</div>,
+  Neurology: Neurology,
   Orthopedics:  Ortho,
   Gastroenterology: () => <div>Gastroenterology Component</div>,
   "Urology & Andrology": Urology,

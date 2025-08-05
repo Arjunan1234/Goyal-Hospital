@@ -35,7 +35,7 @@ export const cardsContent = [
     {
       icon: eye,
       iconAltText: "eye",
-      redirection:"Eye",
+      redirection: "Eye",
       Title: "EYE",
       doctorsList: ["Dr. Pravin Kumar"],
     },
@@ -124,6 +124,19 @@ export const cardsContent = [
       ],
     },
   ],
+  [
+    {
+      icon: cardiology,
+      redirection: "Neurology",
+      iconAltText: "Neurology",
+      Title: "Neurology",
+      doctorsList: [
+       "Dr. Abhinav Gupta",
+       "Dr. Shitla Prasad Pathak",
+       ""
+      ],
+    },
+  ],
 ];
 
 const DoctorCards = () => {
@@ -134,7 +147,7 @@ const DoctorCards = () => {
   };
   const isMobile = useScreenMobile({ size: 568 });
 
-  const defaultVisibleRows = isMobile ? 1 : 3;
+  const defaultVisibleRows = isMobile ? 1 : 4;
   const [visibleRows, setVisibleRows] = useState(defaultVisibleRows);
 
   useEffect(() => {

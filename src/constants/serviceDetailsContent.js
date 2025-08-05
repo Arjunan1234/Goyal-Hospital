@@ -22,6 +22,57 @@ export const navBoxContent = [
   "Medicine",
   "Anesthesia",
 ];
+// neurology
+export const neurologyDepartmentHeader = "DEPARTMENT OF NEUROLOGY";
+export const neurologyDepartmentHeaderContent =
+  "Neurology at Goyal Hospital is a comprehensive department managing both acute and chronic neurological conditions. It treats a wide range of disorders including stroke, headache, epilepsy, vertigo, neuromuscular diseases, spinal problems, Parkinson’s disease, and dementia. The department is equipped with advanced diagnostic tools such as a digital video EEG lab and computerized EMG/NCV studies. It also offers modern treatment options and handles complex cases with a dedicated team of specialists. The neurosurgery unit complements neurology with advanced surgical procedures and critical care support";
+export const neurologyOdpBookingHeader = "OPD Booking";
+export const neurologydpBookingContent = [
+  {
+    drName: "Dr. Abhinav Gupta",
+    design: "MBBS, MS, MCh (Neuro Surgery)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+  {
+    drName: "Dr. Shitla Prasad Pathak",
+    design: "MBBS, MD, DM (Neurology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "On Panel: Yes",
+      },
+
+      {
+        icon: clock,
+        content: "Monday to Saturday 11 am to 1 pm",
+      },
+    ],
+    buttonText: "Confirm Availabilty",
+  },
+];
+export const neurologyFacilityHeader =
+  "TTeam with vast experience in";
+export const neurologyFacilityHeaderContent = [
+  "Neurological Disorders",
+  "Stroke",
+  "Epilepsy",
+  "Dementia Movement Disorders",
+  "Chronic Headache",
+  "Neuromuscular Disorders"
+];
 // cardiology
 export const cardiologyDepartmentHeader =
   "DEPARTMENT OF NON-INVASIVE CARDIOLOGY";
