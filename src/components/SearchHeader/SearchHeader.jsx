@@ -97,7 +97,6 @@ const SearchHeader = () => {
                           onClick={() => {
                             setSearchValue(item.drName);
                             setShowSearchDropdown(false);
-                            navigate("/book-appointment");
                           }}
                           className="dropdown-item"
                         >
@@ -164,7 +163,11 @@ const SearchHeader = () => {
                 image={report}
                 buttonContent="Online Report"
               /> */}
-              <IconButton buttonContent="Contact Us" image={phoneCall} />
+              <IconButton
+                buttonContent="Contact Us"
+                image={phoneCall}
+                onClick={navigate("/book-appointment")}
+              />
             </div>
           </div>
         )}

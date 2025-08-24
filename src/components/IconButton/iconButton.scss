@@ -1,4 +1,5 @@
 @use "/src/styles/variables.scss" as variable;
+
 .iconButtonContainer {
   border: none;
   outline: none;
@@ -9,9 +10,11 @@
   gap: 6px;
   width: 100%;
   transition: scale 0.3s ease;
+
   span {
     @include variable.font-style($fs: 14px, $fw: 500, $lh: 20px);
   }
+
   .imageWrapper {
     width: 16px;
     height: 16px;
@@ -24,7 +27,7 @@
   // }
   &:hover {
     scale: 1.05;
-    background: lighten(#195aff, 5%);
+    background: #195aff;
 
     .imageWrapper {
       transform: rotate(10deg);
