@@ -1,8 +1,11 @@
 import "./odpBookingCard.scss";
 import IconButton from "../../IconButton/IconButton";
+import { useState } from "react";
+import BookContact from "../../ContactUs/BookContact";
+import Modal from "../../Modal/Modal";
 
 const OdpBookingCard = ({
-  drImage,
+  // drImage,
   drName,
   design,
   details,
@@ -10,11 +13,24 @@ const OdpBookingCard = ({
   overWriteClass,
   onButtonClick,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  // const [selectedDoctor, setSelectedDoctor] = useState(drName);
+  const [selectedDoctor, ] = useState(drName);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+    setShowSuccess(false);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <div className={`odpBookingCardContainer ${overWriteClass}`}>
         <div className="imageWrapper">
-          <img src={drImage} alt={drName} />
+          {/* <img src={drImage} alt={drName} /> */}
         </div>
         <div className="cardMainContent">
           <div className="drName">
@@ -32,8 +48,24 @@ const OdpBookingCard = ({
             ))}
           </div>
           <div className="availButton">
-            <IconButton buttonContent={buttonText} isIconNeed={false} onClick={onButtonClick}/>
+            <IconButton
+              buttonContent={buttonText}
+              isIconNeed={false}
+              onClick={() => {
+                handleOpenModal();
+                if (onButtonClick) onButtonClick();
+              }}
+            />
           </div>
+
+          <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
+            {!showSuccess && (
+              <BookContact
+                doctorName={selectedDoctor}
+                // Add callbacks or props here to set showSuccess & selectedDate if needed
+              />
+            )}
+          </Modal>
         </div>
       </div>
     </>

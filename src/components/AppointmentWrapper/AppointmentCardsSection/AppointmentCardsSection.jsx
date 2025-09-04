@@ -3,17 +3,16 @@ import OdpBookingCard from "../../OdpBooking/OdpBookingCard/OdpBookingCard";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import "./appointmentCardsSection.scss";
 import Modal from "../../Modal/Modal";
-import ModalContents from "../../ModalContents/ModalContents";
 import SuccessMessage from "../../ModalContents/SuccessMessage/SuccessMessage";
+import BookContact from "../../ContactUs/BookContact";
 
 const AppointmentCardsSection = ({ cardsData }) => {
   const [openCalendarIndex, setOpenCalendarIndex] = useState(null);
   const [showSuccess, setShowSuccess] = useState(false);
   const [selectedDates, setSelectedDates] = useState({});
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  console.log(selectedDates, "selectedDates");
-  console.log(openCalendarIndex, "openCalendarIndex");
 
   const handleButtonClick = (index) => {
     setOpenCalendarIndex(openCalendarIndex === index ? null : index);
@@ -24,57 +23,60 @@ const AppointmentCardsSection = ({ cardsData }) => {
       ...prev,
       [index]: date,
     }));
+
+    setSelectedDoctor(cardsData[index].drName);
+    setSelectedDate(date.toDate()); // ✅ Convert dayjs to native Date
     setOpenCalendarIndex(null);
-    setIsModalOpen(true); // Open the modal
-    setShowSuccess(false); // Close calendar after selection
+    setIsModalOpen(true);
+    setShowSuccess(false);
   };
 
-  // Close modal and reset state if needed
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setShowSuccess(false);
-    setSelectedDates({}); // Optionally clear selection
+    setSelectedDates({});
   };
 
   return (
-    <>
-      <div className="appointmentCardsSection">
-        <h4>Book Appointment</h4>
-        <div className="appointsCardsWrapper">
-          {cardsData.map((item, index) => (
-            <div className="bookingCardContainer" key={index}>
-              <OdpBookingCard
-                drImage={item.drPhoto}
-                drName={item.drName}
-                design={item.design}
-                details={item.details}
-                buttonText={item.buttonText}
-                overWriteClass="appointmentCards"
-                onButtonClick={() => handleButtonClick(index)}
-              />
-              <div className="calenderWrapper">
-                {openCalendarIndex === index && (
-                  <div className="calendarPopup">
-                    <DateCalendar
-                      value={selectedDates[index] || null}
-                      onChange={(date) => handleDateChange(index, date)}
-                      disablePast // disables past dates
-                    />
-                  </div>
-                )}
-              </div>
-              <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
-                {!showSuccess ? (
-                  <ModalContents onSuccess={() => setShowSuccess(true)} />
-                ) : (
-                  <SuccessMessage />
-                )}
-              </Modal>
+    <div className="appointmentCardsSection">
+      <h4>Book Appointment</h4>
+      <div className="appointsCardsWrapper">
+        {cardsData.map((item, index) => (
+          <div className="bookingCardContainer" key={index}>
+            <OdpBookingCard
+              drImage={item.drPhoto}
+              drName={item.drName}
+              design={item.design}
+              details={item.details}
+              buttonText={item.buttonText}
+              overWriteClass="appointmentCards"
+              onButtonClick={() => handleButtonClick(index)}
+            />
+            <div className="calenderWrapper">
+              {openCalendarIndex === index && (
+                <div className="calendarPopup">
+                  <DateCalendar
+                    value={selectedDates[index] || null}
+                    onChange={(date) => handleDateChange(index, date)}
+                    disablePast
+                  />
+                </div>
+              )}
             </div>
-          ))}
-        </div>
+            <Modal isOpen={isModalOpen} handleClose={handleCloseModal}>
+              {!showSuccess ? (
+                <BookContact
+                  doctorName={selectedDoctor}
+                  selectedDate={selectedDate}
+                />
+              ) : (
+                <SuccessMessage />
+              )}
+            </Modal>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

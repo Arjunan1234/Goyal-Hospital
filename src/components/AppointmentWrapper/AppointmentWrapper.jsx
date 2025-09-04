@@ -8,6 +8,442 @@ import panel from "../../assets/images/panel.svg";
 import blueClock from "../../assets/images/blueClock.svg";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import usePersistentSearch from "../../hooks/usePersistentSearch";
+
+export const allDoctors = [
+  {
+    drName: "Dr. Atul Kumar Gupta",
+    design: "MBBS, MD (Internal Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 2726",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 10:00 - 11:00 AM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Saurabh Kansal",
+    design: "MBBS, MD (Internal Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: -",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 08:30 - 9:30 AM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Ankit Gupta",
+    design: "MBBS, MD (Internal Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 85149",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 10:00 - 1:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Anil Goyal",
+    design: "MBBS, MS (Surgery), McH (Urology), DNB (UROLOGY)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 2079",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:00 - 1:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Arvind Tiwari",
+    design: "MBBS, MS (Surgery), McH (Urology)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 48430",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 10:00 - 2:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. S S Bhagat",
+    design: "MBBS, MS",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 17541",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:30 - 1:30",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Jatinder Kumar",
+    design: "MS, McH (Neuro Surgery)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 2845",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:00 - 12:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Vivek Chhimpa",
+    design: "MBBS, DNB (ORTHO) MNAMS",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 29224",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:30 - 12:30",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. S K Sarkar",
+    design: "MBBS, DLO, PGDHHM, DNB (ENT)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 28528",
+      },
+      {
+        icon: blueClock,
+        content: "Tue, Wed, Fri, Sat 11:30 - 12:30",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Lalit Kumar Gupta",
+    design: "MD, PGDCC (CARDIOLOGY)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 31714",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:30 - 12:30 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Navratan Surana",
+    design: "MBBS, DVD, MD, AMIADVL",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 4466",
+      },
+      {
+        icon: blueClock,
+        content: "Tue, Thur, Sat 10:00 - 11:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Puneet Agarwal",
+    design: "MBBS, MD (Skin & VD)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 27299",
+      },
+      {
+        icon: blueClock,
+        content: "Only Friday 4:00 - 5:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Nirupama Goyal",
+    design: "MBBS, MS (Gynecologist)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 1445",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 10:00 - 1:00, Mon/Wed/Fri 6:00 - 8:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Anju Gaurtam",
+    design: "MBBS, DGO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 20834",
+      },
+      {
+        icon: blueClock,
+        content: "Tue/Thu/Sat 2:00 - 8:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Saiyam Jain",
+    design: "MBBS, MS (ORTHO)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: -",
+      },
+      {
+        icon: blueClock,
+        content: "Mon & Thu 4:00 - 5:00 PM",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Rohit Sharma",
+    design: "MBBS, MD (PSYCHIATRIST)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 53047",
+      },
+      {
+        icon: blueClock,
+        content: "Tue/Fri 9:30 - 10:30",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Manish",
+    design: "MBBS, DTCD, DNB (Respiratory Medicine)",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: -",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Fri 5:00 - 7:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Avani Gadhia",
+    design: "Nutritionist",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: -",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 12:00 - 1:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Rahul Sahu",
+    design: "MBBS, MS ORTHO",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 35085",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 9:30 - 10:30",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Sandeep Gupta",
+    design: "MBBS, MD, DNB",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 25858",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 11:30 - 1:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Sandeep Jain",
+    design: "MBBS, DNB SURGERY",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 19648",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 6:00 - 7:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Rajeev Gupta",
+    design: "MBBS, DCH",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 1897",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 12:00 - 1:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Ajay Kumar",
+    design: "MBBS, DCH",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 14409",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 1:00 - 2:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Nidhi Singhal",
+    design: "BDS, MDS",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: -",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 9:00 - 10:00 & 5:00 - 7:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Vedang Khanna",
+    design: "BDS & IMPLANTOLOGIST, C.C. ENDODONTIST",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: A-16516",
+      },
+      {
+        icon: blueClock,
+        content: "Mon-Sat 10:00 - 2:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Ashish Garg",
+    design: "MBBS, MD, DNB",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 22561",
+      },
+      {
+        icon: blueClock,
+        content: "Mon/Wed/Fri 7:00 - 8:00",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+  {
+    drName: "Dr. Ayush Jain",
+    design: "MBBS, MS, McH, FICS",
+    drPhoto: sampleDoctor,
+    details: [
+      {
+        icon: panel,
+        content: "DMC REG: 4957",
+      },
+      {
+        icon: blueClock,
+        content: "On Call",
+      },
+    ],
+    buttonText: "Schedule Appointment",
+  },
+];
 
 const AppointmentWrapper = () => {
   const appointmentCardsData = [
@@ -130,13 +566,15 @@ const AppointmentWrapper = () => {
       buttonText: "Schedule Appointment",
     },
   ];
-  const [searchValue, setSearchValue] = useState("");
+
+  const [searchValue, setSearchValue] = usePersistentSearch();
+
   const [showSearchDropdown, setShowSearchDropdown] = useState(false);
   const inputContainerRef = useRef(null);
   const navigate = useNavigate();
 
   // Filtered list based on search input
-  const filteredDoctors = appointmentCardsData.filter((item) =>
+  const filteredDoctors = allDoctors.filter((item) =>
     item.drName.toLowerCase().includes(searchValue.toLowerCase())
   );
 
@@ -163,7 +601,9 @@ const AppointmentWrapper = () => {
               <div className="imageWrapper">
                 <img src={leftArrow} alt="back" />
               </div>
-              <span>Back</span>
+              <span style={{ cursor: "pointer" }} onClick={() => navigate(-1)}>
+                Back
+              </span>
             </div>
           </div>
           <div className="searchContainer">

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "../src/styles/common.scss";
-
+import whatsapp from "../src/assets/images/whatsapp.webp";
+import scrollTop from "../src/assets/images/scrolltotop.png";
 import Home from "./containers/Home/Home";
 import About from "./containers/About/About";
 import Services from "./containers/Services/Services";
@@ -17,10 +18,58 @@ import PrivacyPolicy from "./containers/PrivacyPolicy/PrivacyPolicy";
 import Disclaimer from "./containers/Disclaimer/Disclaimer";
 import TPA from "./containers/TPA/TPA";
 import BookAppointment from "./containers/BookAppointment/BookAppointment";
+import { useEffect, useState } from "react";
 const App = () => {
   const isMobile = useScreenMobile({ size: 568 });
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <>
+      <a
+        href="https://wa.me/919876543210"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src={whatsapp}
+          alt="WhatsApp"
+          style={{
+            maxWidth: "50px",
+            position: "fixed",
+            right: "20px",
+            bottom: "100px",
+            zIndex: 999999,
+            cursor: "pointer",
+          }}
+        />
+      </a>
+      {showScroll && (
+        <img
+          src={scrollTop}
+          alt="Scroll to Top"
+          onClick={scrollToTop}
+          style={{
+            maxWidth: "50px",
+            position: "fixed",
+            right: "20px",
+            bottom: "40px",
+            zIndex: 999999,
+            cursor: "pointer",
+          }}
+        />
+      )}
       {!isMobile && <ContactHeader />}
       <SearchHeader />
       {!isMobile && <NavHeader />}

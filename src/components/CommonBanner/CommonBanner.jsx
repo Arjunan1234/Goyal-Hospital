@@ -2,6 +2,7 @@ import IconButton from "../IconButton/IconButton";
 import "./commonBanner.scss";
 import Calendar from "../../assets/images/Calendar.svg";
 import FadeUp from "../FadeUp/FadeUp";
+import { useNavigate } from "react-router-dom";
 const CommonBanner = ({
   title,
   Content,
@@ -10,6 +11,7 @@ const CommonBanner = ({
   overWriteClass = "",
   isCareerBannerTrue = false,
 }) => {
+  const navigate = useNavigate();
   return (
     <>
       <section className={`commonBanner ${overWriteClass}`}>
@@ -36,7 +38,11 @@ const CommonBanner = ({
                 </p>
               </div>
               <div className="buttonContainer">
-                <IconButton buttonContent={buttonContent} image={buttonIcon} />
+                <IconButton
+                  buttonContent={buttonContent}
+                  image={buttonIcon}
+                  onClick={() => navigate("/book-appointment")}
+                />
               </div>
             </div>
           </div>

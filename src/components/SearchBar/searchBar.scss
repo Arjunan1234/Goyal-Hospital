@@ -1,16 +1,20 @@
 @use "/src/styles/variables.scss" as variable;
+
 .searchBarContainer {
   display: flex;
+  width: 247px;
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
   border-radius: 10px;
   border: 1px solid var(--Comps-field-border, #eef0f3);
   background: var(--Comps-field-bkg, #fdfdfd);
+
   .imageWrapper {
     width: 20px;
     height: 20px;
   }
+
   .searchBarInput {
     width: 100%;
     border: none;
@@ -23,6 +27,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
+    /* 133.333% */
   }
 }

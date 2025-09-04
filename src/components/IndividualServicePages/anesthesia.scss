@@ -1,0 +1,6 @@
+@use "/src/styles/variables.scss" as variable;
+.anesthesiaWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}

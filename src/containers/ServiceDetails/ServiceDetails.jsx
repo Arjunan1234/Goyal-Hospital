@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 const ServiceDetails = () => {
   const location = useLocation();
-  const department = location.state?.department || "Urology & Andrology"; //
+  const department = location.state?.department || "Urology & Andrology"; 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
