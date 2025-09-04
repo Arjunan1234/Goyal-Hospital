@@ -27,19 +27,19 @@ const Footer = () => {
             <p
               onClick={() => {
                 window.open(
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com",
+                  "https://mail.google.com/mail/?view=cm&fs=1&to=drgoyalhospital@gmail.com",
                   "_blank"
                 );
               }}
             >
-              <FadeUp>📧 goyalhospital@gmail.com</FadeUp>
+              <FadeUp>📧 drgoyalhospital@gmail.com</FadeUp>
             </p>
             <p
               onClick={() => {
-                window.location.href = "tel:+919841248842";
+                window.location.href = "tel:011-35021200";
               }}
             >
-              <FadeUp>📞 +91 98412 48842</FadeUp>
+              <FadeUp>📞 011-35021200</FadeUp>
             </p>
           </div>
           <div className="buttons">

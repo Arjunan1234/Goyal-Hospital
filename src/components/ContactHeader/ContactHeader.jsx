@@ -6,14 +6,14 @@ const ContactHeader = () => {
   const contactDetails = [
     {
       icon: Mail,
-      content: "goyalhospital@gmail.com",
+      content: "drgoyalhospital@gmail.com",
       // href: "mailto:goyalhospital@gmail.com",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=goyalhospital@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=drgoyalhospital@gmail.com",
     },
     {
       icon: phone,
-      content: "+91 98412 48842",
-      href: "tel:+919841248842",
+      content: "011-35021200",
+      href: "tel:011-35021200",
     },
   ];
   return (
