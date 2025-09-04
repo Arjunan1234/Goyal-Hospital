@@ -6,7 +6,7 @@
   background: #fff;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.05);
 
-  // min-width: 468px;
+  max-width: 400px;
   .imageWrapper {
     img {
       border-top-left-radius: 8px;
@@ -20,6 +20,10 @@
     gap: 16px;
     padding: 16px;
     min-width: 402px;
+
+    @media screen and (max-width:568px){
+      min-width: unset;
+    }
 
     .drName {
       h4 {
@@ -65,7 +69,11 @@
         }
       }
     }
-
+    .availButton {
+      justify-self: end;
+      display: flex;
+      margin-top: auto;
+    }
   }
 }
 
@@ -73,20 +81,26 @@
   .cardMainContent {
     .drName {
       h5 {
-        max-width: 200px;
-      }
-    }
-
-    .drDetailsContainer {
-      .detailsItem {
-        span {
-          max-width: 169px;
+        .appointmentCards {
+          .cardMainContent {
+            .drName {
+              h5 {
+                max-width: 200px;
+              }
+            }
+            .drDetailsContainer {
+              .detailsItem {
+                span {
+                  max-width: 169px;
+                }
+              }
+            }
+            .availButton {
+              margin-top: auto;
+            }
+          }
         }
       }
-    }
-
-    .availButton {
-      margin-top: auto;
     }
   }
 }
@@ -100,14 +114,12 @@
       // height: 233px;
       object-fit: cover;
       overflow: hidden;
-
       img {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         border-bottom-left-radius: unset;
       }
     }
-
     .cardMainContent {
       padding: 12px;
     }

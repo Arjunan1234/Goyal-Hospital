@@ -2,6 +2,8 @@ import React from "react";
 import "./footer.scss";
 import websiteLogoFooter from "../../assets/images/websiteLogoFooter.svg";
 import backgroundPattern from "../../assets/images/pattern.png";
+import nabl from "../../assets/images/nabl.webp";
+import nabh from "../../assets/images/nabh.png";
 import useScreenMobile from "../../hooks/useScreenMobile";
 
 import phone from "../../assets/svg/phoneCall.svg";
@@ -16,7 +18,15 @@ const Footer = () => {
       {!isMobile && <img src={backgroundPattern} alt="" className="pattern" />}
       <div className="footerContainer">
         <div className="footerLeft">
-          <img src={websiteLogoFooter} alt="Goyal Hospital" className="logo" />
+          <div style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
+            <img
+              src={websiteLogoFooter}
+              alt="Goyal Hospital"
+              className="logo"
+            />
+            <img style={{ maxWidth: "100px" }} src={nabl} alt="" />
+            <img style={{ maxWidth: "100px" }} src={nabh} alt="" />
+          </div>
           <h2>
             <FadeUp>Your Health, Our Priority</FadeUp>
           </h2>

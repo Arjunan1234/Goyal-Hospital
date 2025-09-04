@@ -1,0 +1,6 @@
+@use "/src/styles/variables.scss" as variable;
+.plasticWrpper{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}

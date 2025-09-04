@@ -20,30 +20,33 @@ import cardRedirection from "../../assets/images/cardRedirection.svg";
 export const cardsContent = [
   [
     {
+      Title: "Urology",
+      redirection:"Urology & Andrology",
       icon: uro,
       iconAltText: "Urology",
-      Title: "Urology",
-      doctorsList: ["Dr. Anil Goyal", "Dr. Arvind Tiwari"],
+      doctorsList: ["DR. ANIL GOYAL"],
     },
     {
+      Title: "Surgery",
       icon: surgery,
       iconAltText: "surgery",
-      Title: "Surgery",
+      redirection: "Surgery",
       doctorsList: ["Dr. S.S. Bhagat", "Dr. Sandeep Jain", "Dr. Pradeep Saini"],
     },
     {
+      Title: "EYE",
       icon: eye,
       iconAltText: "eye",
-      Title: "EYE",
-      doctorsList: ["Dr. Pravin Kumar", "Dr. Anil Biltoria"],
+      redirection: "Eye",
+      doctorsList: ["Dr. Pravin Kumar"],
     },
   ],
   [
     {
+      Title: "Gynocology & Obsetetrics",
       icon: gyno,
       redirection: "Gynecology",
       iconAltText: "gyno",
-      Title: "Gynocology & Obsetetrics",
       doctorsList: [
         "Dr. Nirupama Goyal",
         "Dr. Aparna Gupta",
@@ -55,10 +58,10 @@ export const cardsContent = [
       ],
     },
     {
-      icon: medicine,
-      redirection: null,
-      iconAltText: "medicine",
       Title: "Medicine",
+      icon: medicine,
+      redirection: "Medicine",
+      iconAltText: "medicine",
       doctorsList: [
         "Dr. Rajiv Bansal",
         "Dr. Atul kumar Gupta",
@@ -69,10 +72,10 @@ export const cardsContent = [
       ],
     },
     {
+      Title: "Orthopaedics",
       icon: ortho,
       iconAltText: "ortho",
       redirection: "Orthopedics",
-      Title: "Orthopaedics",
       doctorsList: [
         "Dr. Amit Srivastava ",
         "Dr. Vivek Chhimpa ",
@@ -84,10 +87,10 @@ export const cardsContent = [
   ],
   [
     {
+      Title: "Pediatrics",
       icon: pediatrics,
       redirection: "Pediatrics",
       iconAltText: "pediatrics",
-      Title: "Pediatrics",
       doctorsList: [
         " Dr. Piyush Jain",
         "Dr. Sanjay Kappor",
@@ -97,29 +100,68 @@ export const cardsContent = [
       ],
     },
 
+    // {
+    //   Title: "Anesthesia",
+    //   icon: anesthesia,
+    //   iconAltText: "anesthesia",
+    //   redirection: "Anesthesia",
+    //   doctorsList: [
+    //     "Dr. Pradeep Sharma",
+    //     "Dr. Shiv Patel",
+    //     "Dr. Ankit Luthra",
+    //     "Dr. Ramesh Subedi",
+    //   ],
+    // },
     {
-      icon: anesthesia,
-      iconAltText: "anesthesia",
-      redirection: null,
-      Title: "Anesthesia",
-      doctorsList: [
-        "Dr. Pradeep Sharma",
-        "Dr. Shiv Patel",
-        "Dr. Ankit Luthra",
-        "Dr. Ramesh Subedi",
-      ],
-    },
-    {
+      Title: "Cardiology",
       icon: cardiology,
       redirection: "Cardiology",
       iconAltText: "cardiology",
-      Title: "Cardiology",
       doctorsList: [
         "Dr. Dheeraj Garg",
         "Dr. Lalit Gupta",
         "Dr. Parnessh Arora",
         "Dr. Vineet Bhatia",
       ],
+    },
+  ],
+  [
+    {
+      Title: "Neurology",
+      icon: cardiology,
+      redirection: "Neurology",
+      iconAltText: "Neurology",
+      doctorsList: ["Dr. Abhinav Gupta", "Dr. Shitla Prasad Pathak", ""],
+    },
+    {
+      Title: "Gastroenterology",
+      icon: cardiology,
+      redirection: "Gastroenterology",
+      iconAltText: "Gastroenterology",
+      doctorsList: ["Dr. Ashish Garg", "Dr. Anando Sengupta"],
+    },
+    {
+      Title: "Dermatology",
+      icon: cardiology,
+      redirection: "Dermatology",
+      iconAltText: "Dermatology",
+      doctorsList: ["Dr. Puneet Aggarwal", "Dr. Navrattan Surana"],
+    },
+  ],
+  [
+    {
+      Title: "Bariatric",
+      icon: cardiology,
+      redirection: "Bariatric",
+      iconAltText: "Bariatric",
+      doctorsList: ["Dr. Yogesh Agarwal"],
+    },
+    {
+      Title: "Plastic",
+      icon: cardiology,
+      redirection: "Plastic",
+      iconAltText: "Plastic",
+      doctorsList: ["Dr. Ayush Jain", "Dr. R.K. Sharma"],
     },
   ],
 ];
@@ -132,7 +174,7 @@ const DoctorCards = () => {
   };
   const isMobile = useScreenMobile({ size: 568 });
 
-  const defaultVisibleRows = isMobile ? 1 : 3;
+  const defaultVisibleRows = isMobile ? 1 : 5;
   const [visibleRows, setVisibleRows] = useState(defaultVisibleRows);
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import BookContact from "../../ContactUs/BookContact";
 import Modal from "../../Modal/Modal";
 
 const OdpBookingCard = ({
-  drImage,
+  // drImage,
   drName,
   design,
   details,
@@ -15,7 +15,8 @@ const OdpBookingCard = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [selectedDoctor, setSelectedDoctor] = useState(drName);
+  // const [selectedDoctor, setSelectedDoctor] = useState(drName);
+  const [selectedDoctor, ] = useState(drName);
   const handleOpenModal = () => {
     setIsModalOpen(true);
     setShowSuccess(false);
