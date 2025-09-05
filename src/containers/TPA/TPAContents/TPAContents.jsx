@@ -3,12 +3,12 @@ import TPAImage from "./TPAImage/TPAImage";
 import {
   governmentTitle,
   governmentContent,
-  governmentTpaLogos,
-  governmentTpaMobileLogos,
   thirdPartyTitle,
   thirdPartyContent,
-  thirdPartyTpaLogos,
-  thirdPartyTpaMobileLogos
+  governmentTpaMobileLogos1,
+  governmentTpaLogos1,
+  thirdPartyTpaMobileLogos1,
+  thirdPartyTpaLogos1
 } from "../../../constants/TPAImage";
 
 import "./tpaContents.scss";
@@ -31,14 +31,17 @@ const TPAContents = () => {
           <TPAImage
             title={governmentTitle}
             content={governmentContent}
+            // imageContents={
+            //   isMobile ? governmentTpaMobileLogos : governmentTpaLogos
+            // }
             imageContents={
-              isMobile ? governmentTpaMobileLogos : governmentTpaLogos
+              isMobile ? governmentTpaMobileLogos1 : governmentTpaLogos1
             }
           />
           <TPAImage
             title={thirdPartyTitle}
             content={thirdPartyContent}
-            imageContents={isMobile ? thirdPartyTpaMobileLogos : thirdPartyTpaLogos}
+            imageContents={isMobile ? thirdPartyTpaMobileLogos1 : thirdPartyTpaLogos1}
           />
         </div>
       </section>

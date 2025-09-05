@@ -1,6 +1,7 @@
 import "./tpaImage.scss";
 
 const TPAImage = ({ title, content, imageContents = [] }) => {
+  console.log(imageContents, "zzzzzzzzzzz")
   return (
     <>
       <section className="tpaImage">
@@ -11,8 +12,12 @@ const TPAImage = ({ title, content, imageContents = [] }) => {
           </div>
           <div className="logoWrapper">
             {imageContents.map((item, index) => (
-              <div className="imageWrapper" key={index}>
-                <img src={item} alt="logo" />
+              <div className="logoItem">
+                <div className="imageWrapper" key={index}>
+                  <img src={item.image} alt="logo" />
+                </div>
+              {/* {<p className="content">{item.name}</p>} */}
+              {<p className="content">{item.name}</p>}
               </div>
             ))}
           </div>
