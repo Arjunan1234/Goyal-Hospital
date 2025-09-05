@@ -9,6 +9,7 @@ import AboutUsSection from "../../components/AboutUsSection/AboutUsSection";
 import CommonBanner from "../../components/CommonBanner/CommonBanner";
 import MarqueeCards from "../../components/MarqueeCards/MarqueeCards";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import SeedsOfInnocence from "../../components/SeedsOfInnocence/SeedsOfInnocence"
 import {
   homePageBannerContent,
   homePageBannerTitle,
@@ -29,6 +30,7 @@ const Home = () => {
       <AboutUsSection />
       <ServicesSection />
       <DoctorCarousel />
+      <SeedsOfInnocence />
       <Testimonial />
 
       <EconomicTimes />
