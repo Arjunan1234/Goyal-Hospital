@@ -20,6 +20,7 @@ const mobileNavContents = [
   { label: "Speciality", path: "/speciality" },
   { label: "Careers", path: "/career" },
   { label: "Gallery", path: "/gallery" },
+  {label: "TPA",path:"/tpa"}
 ];
 const SearchHeader = () => {
   const [searchValue, setSearchValue] = usePersistentSearch();
